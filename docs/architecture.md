@@ -1,8 +1,8 @@
 ---
 id: architecture
-title: Polygon zkEVM Architecture
+title: Architecture
 sidebar_label: Architecture
-description: Introduction to Polygon zkEVM and it's architecture
+description: Introduction to Polygon zkEVM and it's architecture.
 keywords:
   - docs
   - zk rollups

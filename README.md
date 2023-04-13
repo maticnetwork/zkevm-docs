@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="/static/img/polygon-zkevm.png" width="300">
+<img align="center" src="/static/img/polygon-zkevm.svg" width="300">
 </p>
 
 <div align="Center">

@@ -7,7 +7,7 @@ module.exports = {
   url: "https://wiki.polygon.technology",
   baseUrl: "/",
   favicon: "img/logo-round-purple.png",
-  organizationName: "Polygon Labs",
+  organizationName: "maticnetwork",
   projectName: "zkevm-docs",
   customFields: {
     description: "Build your next blockchain app on Polygon zkEVM.",

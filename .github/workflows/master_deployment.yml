@@ -1,0 +1,61 @@
+name: Main deployment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'i18n/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build
+    permissions:
+      id-token: write
+      contents: write
+    environment: ${{ github.ref_name }}
+    strategy:
+      matrix:
+        locale: ['en']
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: master
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-region: eu-west-1
+          role-to-assume: arn:aws:iam::042947190491:role/zkevm-docs-GithubActionsRole
+          role-session-name: GitHubActionsDeployment
+      # Fetch Git history
+      - name: Fetch Git history
+        run: git fetch --unshallow
+
+      # Cache Docusaurus artifacts and node_modules
+      - name: Cache Docusaurus artifacts
+        id: cache-docusaurus
+        uses: actions/cache@v2
+        with:
+          path: |
+            .docusaurus
+            node_modules
+          key: ${{ runner.os }}-build-${{ matrix.locale }}-${{ hashFiles('.docusaurus/**', 'node_modules/**') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ matrix.locale }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      # Install dependencies and build
+      - name: Install dependencies and build
+        run: |
+          export NODE_OPTIONS=--max-old-space-size=4096
+          yarn install --frozen-lockfile
+          yarn build --locale ${{ matrix.locale }}
+
+      - name: Uploading to s3 bucket
+        run: aws s3 sync ./build s3://${{ secrets.PROD_AWS_S3_BUCKET }}

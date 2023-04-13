@@ -1,13 +1,12 @@
 ![Prod-frontend][Build-status]
 [![Vulnerabilities][Vulnerability-badge]][Sonar-url]
 
-# Polygon Technologies Website
+# zkEVM Docs
 
-This is the repo for the polygon.technology website. Here you will find architecture,
-deployment, setup, and status information for the site.
+This is the repo for the zkEVM docs.
 
 ## Built With
-[![Node.js 14.17][Nodejs-badge]][Nodejs-url]
+[![Node.js 16][Nodejs-badge]][Nodejs-url]
 
 ## Build Setup
 

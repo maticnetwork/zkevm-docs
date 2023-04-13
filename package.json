@@ -1,0 +1,62 @@
+{
+  "name": "matic-docs",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "crowdin": "crowdin",
+    "write-translations": "docusaurus write-translations",
+    "crowdin:sync": "docusaurus write-translations && crowdin upload && crowdin download"
+  },
+  "dependencies": {
+    "@crowdin/cli": "3",
+    "@docsearch/js": "^3.1.0",
+    "@docusaurus/core": "^2.4.0",
+    "@docusaurus/logger": "^2.3.1",
+    "@docusaurus/plugin-client-redirects": "^2.3.1",
+    "@docusaurus/preset-classic": "^2.4.0",
+    "@docusaurus/theme-live-codeblock": "^2.3.1",
+    "@docusaurus/theme-search-algolia": "^2.3.1",
+    "avn": "0.2.4",
+    "avn-nvm": "^0.2.2",
+    "browserslist": "^4.20.3",
+    "classnames": "^2.3.1",
+    "copy-webpack-plugin": "^5.1.2",
+    "css-select": "^2.0.1",
+    "docusaurus": "^1.14.7",
+    "hast-util-is-element": "1.1.0",
+    "highlight.js": "^10.4.1",
+    "i18n": "^0.15.0",
+    "katex": "^0.16.0",
+    "mkdirp": "0.5.1",
+    "node-gyp": "3.4.0",
+    "npm": "6.14.17",
+    "react": "^16.8.4",
+    "react-bootstrap": "^2.7.2",
+    "react-dev-utils": "11.0.4",
+    "react-dom": "^16.8.4",
+    "rehype-katex": "5",
+    "remark-math": "3",
+    "request": "2.75.0",
+    "semver-regex": "^3.1.4",
+    "shell-quote": "1.7.3",
+    "trim": "^0.0.3",
+    "trim-newlines": "^3.0.1",
+    "yarn-deduplicate": "^6.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

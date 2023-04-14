@@ -1700,53 +1700,47 @@ strong {
 
 /* admonitions */
 
-/* ALERTS */
+  .theme-admonition {
+    background: radial-gradient(62.22% 67.63% at 27.89% 64.11%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%) , #141318;
+    border: 1px solid #2B2932;
+    border-radius: 12px;
+  }
+
+  .theme-admonition > div:first-child {
+    font-weight: 600;
+  }
+
+  .theme-admonition > div:first-child > span:first-child{
+    display: none;
+  }
 
   .alert {
-    border-left: 6px solid;
-    margin: 1.5rem 0;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    font-weight: 400;
   }
 
-  .alert--secondary {
-  background-color: #252526;
-  border-left-color: #383838;
-  color: #fff;
-  font-weight: 500;
+  .alert--secondary > div:first-child {
+    color: rgba(255, 255, 255, 0.89);
   }
 
-  .alert--info {
-  background-color: #32324a;
-  border-left-color: #464659;
-  color: #fff;
-  font-weight: 500;
+  .alert--info > div:first-child {
+    color: #0084FF;
   }
 
-  .alert--warning {
-    background-color: #ffe082;
-    border-left-color: #ffd54f;
-    color: #000;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  .alert--warning > div:first-child {
+    color: #ffc029;
   }
 
-  .alert--warning a {
-    color: #000;
+  .alert--danger > div:first-child {
+    color: #e80658;
   }
 
-  .alert--danger {
-    background-color: #e57373;
-    border-left-color: #8b0000;
-    color: #000;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-
-  .alert--success {
-    background-color: #607D8B;
-    border-left-color: #3f525a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-    font-weight: bold;
+  .alert--success > div:first-child {
+    color: #0BAA60
   }
 
 /* sidebar-title */
@@ -1761,7 +1755,7 @@ strong {
 
 /* Code block styles */
 pre[class*="language-"] {
-  background-color: #1E1E1E;
+  background-color: #121117;
   color: #F8F8F2;
   border-radius: 5px;
   padding: 1em;

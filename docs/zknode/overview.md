@@ -60,8 +60,8 @@ RPC (Remote Procedure Call) is a JSON-RPC interface compatible with Ethereum. Fo
 
 This subcomponent implements the Merkle Tree and connects to the DB backend. It checks integrity at the block level (information related to gas and block size, among others) and some transaction-related information (signatures, sufficient balance). It also stores the Smart Contract code into the Merkle tree and processes transactions using EVM.
 
-## [zkProver](/zkEVM/zkProver/overview.md)
+## [zkProver](/zkProver/overview.md)
 
 All the rules for a transaction to be valid are implemented and enforced in the zkProver. A zkProver performs complex mathematical computations in the form of polynomials and assembly language. These are later verified on a Smart Contract.
 
-These rules could be seen as constraints that a transaction must satisfy in order to be able to modify the state tree or the exit tree. The zkProver is the most complex module which required development of two new programming languages to implement the needed elements. Its detailed architecture is outlined [here](/zkEVM/zkProver/overview.md).
+These rules could be seen as constraints that a transaction must satisfy in order to be able to modify the state tree or the exit tree. The zkProver is the most complex module which required development of two new programming languages to implement the needed elements. Its detailed architecture is outlined [here](/zkProver/overview.md).

@@ -59,7 +59,7 @@ Please note that the architecture shown in below figure is rather simplistic. It
 
 For example, the interaction between the Consensus SC and the Sequencer is omitted in the figure. 
 
-For a more wholistic view of the interaction between the Consensus SC and the Sequencer, the reader is referred to earlier subsections of this documentation, specifically on the [<ins>Consensus SC</ins>](/zkEVM/architecture.md#consensus-contract).
+For a more wholistic view of the interaction between the Consensus SC and the Sequencer, the reader is referred to earlier subsections of this documentation, specifically on the [<ins>Consensus SC</ins>](/architecture.md#consensus-contract).
 
 :::
 

@@ -13,7 +13,7 @@ keywords:
 image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
-This document compiles some of the frequently asked questions related to the Polygon zkEVM. For more details, check out [this documentation](/zkEVM/introduction.md).
+This document compiles some of the frequently asked questions related to the Polygon zkEVM. For more details, check out [this documentation](/introduction.md).
 
 ---
 
@@ -46,7 +46,7 @@ However, with the proving system breakthroughs pioneered by Polygon Labs, we bel
 
 ### How do I connect Polygon zkEVM to a Metamask Wallet?
 
-In order to add the Polygon zkEVM network to your wallet, please check [this guide](/zkEVM/develop.md#connecting-to-zkevm) which contains the latest RPC details and videos demonstrating useful functionalities.
+In order to add the Polygon zkEVM network to your wallet, please check [this guide](/develop.md#connecting-to-zkevm) which contains the latest RPC details and videos demonstrating useful functionalities.
 
 ### How does Polygon zkEVM compare to other zkEVMs in terms of technology and performance? What are the technical advantages there?
 
@@ -66,7 +66,7 @@ It is also important to note that Polygon **zkEVM supports Account Abstraction v
 
 ### What types of dApps can be deployed on Polygon zkEVM?
 
-Any dApp that is compatible with EVM can be deployed, except for those which require a specific precompiled contract that is currently not supported by zkEVM. For more details related to supported precompiled contracts, check out [this document](/zkEVM/protocol/evm-differences.md).
+Any dApp that is compatible with EVM can be deployed, except for those which require a specific precompiled contract that is currently not supported by zkEVM. For more details related to supported precompiled contracts, check out [this document](/protocol/evm-differences.md).
 
 ### Can this Layer 2 zkEVM work with other chains?
 
@@ -98,7 +98,7 @@ Yes, any language that gets compiled to EVM opcode should work with Polygon zkEV
 
 Additionally, for a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node. It works the same way as other nodes such as geth.
 
-Learn how to set up your production zkNode [here](/zkEVM/setup-production-node.md).
+Learn how to set up your production zkNode [here](/setup-production-node.md).
 
 ### Do you support the JSON-RPC EVM query spec? What are the unsupported queries?
 

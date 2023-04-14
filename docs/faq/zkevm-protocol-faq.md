@@ -13,7 +13,7 @@ keywords:
 image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
-This document compiles some of the frequently asked questions related to the Polygon zkEVM protocol. For more details, check out [this documentation](/zkEVM/protocol/introduction.md).
+This document compiles some of the frequently asked questions related to the Polygon zkEVM protocol. For more details, check out [this documentation](/protocol/introduction.md).
 
 ---
 

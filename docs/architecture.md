@@ -88,9 +88,9 @@ A smart contract verifies the validity proofs to ensure that each transition is 
 
 To carry out these procedures, zkEVM employs two sorts of participants: **Sequencers** and **Aggregators**. Under this two-layer model: 
 ​
-- [**Sequencers**](/zkEVM/zknode/overview.md#sequencers) &rarr; propose transaction batches to the network, i.e. they roll-up the transaction requests in batches and add them to the Consensus Contract.
+- [**Sequencers**](/zknode/overview.md#sequencers) &rarr; propose transaction batches to the network, i.e. they roll-up the transaction requests in batches and add them to the Consensus Contract.
 ​
-- [**Aggregators**](/zkEVM/zknode/overview.md#aggregators) &rarr; check the validity of the transaction batches and provide validity proofs. Any permissionless Aggregator can submit the proof to demonstrate the correctness of the state transition computation.
+- [**Aggregators**](/zknode/overview.md#aggregators) &rarr; check the validity of the transaction batches and provide validity proofs. Any permissionless Aggregator can submit the proof to demonstrate the correctness of the state transition computation.
 
 The  Smart Contract, therefore, makes two calls: One to receive batches from Sequencers, and another to Aggregators, requesting batches to be validated.
 ​
@@ -140,7 +140,7 @@ The two permissionless participants of the zkEVM network are: **Sequencers** and
    - Static Cost: L1 call cost + Server cost (to build a proof)
    - Profitable if: `MATIC fee` > `L1 call` + `Server cost`
 
-## [zkProver](/zkEVM/zkProver/overview.md)
+## [zkProver](/zkProver/overview.md)
 
 zkEVM employs advanced zero-knowledge technology to create validity proofs. It uses a **zero-knowledge prover (zkProver)**, which is intended to run on any server and is being engineered to be compatible with most consumer hardware. Every **Aggregator** will use this zkProver to validate batches and provide Validity Proofs.
 
@@ -148,7 +148,7 @@ It consists of a **Main State Machine Executor**, a collection of **secondary St
 
 ![Skeletal Overview of zkProver](figures/fig4-zkProv-arch.png)
 
-In a nutshell, **the zkEVM expresses state changes in a polynomial form**. As a result, the constraints that each proposed batch must meet are polynomial constraints or polynomial identities. To put it another way, all valid batches must satisfy specific polynomial constraints. Check out the detailed architecture of zkProver [here](/zkEVM/zkProver/overview.md).
+In a nutshell, **the zkEVM expresses state changes in a polynomial form**. As a result, the constraints that each proposed batch must meet are polynomial constraints or polynomial identities. To put it another way, all valid batches must satisfy specific polynomial constraints. Check out the detailed architecture of zkProver [here](/zkProver/overview.md).
 
 ## [zkEVM Bridge](protocol/zkevm-bridge.md)
 

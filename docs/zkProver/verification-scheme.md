@@ -55,7 +55,7 @@ Our special implementation of a STARK is called **PIL-STARK**, and its polynomia
 
 Before describing PIL-STARK a quick look at the novel Polynomial Identities Language (PIL), and some of its distinguishing features, will be helpful.
 
-### [Polynomial Identity Language](/docs/zkEVM/PIL/introduction.md)
+### [Polynomial Identity Language](/docs/PIL/introduction.md)
 
 **PIL** is a domain-specific language (DSL) that provides a method for naming polynomials and describing the identities that define computations carried out by a state machine. 
 

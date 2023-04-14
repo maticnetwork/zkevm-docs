@@ -13,7 +13,7 @@ keywords:
 image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
-This document compiles some of the frequently asked questions related to the Polygon zkEVM's equivalence with EVM. For more details, check out [this documentation](/zkEVM/protocol/evm-differences.md).
+This document compiles some of the frequently asked questions related to the Polygon zkEVM's equivalence with EVM. For more details, check out [this documentation](/protocol/evm-differences.md).
 
 ---
 
@@ -37,7 +37,7 @@ The best way to scale Ethereum is to strive to maintain equivalence with this ec
 
 ### What EVM opcodes are different on Polygon zkEVM?
 
-The following EVM opcodes are different in Polygon zkEVM: **SELFDESTRUCT**, **EXTCODEHASH**, **DIFFICULTY**, **BLOCKCHASH**, and **NUMBER**. For a detailed article on differences between EVM and zkEVM, check out [this document](/zkEVM/protocol/evm-differences.md).
+The following EVM opcodes are different in Polygon zkEVM: **SELFDESTRUCT**, **EXTCODEHASH**, **DIFFICULTY**, **BLOCKCHASH**, and **NUMBER**. For a detailed article on differences between EVM and zkEVM, check out [this document](/protocol/evm-differences.md).
 
 ### Which opcodes are missing in the current zkEVM version?
 

@@ -2004,3 +2004,7 @@ code:not(.language-text) {
 .table-of-contents__link--active code {
   color: #000;
 }
+
+.close {
+  align-self: auto !important;
+}

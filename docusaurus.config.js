@@ -29,7 +29,7 @@ module.exports = {
 
   onBrokenLinks: 'log',
   themeConfig: {
-    metadata: [{name: 'description', content: 'Welcome to Polygon Wiki, the official documentation for Polygon. Learn about Polygon and its suite of Ethereum-scaling solutions.'}],
+    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Developers, the official documentation for Polygon zkEVM.'}],
     announcementBar: {
       id: 'banner',
       content: `
@@ -236,25 +236,25 @@ module.exports = {
           position: "right",
           items: [
             {
-              href: '/docs/pos/polygon-architecture',
+              href: 'https://wiki.polygon.technology/docs/pos/polygon-architecture',
               label: 'PoS',
               target: '_blank',
               rel: null,
             },
             {
-              href: '/docs/pos/polygon-architecture',
+              href: '/',
               label: 'zkEVM',
-              target: '_blank',
+              target: '_self',
               rel: null,
             },
             {
-              href: '/docs/supernets',
+              href: 'https://wiki.polygon.technology/docs/supernets',
               label: 'Supernets',
               target: '_blank',
               rel: null,
             },
             {
-              href: '/docs/miden',
+              href: 'https://wiki.polygon.technology/docs/miden',
               label: 'Miden',
               target: '_blank',
               rel: null,

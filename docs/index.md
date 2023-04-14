@@ -18,15 +18,6 @@ Polygon zkEVM Mainnet Beta is provided on an **AS-IS** and **AS-AVAILABLE** basi
 
 :::
 
----
-
-## Polygon zkEVM Status
-
-You can check the live status of Polygon zkEVM network using the following links for Mainnet Beta and Public Testnet.
-
-- **Mainnet Beta &rarr;** https://status.zkevm-rpc.com
-- **Public Testnet &rarr;** https://status.zkevm-test.net
-
 ## Polygon zkEVM Risk Disclosures
 
 <details>

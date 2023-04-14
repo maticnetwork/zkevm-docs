@@ -19,6 +19,7 @@ image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 ## Overview
+
 This section is devoted to explain the basic syntax of zkASM from a high-level perspective. Advanced syntax is totally dependant on the use case (e.g. the design of a zkEVM) and will be explained in more detail with more complete examples later on.
 
 :::info

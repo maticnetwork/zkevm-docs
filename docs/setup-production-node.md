@@ -156,4 +156,3 @@ In other words, instead of running ```cp $ZKEVM_DIR/testnet/example.env $ZKEVM_C
     ```bash
     docker compose --env-file $ZKEVM_CONFIG_DIR/.env -f $ZKEVM_DIR/$ZKEVM_NET/docker-compose.yml logs <cointainer_name>
     ```
-

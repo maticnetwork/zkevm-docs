@@ -93,11 +93,11 @@ module.exports = {
               },
               {
                 label: "zkEVM",
-                href: "docs/category/zk-assembly"
+                href: "https://polygon.technology/polygon-zkevm"
               },
               {
                 label: "Miden",
-                href: "docs/miden/design/main"
+                href: "https://polygon.technology/polygon-miden"
               },
           ]
         },

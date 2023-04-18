@@ -184,7 +184,7 @@ module.exports = {
     },
     copyright: `Copyright © ${new Date().getFullYear()}`,
     },
-    image: 'img/thumbnail.png',
+    image: 'https://wiki.polygon.technology/zkEVM/img/thumbnail.png',
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/dracula"),

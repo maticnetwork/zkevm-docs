@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - proof technique
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Main State Machine Executor** sends various instructions to the secondary state machines within the zkProver. Although secondary state machines specialize in specific types of computations, they frequently use [**Plookup**](https://eprint.iacr.org/2020/315.pdf) in their PIL codes to complete tasks mandated by the Main SM Executor.

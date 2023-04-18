@@ -10,7 +10,6 @@ keywords:
   - wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Consider a proof/verification scheme, using an arbitrary Polynomial Commitment Scheme, where users have to prove knowledge of the N-th member of a multiplicative Fibonacci Series, for specific initial conditions.

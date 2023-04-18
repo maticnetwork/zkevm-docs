@@ -892,7 +892,7 @@ html[data-theme="dark"] .header-twitter-link::before {
 }
 
 [data-theme='dark'] .show-card {
-  background: radial-gradient(75% 75% at 50% 25.87%, #5c32a4 0%, #6A23E7 100%);
+  background: radial-gradient(75% 75% at 50% 25.87%, #472582 0%, #6A23E7 100%);
   border: 2px solid #222;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -2001,4 +2001,23 @@ code:not(.language-text) {
 
 .close {
   align-self: auto !important;
+}
+
+.dropdown__menu > li > a > svg {
+  display: none;
+}
+
+p {
+  line-height: 1.75rem;
+  letter-spacing: 0.01rem /* for better visibility */
+}
+
+@media (max-width: 1150px) {
+  .tabs_animation-wrapper {
+    display: none;
+  }
+
+  .navbar__items--right > :last-child {
+    width: 165px;
+  }
 }

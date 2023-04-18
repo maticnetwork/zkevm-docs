@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - state machine
   - poseidon
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Poseidon State Machine** is one of the zkProver's 14 state machines. It **is a secondary state machine that receives instructions from the Main State Machine of the zkProver**.

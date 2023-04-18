@@ -10,7 +10,6 @@ keywords:
   - wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The framework for the proof/verification system of our mFibonacci SM is that of a **Polynomial Commitment Scheme**. The mechanism for proving correctness of the computations carried out by the mFibonacci SM (or, any state machine in the zkEVM setting), is best described in terms of an interactive zero-knowledge proof system. One therefore thinks of the proof/verification system as enabled by an interaction of two parties, traditionally called the **Verifier** and the **Prover**.

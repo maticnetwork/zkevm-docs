@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - state machine
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Binary State Machine is one of the six secondary state machines receiving instructions from the Main SM Executor**. It is responsible for the execution of all binary operations in the zkProver.

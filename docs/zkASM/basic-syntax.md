@@ -15,7 +15,6 @@ keywords:
   - zkASM
   - basic syntax
   - zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 ## Overview

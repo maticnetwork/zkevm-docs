@@ -11,7 +11,6 @@ keywords:
   - zkROM
   - zkExecutor
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The design paradigm at Polygon has shifted to developing a **zero-knowledge virtual machine** that emulates the Ethereum Virtual Machine (EVM).

@@ -10,7 +10,6 @@ keywords:
   - zkevm protocol
   - Polygon zkEVM
   - incentive mechanism
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 To ensure the system's sustainability, actors must be compensated for correctly performing their roles and giving the protocol finality.

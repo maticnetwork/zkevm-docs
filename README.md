@@ -1,3 +1,5 @@
+<br>
+
 <p align="center">
 <img align="center" src="/static/img/polygon-zkevm.svg" width="300">
 </p>
@@ -19,21 +21,21 @@
 
 Polygon zkEVM Developers is the documentation hub providing extensive documentation, community resources, and guides for enthusiasts and developers interested in learning about or building on zkEVM.
 
-The [Polygon zKEVM Developers](https://wiki.polygon.technology/zkEVM) is built using [Docusaurus](https://docusaurus.io/), 
+The [Polygon zKEVM Developers](https://wiki.polygon.technology/zkEVM) website is built using [Docusaurus](https://docusaurus.io/), 
 a modern static website generator to build optimized websites quickly.
 
-## How to Contribute to Polygon Wiki
+## Contribute to Polygon zkEVM Developers
 
-We believe one of the things that makes Polygon unique is its coherent design, and we seek to retain this defining 
-characteristic. We have defined some guidelines to ensure new contributions only ever enhance the 
-Wiki from the outset.
+We believe one of the things that makes Polygon Labs unique is its coherent design, and we seek to retain this defining 
+characteristic across all our solutions. We have defined some guidelines to ensure new contributions only ever enhance the 
+developer docs from the outset.
 
 ### Requirements
 
+Note that on macOS, you also need Xcode and Command Line Tools.
+
 * Install [Node.js](https://nodejs.org/en/download/) version >= 16.14.1
 * Install [Yarn](https://yarnpkg.com/getting-started/install) version >= 1.22  
-
-> Note that on macOS you also need Xcode and Command Line Tools.
 
 ### Run the Wiki locally
 
@@ -110,7 +112,7 @@ your PR. Note that you must have a GitHub account and an understanding of Markdo
    For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
     ```
-    git commit -m "brief description of changes [Fixes #1234]"
+    git commit -m "brief description of changes"
     ```
 
 3. Push to your forked repository.
@@ -119,10 +121,10 @@ your PR. Note that you must have a GitHub account and an understanding of Markdo
     git push
     ```
 
-4. Submit a PR against the `master` branch of the `maticnetwork/zkevm-docs` repo
+4. Submit a PR against the `main` branch of the `maticnetwork/zkevm-docs` repo.
    
-5. Add a title to your PR. 
-   > For example, if you want to suggest edits to the "Getting Started" page, name your PR: *Update /docs/develop/getting-started.md*.
+5. Add a title to your PR with appropriate labels.
+   > For example, if you want to suggest edits to the "Develop" page, name your PR: *update: develop.md*.
    
 6. Add a description to your PR. Please reference the issue it resolves. 
    > For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
@@ -140,27 +142,40 @@ You can apply UI changes, sidebar, and configuration design through the followin
 You can easily submit an edit suggestion. Note that you must have a GitHub account and good knowledge of Markdown syntax.
 
 1. Navigate to the [Polygon zkEVM Developers page](https://wiki.polygon.technology/zkEVM) that you want to edit.
-2. Scroll down until the end of that page
+
+2. Scroll down until the end of that page.
+
 3. Click on the link: **Edit this page**. It will forward you to the same page (Markdown format) hosted on GitHub.
-4. On the related GitHub page, click the pencil icon (similar to  ) near the upper right corner of the file
-5. Apply your edits by modifying the Markdown file
-6. After you finish, scroll down until the end of that page to create a pull request 
+
+4. On the related GitHub page, click the pencil icon (similar to ✎) near the upper right corner of the file.
+
+5. Apply your edits by modifying the Markdown file.
+
+6. After you finish, scroll down until the end of that page to create a pull request.
+
 7. Add a title to your PR.
-8. Add a description to your PR. Please reference the issue it resolves. 
+
+8. Add a description to your PR. Please reference the issue it resolves.
    > For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+
 9.  Write a brief description of the changes you have made. If possible, include screenshots and references.
+
 10. Click on the green button **Propose changes** to submit your changes. Note that submitting a change will write 
     it to a new branch in your fork.
 
-One of the Wiki maintainers will review your PR and either accept it or submit our review. 
-Acceptable PRs will be approved & merged into the `master` branch.
+One of the Wiki maintainers will review your PR and either accept it or submit their review.
+
+Acceptable PRs will be approved & merged into the `main` branch.
 
 ## Submit an Issue
 
 - Create a [new issue](https://github.com/maticnetwork/zkevm-docs/issues/new/choose) to report a bug, request a feature, 
   or suggest changes.
+
 - Comment on the issue if you want to be assigned to it so [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
+
 - If you do not have a specific contribution in mind, you can also browse current issues.
+
 - Issues that additionally have the `good first issue` label are considered ideal for first-timers.
 
 ## Build
@@ -190,5 +205,5 @@ implemented:
 - `build`: caches the static assets to avoid regenerating any pages that have not changed
 - `node_modules`: caches node_modules based on the hash of `yarn.lock`. Any changes to package dependencies will invalidate and rebuild this cache
 
-Current cache config is defined in [build.yml](.github/workflows/build.yml#22). Caches can be viewed or invalidated in the 
+Current cache config is defined in [master_deployment.yml](.github/workflows/master_deployment.yml#39). Caches can be viewed or invalidated in the 
 GitHub repo settings.

@@ -1,6 +1,6 @@
 ---
-id: wallet-usage-guide
-title: Bridging Assets to zkEVM Using Wallet Suite
+id: bridge-to-zkevm
+title: Bridge Assets to zkEVM
 sidebar_label: Bridge to zkEVM
 description: Learn how to bridge assets on Polygon ZkEVM Wallet Suite.
 keywords:
@@ -9,7 +9,6 @@ keywords:
   - Polygon zkEVM
   - wallet
   - bridge
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

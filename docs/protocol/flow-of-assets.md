@@ -10,7 +10,6 @@ keywords:
   - bridge
   - Polygon zkEVM
   - flow of assets
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 ## Asset Flow from L1 &rarr; L2

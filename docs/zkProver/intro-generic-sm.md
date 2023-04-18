@@ -10,7 +10,6 @@ keywords:
   - wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 In this document is an introduction of the basic components of a generic state machine.

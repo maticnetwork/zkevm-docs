@@ -69,7 +69,7 @@ function Home() {
                     className="tabs-frame"
                     title="Hero"
                     data-ready="true"
-                    width="800"
+                    width="500"
                     height="450"
                   />
                 </div>

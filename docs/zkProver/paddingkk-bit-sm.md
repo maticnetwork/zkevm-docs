@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - state machine
   - padding kk bit
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 **The 136-byte output of the Padding-KK SM must first be translated to bits before it can be used as the KECCAK-F SM's input**. This is where the Padding-KK-Bit state machine comes into picture. **One of the functions of the Padding-KK-Bit SM is to convert bytes to bits in both directions**. And serves as a bridge between the **bit-wise operating KECCAK-F SM** and the **byte-wise operating Padding-KK SM**.

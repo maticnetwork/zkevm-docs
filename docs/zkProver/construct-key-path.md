@@ -9,7 +9,6 @@ keywords:
   - polygon wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Let us first look at the zkProver's **storage parameters**.

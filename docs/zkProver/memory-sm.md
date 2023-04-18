@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - state machine
   - memory
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The Memory State Machine is a secondary state machine, therefore it has the executor part (the Memory SM Executor) and an internal Memory PIL program which is a set of verification rules, written in the PIL language.

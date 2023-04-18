@@ -10,7 +10,6 @@ keywords:
   - hermez
   - zkEVM
   - zkNode
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 A zkNode is the software needed to run a zkEVM node. It is a client that the network requires to implement the synchronization and govern the roles of the participants (Sequencers or Aggregators). Polygon zkEVM participants will choose how they participate:

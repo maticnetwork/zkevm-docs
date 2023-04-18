@@ -10,7 +10,6 @@ keywords:
   - wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 In this document we discuss how the correctness of the Execution Trace is ensured.

@@ -10,7 +10,6 @@ keywords:
   - proof
   - Polygon zkEVM
   - faq
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This document compiles some of the frequently asked questions related to the Polygon zkEVM protocol. For more details, check out [this documentation](/protocol/introduction.md).

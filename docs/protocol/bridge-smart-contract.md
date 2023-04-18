@@ -10,7 +10,6 @@ keywords:
   - bridge
   - Polygon zkEVM
   - smart contracts
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This section describes how asset transfers are enabled by three smart contracts; the **Bridge SC** (PolygonZkEVMBridge.sol), the **Global Exit Root Manager** (PolygonZkEVMGlobalExitRoot.sol), and the **Consensus Contract** (PolygonZkEVM.sol).

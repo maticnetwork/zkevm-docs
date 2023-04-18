@@ -1,7 +1,7 @@
 ---
 id: setup-local-node
 title: Setup Local zkNode
-sidebar_label: Local zkNode
+sidebar_label: Setup Local zkNode
 description: Detailed guide on setting up Polygon zkEVM Node locally on your device
 keywords:
   - docs
@@ -12,7 +12,6 @@ keywords:
   - local zknode
   - tutorial
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 It's crucial that developers can thoroughly test the network for a developing blockchain technology like **Polygon zkEVM** without putting users or themselves at unnecessary risk. Developers should be able to test their smart contracts, experiment with new code, and play around with the network on their local machines.

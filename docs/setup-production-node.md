@@ -1,7 +1,7 @@
 ---
 id: setup-production-node
 title: Setup Production zkNode
-sidebar_label: Production zkNode
+sidebar_label: Setup Production zkNode
 description: Detailed guide on setting up a live/production Polygon zkEVM Node using Docker.
 keywords:
   - docs
@@ -12,7 +12,6 @@ keywords:
   - production zknode
   - tutorial
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Polygon zkEVM is now available on the Mainnet Beta for developers to launch smart contracts, execute transactions, and experiment with the network. This tutorial extends the exploration by allowing developers to **launch their own node on the zkEVM Public Testnet**.

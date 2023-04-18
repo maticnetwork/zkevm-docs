@@ -9,7 +9,6 @@ keywords:
   - polygon
   - bridge
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The ability of any blockchain to exchange data with other blockchains is critical for it to participate in an ecosystem of other blockchains; this is known as **interoperability**. Many interoperability-enabling solutions have been developed, each with their own set of advantages and disadvantages.

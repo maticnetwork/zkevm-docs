@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - state machine
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Memory Align State Machine** is a secondary state machine that includes **an executor (the Memory Align SM Executor)** and **an internal Memory Align PIL (program) that is a set of verification rules written in the PIL language**.

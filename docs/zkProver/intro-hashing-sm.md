@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - keccak
   - poseidon
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 For hashing, the zkEVM utilizes two state machines: the **Keccak State Machine** and the **POSEIDON State Machine**. The Keccak-256 hash function is used for seamless EVM compatibility, whereas [POSEIDON](https://eprint.iacr.org/2019/458.pdf) is best suited for the zkProver context because it is a [**STARK-friendly Hash (SFH)**](https://starkware.co/hash-challenge/) function.

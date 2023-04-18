@@ -9,7 +9,6 @@ keywords:
   - zkEVM
   - wiki
   - polygon
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 :::info Before We Begin

@@ -14,7 +14,6 @@ keywords:
   - zkEVM
   - polygon zkEVM
   - architecture
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 ## Overview

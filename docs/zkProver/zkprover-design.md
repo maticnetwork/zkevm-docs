@@ -10,7 +10,6 @@ keywords:
   - polygon
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The overall design of the Polygon zkEVM follows the State Machine model, and thus **emulates the Ethereum Virtual Machine (EVM)**, with the aim to provide the same user experience as in Ethereum. In addition to enabling payments and transfers of ERC20 tokens, users can now run Ethereum smart contracts on it.

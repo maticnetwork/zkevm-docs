@@ -10,7 +10,6 @@ keywords:
   - bridge
   - Polygon zkEVM
   - exit tree
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The zkEVM's Bridge SC utilizes a special Merkle Tree called **Exit Tree** for each of the networks participating in the communication or asset-exchange.

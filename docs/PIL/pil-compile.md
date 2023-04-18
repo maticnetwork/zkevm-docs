@@ -10,7 +10,6 @@ keywords:
   - state
   - machine
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Depending on the language used in implementation, every PIL code can be compiled into either a $\texttt{JSON}$ file or a $\texttt{C++}$ code by using a compiler called $\bf{pilcom}$. 

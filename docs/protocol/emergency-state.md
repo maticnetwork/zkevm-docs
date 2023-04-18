@@ -12,7 +12,6 @@ keywords:
   - censorship
   - emergency state
   - malfunction
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The emergency state is a Consensus Contract state (of 'PolygonZkEVM.sol' and 'PolygonZkEVMBridge.sol') that, when activated, terminates batch sequencing and bridge operations. The goal of enabling the emergency state is to allow the Polygon team to solve cases of soundness vulnerabilities or exploitation of any smart contract bugs. It is a security measure used to protect users' assets in L2.

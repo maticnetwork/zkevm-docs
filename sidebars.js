@@ -165,7 +165,7 @@ module.exports = {
       className: 'sidebar-title',
     },
     "develop",
-    "wallet-usage-guide",
+    "bridge-to-zkevm",
     "setup-local-node",
     "setup-production-node",
     "zkevm-gas-station",

@@ -12,7 +12,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - poseidon
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 ## The Storage Executor

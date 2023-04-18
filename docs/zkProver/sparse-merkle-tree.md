@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - merkle tree
   - sparse
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 zkProver's data is stored in the form of a special **Sparse Merkle Tree (SMT), which is a tree that combines the concept of a Merkle Tree and that of a Patricia tree**. The design is based on how the Sparse Merkle Trees are constructed and how they store **keys** and **values**.

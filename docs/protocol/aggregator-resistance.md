@@ -12,7 +12,6 @@ keywords:
   - censorship
   - aggregator
   - malfunction
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 In the same way that the system cannot reach L2 State finality without an active and well-functioning Sequencer, there can be no finality without an active and well-functioning Aggregator.

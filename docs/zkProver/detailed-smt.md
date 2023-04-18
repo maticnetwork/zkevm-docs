@@ -9,7 +9,6 @@ keywords:
   - polygon wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This document covers more concepts needed in understanding our specific design of the zkProver storage using binary SMTs. These concepts also help in elucidating how **keys influence the shape of binary SMTs**.

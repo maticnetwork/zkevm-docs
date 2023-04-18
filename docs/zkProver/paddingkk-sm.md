@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - state machine
   - padding kk
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 All Keccak-related state machines are accessed through the Padding-KK state machine. It is therefore responsible for handling queries from the Main state machine. The common queries are requests for digests of messages, together with validation of these digests.

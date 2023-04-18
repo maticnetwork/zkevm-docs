@@ -9,7 +9,6 @@ keywords:
   - polygon
   - zkevm protocol
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This document provides a comprehensive list of differences between the Ethereum Virtual Machine (EVM) and the Polygon Zero-Knowledge Ethereum Virtual Machine (zkEVM). The list includes supported EIPs, opcodes, and additional changes made to build the zkEVM.

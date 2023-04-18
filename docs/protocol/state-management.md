@@ -11,7 +11,6 @@ keywords:
   - zkevm protocol
   - deploy on zkEVM
   - state transitions
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 This document aims to explain how the Polygon zkEVM Protocol manages the L2 Rollup's states while providing state transition verifiability and security.

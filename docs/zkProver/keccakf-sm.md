@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - state machine
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The KECCAK-F State Machine is one of the secondary zkProver state machines. It computes message string hashes and validates the accuracy of those computations upon the request of Main SM.

@@ -11,7 +11,6 @@ keywords:
   - machine
   - Polygon zkEVM
   - proofs of execution
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Once the constant and the committed polynomials are filled (as seen in the [Filling Polynomial section](filling-polynomial.md)), the next step is generation of a proof of correctness.

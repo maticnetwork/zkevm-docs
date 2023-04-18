@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - state machine
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Bits2Field State Machine** is one of the auxiliary state machines used specifically for parallelizing the implementation of KECCAK-F SM. Its source code is available [here](https://github.com/0xPolygonHermez/zkevm-prover/blob/main/src/sm/bits2field/bits2field_executor.cpp).

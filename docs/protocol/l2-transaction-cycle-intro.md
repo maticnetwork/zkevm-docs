@@ -11,7 +11,6 @@ keywords:
   - zkevm protocol
   - deploy on zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 :::info

@@ -8,7 +8,6 @@ keywords:
   - polygon
   - zkevm
   - gas price prediction
-image: https://wiki.polygon.technology/img/polygon-logo.png
 ---
 
 import Tabs from '@theme/Tabs';

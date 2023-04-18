@@ -10,7 +10,6 @@ keywords:
   - state
   - machine
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 PIL was designed with the aim to simplify the proving and verification of execution correctness. Given that PIL is geared towards modularity, each PIL code has to stipulate a unique identifier for each program. It therefore has an effective syntax that is easy to learn.

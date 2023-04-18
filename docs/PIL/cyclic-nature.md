@@ -11,7 +11,6 @@ keywords:
   - machine
   - Polygon zkEVM
   - cyclic nature
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 In order to synchronize the execution trace of a given program with the subgroup $G$ of the multiplicative group $\mathbb{F}^*$, over which interpolation is performed, an extra constant polynomial (or precompiled column) is added to the trace. 

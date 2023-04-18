@@ -11,7 +11,6 @@ keywords:
   - Polygon zkEVM
   - upgradability
   - Transparent Upgradeable Proxy
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 To allow for future updates to the zkEVM Protocol implementation (either in the case of adding new features, fixing bugs, or optimizations upgrades), the following contracts are deployed using a **Transparent Upgradeable Proxy (TUP)** pattern:

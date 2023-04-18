@@ -12,7 +12,6 @@ keywords:
   - programming language
   - zkEVM
   - introduction
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Ethereum is a state machine that transitions from an old state to a new state by reading a series of transactions. It is a natural choice, in order to interpret the set of EVM opcodes, to design another state machine as for the interpreter.

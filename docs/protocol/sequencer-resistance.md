@@ -12,7 +12,6 @@ keywords:
   - censorship
   - sequencer
   - malfunction
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Users must rely on a Trusted Sequencer for their transactions to be executed in the L2. However, users can include their transactions in a **forced batch** if they are unable to execute them through the Trusted Sequencer.

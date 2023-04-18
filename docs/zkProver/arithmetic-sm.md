@@ -10,7 +10,6 @@ keywords:
   - Polygon zkEVM
   - state machine
   - arithmetic state machine
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Arithmetic State Machine** is a secondary state machine that also **has an executor (the Arithmetic SM Executor)** and **an internal Arithmetic program (a set of verification rules written in the PIL language)**. The Arithmetic SM Executor is available in two languages: Javascript and C/C++.

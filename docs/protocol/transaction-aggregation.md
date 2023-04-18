@@ -11,7 +11,6 @@ keywords:
   - zkevm protocol
   - Consolidated State
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 :::info

@@ -11,7 +11,6 @@ keywords:
   - machine
   - Polygon zkEVM
   - config
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 In order for PIL to securely enable modularity, especially in complex settings such as the Polygon zkEVM's, where the Main SM has several secondary state machines executing different computations, a **dependency inclusion feature** among different `.pil` files needed to be developed.

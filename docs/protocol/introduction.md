@@ -11,7 +11,6 @@ keywords:
   - zkevm protocol
   - deploy on zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Various **Layer 2 solutions** aimed at improving the **scalability of the Ethereum** network, **primarily transaction throughput**, have been developed over the past years. The ultimate and intended benefit for Ethereum network users is a reduction in gas fees, while maintaining decentralisation and security.

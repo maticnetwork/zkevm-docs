@@ -10,7 +10,6 @@ keywords:
   - state
   - machine
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 For most of the programs used in the zkEVM's Prover, the values recorded in the columns of execution traces are field elements. 

@@ -10,7 +10,6 @@ keywords:
   - state
   - machine
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Public Values refers to values of committed polynomials that are known to both the prover and the verifier, as part of the arithmetization process. For example, if the prover is claiming to know the output of a certain computation, then its arithmetization would lead to the inclusion of a public value to some of the polynomials representing such a computation.

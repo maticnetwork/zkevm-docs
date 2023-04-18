@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - glossary
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 ### Layer 1

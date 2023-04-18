@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - keccak framework
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The zkEVM, as an L2 zk-Rollup for Ethereum, employs the Keccak hash function to achieve seamless compatibility with the Ethereum blockchain at Layer 1. However, **rather than implementing the Keccak-256 hash function as a single state machine, the zkEVM does so in a framework of four state machines**. They are as follows:

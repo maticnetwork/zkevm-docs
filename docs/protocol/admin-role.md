@@ -10,7 +10,6 @@ keywords:
   - zkEVM Protocol
   - Polygon zkEVM
   - admin role
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The Admin is an Ethereum account that controls the Consensus contract, but **it is planned to be removed in the future**. It is the only account in the contract that can call the following functions;

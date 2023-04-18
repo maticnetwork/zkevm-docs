@@ -10,7 +10,6 @@ keywords:
   - zkEVM
   - Polygon zkEVM
   - mechanism
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 The **Storage SM** is one of zkProver's secondary state machines, and thus receives instructions from the Main SM called **Storage Actions**. The Storage Actions basically refer to the verification of **CRUD** operations executed by the Main SM.

@@ -1,7 +1,7 @@
 ---
 id: develop
 title: Start Building on Polygon zkEVM
-sidebar_label: Develop
+sidebar_label: Build on zkEVM
 description: A guide to help developers get started building on the Polygon zkEVM
 keywords:
   - docs
@@ -10,7 +10,6 @@ keywords:
   - zkEVM mainnet
   - deploy on zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Polygon zkEVM is the first zero-knowledge scaling solution that is **fully equivalent to an EVM**. All existing smart contracts, developer toolings and wallets work seamlessly. Polygon zkEVM harnesses the power of zero-knowledge proofs in order to reduce transaction costs and massively increase throughput, all while inheriting the security of Ethereum.

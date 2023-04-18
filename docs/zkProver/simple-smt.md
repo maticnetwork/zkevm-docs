@@ -9,7 +9,6 @@ keywords:
   - polygon wiki
   - zkEVM
   - Polygon zkEVM
-image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
 Understanding the finer details of how the Storage SM operates requires a good grasp of the way the zkProver's Sparse Merkle Trees (SMTs) are constructed. This document explains how these SMTs are built. 

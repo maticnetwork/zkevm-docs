@@ -118,22 +118,22 @@ a:after {
 }
 @media (min-width: 576px) {
   .bootstrap-wrapper .container {
-    max-width: 540px;
+    max-width: 530px;
   }
 }
 @media (min-width: 768px) {
   .bootstrap-wrapper .container {
-    max-width: 720px;
+    max-width: 700px;
   }
 }
 @media (min-width: 992px) {
   .bootstrap-wrapper .container {
-    max-width: 960px;
+    max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
   .bootstrap-wrapper .container {
-    max-width: 1140px;
+    max-width: 1100px;
   }
 }
 .bootstrap-wrapper .container-fluid {
@@ -1224,16 +1224,17 @@ strong {
 }
 
 .index-page h1 {
-  font-size: 4.2em;
+  font-size: 4em;
   margin-bottom: 20px;
 }
 
 .index-page h2 {
-  font-size: 3em;
+  font-size: 3.25em;
+  margin-bottom: 20px;
 }
 
-.index-page h3 {
-  font-size: 2.1em;
+.index-page h4 {
+  font-size: 1.85em;
 }
 
 .index-page:not(.exclude) {
@@ -1326,12 +1327,12 @@ strong {
 .footer__link-item {
   display: block;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: #67666e;
   text-decoration: none;
 }
 
 .footer__link-item:hover {
-  color: #a626c1;
+  color: #fff;
 }
 
 .footer__btn {
@@ -1349,6 +1350,58 @@ strong {
 .footer__btn:focus,
 .footer__btn.focus {
   box-shadow: 0 0 0 0.2rem rgba(166, 38, 193, 0.5);
+}
+
+.footer_logo-row {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.padding-bottom-huge {
+  padding-bottom: 5rem !important;
+}
+
+.w-nav-brand {
+    float: left;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav_logo-link {
+    min-width: 152px;
+    flex: 0 2 auto;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.nav_logo-link.is-footer {
+    justify-content: flex-start;
+}
+
+.footer_sm-link-wrapper {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.icon-1x1-medium {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-1x1-medium.is-footer-icon {
+    color: #67666e;
+    transition: color .2s;
+}
+
+.icon-1x1-medium.is-footer-icon:hover {
+    color: #fff;
 }
 
 @media (max-width: 767px) {

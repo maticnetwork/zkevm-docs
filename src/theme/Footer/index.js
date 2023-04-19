@@ -1,10 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from './styles.module.css';
 
 function FooterLink({to, href, label, ...props}) {
   const toUrl = useBaseUrl(to);
@@ -26,18 +24,13 @@ function FooterLink({to, href, label, ...props}) {
   );
 }
 
-const FooterLogo = ({url, alt}) => (
-  <img className="footer__logo" alt={alt} src={url} />
-);
-
 function Footer() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   const { themeConfig = {} } = siteConfig;
   const { footer } = themeConfig;
 
-  const { copyright, links = [], logo = {} } = footer || {};
-  const logoUrl = useBaseUrl(logo.src);
+  const { copyright, links = [] } = footer || {};
 
   if (!footer) {
     return null;
@@ -49,65 +42,112 @@ function Footer() {
         'footer--dark': footer.style === 'dark',
       })}
     >
-      <div className="container">
-        <div className="row">
-          {links.map((linkItem, i) => (
-            <div key={i} className="col footer__col">
-              {linkItem.title != null ? (
-                <h4 className="footer__title">{linkItem.title}</h4>
-              ) : null}
-              {linkItem.items != null &&
-              Array.isArray(linkItem.items) &&
-              linkItem.items.length > 0 ? (
-                <div className="footer__items">
-                  {linkItem.items.map((item, key) =>
-                    item.html ? (
-                      <div
-                        key={key}
-                        className="footer__item"
-                        dangerouslySetInnerHTML={{
-                          __html: item.html,
-                        }}
-                      />
-                    ) : (
-                      <div
-                        key={item.href || item.to}
-                        className="footer__item"
-                      >
-                        <FooterLink {...item} />
-                      </div>
-                    )
-                  )}
+        <div className="container">
+          <div className="footer_logo-row">
+            <a href="/" aria-current="page" className="nav_logo-link is-footer w-nav-brand w--current">
+              <img src="img/polygon-labs.svg" loading="lazy" width="113" height="36" alt=""/>
+            </a>
+
+            <div className="footer_sm-link-wrapper">
+              <a href="https://twitter.com/0xPolygon" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.069 6.73077C20.394 7.07692 19.719 7.19231 18.9315 7.30769C19.719 6.84615 20.2815 6.15385 20.5065 5.23077C19.8315 5.69231 19.044 5.92308 18.144 6.15385C17.469 5.46154 16.4565 5 15.444 5C13.0815 5 11.2815 7.30769 11.844 9.61538C8.80647 9.5 6.10647 8 4.19397 5.69231C3.18147 7.42308 3.74397 9.61538 5.31897 10.7692C4.75647 10.7692 4.19397 10.5385 3.63147 10.3077C3.63147 12.0385 4.86897 13.6538 6.55647 14.1154C5.99397 14.2308 5.43147 14.3462 4.86897 14.2308C5.31897 15.7308 6.66897 16.8846 8.35647 16.8846C7.00647 17.9231 4.98147 18.5 3.06897 18.2692C4.75647 19.3077 6.66897 20 8.69397 20C15.5565 20 19.3815 14.1154 19.1565 8.69231C19.944 8.23077 20.619 7.53846 21.069 6.73077Z" fill="currentcolor"></path>
+                  </svg>
                 </div>
-              ) : null}
+              </a>
+              <a href="https://t.me/polygonofficial" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7865 4.1052L3.95615 10.6219C2.80755 11.0851 2.8142 11.7285 3.74542 12.0154L8.06644 13.3689L18.064 7.03519C18.5368 6.74638 18.9687 6.90175 18.6136 7.21819L10.5136 14.5584H10.5117L10.5136 14.5594L10.2156 19.0315C10.6522 19.0315 10.8449 18.8304 11.0898 18.5931L13.1886 16.5438L17.5543 19.7817C18.3592 20.2268 18.9373 19.998 19.1376 19.0334L22.0035 5.47202C22.2968 4.29107 21.5545 3.75635 20.7865 4.1052Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="https://discord.com/invite/0xPolygon" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.3166 7.08877C17.1362 6.57346 15.8874 6.20731 14.6032 6C14.4432 6.26982 14.2563 6.63272 14.1274 6.92143C12.7428 6.72718 11.371 6.72718 10.0118 6.92143C9.88302 6.63278 9.69191 6.26982 9.53047 6C8.24501 6.20741 6.99512 6.57449 5.8141 7.09146C3.46398 10.4049 2.82688 13.6359 3.14539 16.8212C4.70415 17.9072 6.21475 18.567 7.69989 18.9987C8.06898 18.5251 8.39525 18.0238 8.67533 17.4998C8.1421 17.3104 7.62805 17.077 7.13928 16.8023C7.26791 16.7134 7.3935 16.6207 7.51588 16.5244C10.4776 17.8168 13.6956 17.8168 16.622 16.5244C16.745 16.62 16.8705 16.7127 16.9986 16.8023C16.509 17.0777 15.994 17.3116 15.4597 17.5012C15.7414 18.0273 16.0671 18.5291 16.4352 19C17.9217 18.5683 19.4337 17.9086 20.9925 16.8212C21.3662 13.1287 20.354 9.92724 18.3166 7.08871V7.08877ZM9.07885 14.8623C8.18975 14.8623 7.46061 14.0879 7.46061 13.1449C7.46061 12.2019 8.17421 11.4262 9.07885 11.4262C9.98356 11.4262 10.7126 12.2005 10.6971 13.1449C10.6985 14.0879 9.98356 14.8623 9.07885 14.8623ZM15.059 14.8623C14.1699 14.8623 13.4408 14.0879 13.4408 13.1449C13.4408 12.2019 14.1544 11.4262 15.059 11.4262C15.9637 11.4262 16.6928 12.2005 16.6772 13.1449C16.6772 14.0879 15.9637 14.8623 15.059 14.8623Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="https://www.reddit.com/r/0xPolygon/" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.069 12.1445C22.069 10.9157 21.0835 9.93969 19.8826 9.93969C19.3153 9.93891 18.7696 10.1591 18.3594 10.5542C16.8541 9.46977 14.793 8.76512 12.4992 8.67475L13.5026 3.93985L16.7642 4.6445C16.8003 5.47587 17.4811 6.14464 18.3236 6.14464C19.1837 6.14464 19.8826 5.43999 19.8826 4.57214C19.8826 3.70477 19.1838 3 18.3236 3C17.7143 3 17.1764 3.36144 16.9256 3.88561L13.2878 3.10848C13.1802 3.09024 13.0726 3.10848 13.0009 3.16272C12.9112 3.21696 12.8576 3.3072 12.8398 3.41569L11.7284 8.69264C9.39874 8.76512 7.30185 9.46977 5.77866 10.5723C5.3684 10.1772 4.82267 9.95709 4.25535 9.95793C3.03667 9.95793 2.06897 10.9517 2.06897 12.1627C2.06897 13.0662 2.60649 13.8251 3.3594 14.1688C3.32284 14.3897 3.30484 14.6134 3.30561 14.8374C3.30561 18.2347 7.23045 21 12.0691 21C16.9078 21 20.8327 18.2529 20.8327 14.8374C20.8326 14.6135 20.8146 14.3899 20.7789 14.1688C21.5315 13.8251 22.069 13.048 22.069 12.1445ZM7.051 13.7166C7.051 12.8493 7.74977 12.1445 8.61037 12.1445C9.4705 12.1445 10.1694 12.8491 10.1694 13.7166C10.1694 14.5841 9.47061 15.2891 8.61037 15.2891C7.74989 15.3069 7.051 14.5841 7.051 13.7166ZM15.7788 17.8914C14.7035 18.9758 12.6604 19.0482 12.0691 19.0482C11.4598 19.0482 9.41683 18.9576 8.35916 17.8914C8.19815 17.7288 8.19815 17.4757 8.35916 17.3131C8.52053 17.1507 8.77138 17.1507 8.93274 17.3131C9.61389 18 11.0476 18.2347 12.0691 18.2347C13.0907 18.2347 14.5421 17.9998 15.2052 17.3131C15.3666 17.1507 15.6174 17.1507 15.7788 17.3131C15.9221 17.4757 15.9221 17.7288 15.7788 17.8914ZM15.4919 15.307C14.6316 15.307 13.9329 14.6024 13.9329 13.7349C13.9329 12.8674 14.6316 12.1627 15.4919 12.1627C16.3524 12.1627 17.0511 12.8674 17.0511 13.7349C17.0511 14.584 16.3524 15.307 15.4919 15.307Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="https://github.com/maticnetwork/" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0384 2C6.5338 2 2.06897 6.58933 2.06897 12.2474C2.06897 16.7739 4.94359 20.6088 8.85796 21.9919C9.34726 22.0547 9.53074 21.7404 9.53074 21.4889C9.53074 21.2375 9.53074 20.6088 9.53074 19.7286C6.77845 20.3573 6.16683 18.3456 6.16683 18.3456C5.73869 17.1511 5.06591 16.8367 5.06591 16.8367C4.14848 16.2081 5.12707 16.2081 5.12707 16.2081C6.10567 16.2709 6.65613 17.2768 6.65613 17.2768C7.57356 18.8485 8.98028 18.4084 9.53074 18.1569C9.59191 17.4654 9.89772 17.0253 10.1424 16.7739C7.94053 16.5224 5.61637 15.6422 5.61637 11.6816C5.61637 10.55 5.98334 9.66984 6.65613 8.91543C6.59496 8.72682 6.22799 7.65808 6.77845 6.27499C6.77845 6.27499 7.63472 6.02352 9.53074 7.34374C10.3259 7.09227 11.1821 7.0294 12.0384 7.0294C12.8947 7.0294 13.7509 7.15514 14.546 7.34374C16.4421 6.02352 17.2983 6.27499 17.2983 6.27499C17.8488 7.65808 17.4818 8.72682 17.4207 8.97829C18.0323 9.66984 18.4604 10.6128 18.4604 11.7445C18.4604 15.7051 16.1362 16.5224 13.9344 16.7739C14.3014 17.0882 14.6072 17.7169 14.6072 18.6599C14.6072 20.043 14.6072 21.1117 14.6072 21.4889C14.6072 21.7404 14.7907 22.0547 15.28 21.9919C19.2555 20.6088 22.069 16.7739 22.069 12.2474C22.0078 6.58933 17.543 2 12.0384 2Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/0xpolygon/" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3.06897" y="3" width="18" height="18" rx="5" stroke="currentcolor" stroke-width="1.5"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.569 7.5C18.1213 7.5 18.569 7.05228 18.569 6.5C18.569 5.94772 18.1213 5.5 17.569 5.5C17.0167 5.5 16.569 5.94772 16.569 6.5C16.569 7.05228 17.0167 7.5 17.569 7.5ZM15.569 12C15.569 13.933 14.002 15.5 12.069 15.5C10.136 15.5 8.56897 13.933 8.56897 12C8.56897 10.067 10.136 8.5 12.069 8.5C14.002 8.5 15.569 10.067 15.569 12ZM17.069 12C17.069 14.7614 14.8304 17 12.069 17C9.30755 17 7.06897 14.7614 7.06897 12C7.06897 9.23858 9.30755 7 12.069 7C14.8304 7 17.069 9.23858 17.069 12Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/company/polygonlabs/" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19ZM18.5 18.5V13.2C18.5 12.3354 18.1565 11.5062 17.5452 10.8948C16.9338 10.2835 16.1046 9.94 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17C14.6813 12.17 15.0374 12.3175 15.2999 12.5801C15.5625 12.8426 15.71 13.1987 15.71 13.57V18.5H18.5ZM6.88 8.56C7.32556 8.56 7.75288 8.383 8.06794 8.06794C8.383 7.75288 8.56 7.32556 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19C6.43178 5.19 6.00193 5.36805 5.68499 5.68499C5.36805 6.00193 5.19 6.43178 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27V18.5Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/PolygonTV" target="_blank" className="w-inline-block">
+                <div className="icon-1x1-medium is-footer-icon w-embed">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.855 4 13.732 4.022 14.582 4.058L15.586 4.106L16.547 4.163L17.447 4.224L18.269 4.288C19.161 4.35628 20.0004 4.73695 20.6395 5.36304C21.2786 5.98913 21.6764 6.82054 21.763 7.711L21.803 8.136L21.878 9.046C21.948 9.989 22 11.017 22 12C22 12.983 21.948 14.011 21.878 14.954L21.803 15.864C21.79 16.01 21.777 16.151 21.763 16.289C21.6764 17.1796 21.2784 18.0112 20.6391 18.6373C19.9999 19.2634 19.1602 19.6439 18.268 19.712L17.448 19.775L16.548 19.837L15.586 19.894L14.582 19.942C13.7218 19.9794 12.861 19.9987 12 20C11.139 19.9987 10.2782 19.9794 9.418 19.942L8.414 19.894L7.453 19.837L6.553 19.775L5.731 19.712C4.83895 19.6437 3.99955 19.2631 3.36047 18.637C2.72139 18.0109 2.32357 17.1795 2.237 16.289L2.197 15.864L2.122 14.954C2.04554 13.9711 2.00484 12.9858 2 12C2 11.017 2.052 9.989 2.122 9.046L2.197 8.136C2.21 7.99 2.223 7.849 2.237 7.711C2.32354 6.8207 2.72122 5.98942 3.36009 5.36334C3.99897 4.73727 4.83813 4.3565 5.73 4.288L6.551 4.224L7.451 4.163L8.413 4.106L9.417 4.058C10.2775 4.02063 11.1387 4.0013 12 4V4ZM10 9.575V14.425C10 14.887 10.5 15.175 10.9 14.945L15.1 12.52C15.1914 12.4674 15.2673 12.3916 15.3201 12.3003C15.3729 12.209 15.4007 12.1055 15.4007 12C15.4007 11.8945 15.3729 11.791 15.3201 11.6997C15.2673 11.6084 15.1914 11.5326 15.1 11.48L10.9 9.056C10.8088 9.00332 10.7053 8.9756 10.5999 8.97562C10.4945 8.97563 10.3911 9.00339 10.2998 9.0561C10.2086 9.1088 10.1329 9.1846 10.0802 9.27587C10.0276 9.36713 9.99993 9.47065 10 9.576V9.575Z" fill="currentcolor"></path>
+                  </svg>
+                </div>
+              </a>
             </div>
-          ))}
-        </div>
-        {(logo || copyright) && (
-          <div className="text--center">
-            {logo && logo.src && (
-              <div className="margin-bottom--sm">
-                {logo.href ? (
-                  <a
-                    href={logo.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.footerLogoLink}
-                  >
-                    <FooterLogo alt={logo.alt} url={logoUrl} />
-                  </a>
-                ) : (
-                  <FooterLogo alt={logo.alt} url={logoUrl} />
-                )}
+          </div>
+          <div className="padding-bottom-huge"></div>
+          <div className="row">
+            {links.map((linkItem, i) => (
+              <div key={i} className="col footer__col">
+                {linkItem.title != null ? (
+                  <h4 className="footer__title">{linkItem.title}</h4>
+                ) : null}
+                {linkItem.items != null &&
+                Array.isArray(linkItem.items) &&
+                linkItem.items.length > 0 ? (
+                  <div className="footer__items">
+                    {linkItem.items.map((item, key) =>
+                      item.html ? (
+                        <div
+                          key={key}
+                          className="footer__item"
+                          dangerouslySetInnerHTML={{
+                            __html: item.html,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          key={item.href || item.to}
+                          className="footer__item"
+                        >
+                          <FooterLink {...item} />
+                        </div>
+                      )
+                    )}
+                  </div>
+                ) : null}
               </div>
-            )}
+            ))}
+          </div>
+          <div className="text--center" style={{color: "#67666e"}}>
             {copyright}
           </div>
-        )}
       </div>
     </footer>
   );
 }
-
 
 export default Footer;

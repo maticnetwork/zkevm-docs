@@ -177,12 +177,7 @@ module.exports = {
             ]
           },
     ],
-    logo: {
-      alt: 'Polygon zkEVM Logo',
-      src: 'img/polygon-zkevm.svg',
-      href: 'https://polygon.technology/polygon-zkevm',
-    },
-    copyright: `Copyright © ${new Date().getFullYear()}`,
+    copyright: `Copyright © ${new Date().getFullYear()} Polygon Labs UI (Cayman) Ltd.`,
     },
     image: 'img/thumbnail.png',
     prism: {
@@ -207,7 +202,7 @@ module.exports = {
         alt: "Polygon logo",
         src: "/img/polygon-zkevm.svg",
         srcDark: "/img/polygon-zkevm.svg",
-        href: 'https://wiki.polygon.technology/zkEVM',
+        href: 'https://zkevm.polygon.technology',
         target: "_self",
        },
       items: [
@@ -309,8 +304,8 @@ module.exports = {
         },
         gtag: {
           // Need to create new tags for zkEVM docs
-          // trackingID: 'G-LLNECLTBDN',
-          // anonymizeIP: true,
+           trackingID: 'G-LLNECLTBDN',
+           anonymizeIP: true,
         },
       },
     ],

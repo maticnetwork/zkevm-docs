@@ -102,10 +102,10 @@ function Home() {
             <section className="section container-fluid">
             <div className="row justify-content-center">
               <div className="col-lg-8 pop-text">
-                <h1 className="mt-0">
+                <h2 className="mt-0">
                   zkEVM <span className="white-text">for Builders</span>
-                </h1>
-                <h3 className="mt-0">Ethereum scalability with zkEVM <span className="white-text">performance and security</span></h3>
+                </h2>
+                <h4 className="mt-0">Ethereum scalability with zkEVM <span className="white-text">performance and security</span></h4>
                 <p className="lead">
                   <b>Polygon zkEVM Builders</b> is the documentation hub providing 
                   extensive documentation, community resources, and guides for enthusiasts 

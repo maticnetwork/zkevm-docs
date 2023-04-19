@@ -5,6 +5,27 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { firstRow, secondRow } from "../data/features";
 
+async function addMaticNetwork() {
+  try {
+    const result = await window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [{
+        chainId: "0x44D",
+        rpcUrls: ["https://zkevm-rpc.com"],
+        chainName: "Polygon zkEVM",
+        nativeCurrency: {
+          name: "Ether",
+          symbol: "ETH",
+          decimals: 18
+        },
+        blockExplorerUrls: ["https://zkevm.polygonscan.com/"]
+      }]
+    });
+  } catch (error){
+    console.log(error)
+  }
+}
+
 function FirstRow({ title, linkUrl, imageUrl }) {
   return (
     <div className="col-md-4 p-8">
@@ -39,6 +60,37 @@ function SecondRow({ title, linkUrl }) {
   );
 }
 
+function Buttonizer({linkUrl}) {
+  return (
+    <div className="button-group">
+      <button onClick={addMaticNetwork} className="button is-icon w-inline-flex">
+        <div className="button-icon_left-element is-icon-medium">
+          <div className="text-size-small">Start Learning</div>
+        </div>
+        <div className="button-icon_right-element is-icon-medium">
+          <div className="icon-1x1-medium w-embed">
+            <svg width="auto" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </button>
+      <a href={linkUrl} target="_blank" className="button is-icon is-secondary w-inline-flex">
+        <div className="button-icon_left-element is-icon-medium">
+          <div className="text-size-small">Start Building</div>
+        </div>
+        <div className="button-icon_right-element is-icon-medium">
+          <div className="icon-1x1-medium w-embed">
+            <svg width="auto" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+}
+
 function Home() {
   return (
     <Layout>
@@ -59,20 +111,11 @@ function Home() {
                   extensive documentation, community resources, and guides for enthusiasts 
                   and developers interested in learning about or building on zkEVM.
                 </p>
+                <div class="padding-bottom custom-padding"></div>
+                <Buttonizer linkUrl={'https://wallet.polygon.technology/zkEVM-Bridge/bridge'} />
               </div>
               <div className="col-lg-4">
-                <div className="tabs_animation-wrapper">
-                  <iframe
-                    src="https://player.vimeo.com/video/791154651?h=f4d511386d&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1"
-                    frameBorder="0"
-                    allow="autoplay"
-                    className="tabs-frame"
-                    title="Hero"
-                    data-ready="true"
-                    width="500"
-                    height="450"
-                  />
-                </div>
+                <div className="tabs_animation-wrapper"><iframe src="https://player.vimeo.com/video/791154651?h=f4d511386d&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameBorder="0" allow="autoplay" className="tabs-frame" title="Hero" data-ready="true" width="500"height="450" /></div>
               </div>
             </div>
             </section>
@@ -84,8 +127,8 @@ function Home() {
                   <FirstRow key={idx} {...props} />
                 ))}
             </div>
-            <br />
-            <br />
+            <br/>
+            <br/>
           </div>
           <div className="row" style={{marginBottom: 32}}>
             <a href="https://github.com/0xpolygonhermez" style={{color: "white", display: "inline-flex"}} className="pop-text">
@@ -123,6 +166,45 @@ function Home() {
               </div>          
           </div>
         </div>
+
+        <section className="newsletter">
+          <div className="newsletter_anim-wrapper pb_intersection">
+            <div className="animation_embed w-embed w-iframe">
+              <iframe src="https://player.vimeo.com/video/791149043?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style={{position: 'absolute', top:0, left:0, width:'100%', height:'100%'}} title="Hero" data-ready="true"></iframe>    
+            </div>
+          </div>
+          <div className="padding-global">
+            <div class="container-medium">  
+              <div class="padding-section-large">
+                <div class="newsletter-form_max-width">
+                  <div class="tiny-text">STAY UP TO DATE</div>
+                  <div class="padding-bottom padding-xsmall"></div>
+                  <h3 class="heading-style-h4"><span className="white-text">Get our newsletter</span></h3>
+                  <div class="padding-bottom padding-custom2"></div>
+                  <div class="w-form">
+                    <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" method="get" class="newsletter_form" aria-label="Newsletter Form">
+                      <input type="email" class="form_input is-newsletter w-input" maxlength="256" name="Newsletter-Email" data-name="Newsletter Email" placeholder="Enter your email" id="Newsletter-Email" required="" />
+                        <div class="newsletter_form-embed w-embed w-script">
+                          <input type="hidden" name="Path" id="titleinput" value="" />
+                            <script>
+                            const slg = window.location.pathname.slice(1);
+                            document.getElementById("titleinput").value = slg;
+                            </script>
+                          </div>
+                        <input type="submit" id="newsletter-submit" value="" data-wait="" class="newsletter_submit-icon w-button" />
+                    </form>
+                    <div class="newsletter_success-state w-form-done" tabindex="-1" role="region" aria-label="Newsletter Form success">
+                      <div>Thank You! We have received your submission!<br/></div>
+                    </div>
+                    <div class="newsletter_error-state w-form-fail" tabindex="-1" role="region" aria-label="Newsletter Form failure">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </Layout>
   );

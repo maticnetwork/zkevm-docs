@@ -1308,6 +1308,7 @@ strong {
   background-color: #000;
   color: #ffffff;
   padding: 44px 0;
+  border-top: thin dotted;
 }
 
 .footer-container {

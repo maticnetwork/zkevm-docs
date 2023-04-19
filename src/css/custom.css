@@ -1213,8 +1213,8 @@ strong {
 }
 
 .index-page .row > :nth-child(1) {
-  margin-top: 110px;
-  margin-bottom: 110px;
+  margin-top: 75px;
+  margin-bottom: 75px;
   z-index: 199;
 }
 

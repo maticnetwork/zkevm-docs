@@ -5,6 +5,27 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { firstRow, secondRow } from "../data/features";
 
+async function addMaticNetwork() {
+  try {
+    const result = await window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [{
+        chainId: "0x44D",
+        rpcUrls: ["https://zkevm-rpc.com"],
+        chainName: "Polygon zkEVM",
+        nativeCurrency: {
+          name: "Ether",
+          symbol: "ETH",
+          decimals: 18
+        },
+        blockExplorerUrls: ["https://zkevm.polygonscan.com/"]
+      }]
+    });
+  } catch (error){
+    console.log(error)
+  }
+}
+
 function FirstRow({ title, linkUrl, imageUrl }) {
   return (
     <div className="col-md-4 p-8">
@@ -39,10 +60,10 @@ function SecondRow({ title, linkUrl }) {
   );
 }
 
-function Buttonizer({docsUrl, linkUrl}) {
+function Buttonizer({linkUrl}) {
   return (
     <div className="button-group">
-      <a href={useBaseUrl(docsUrl)} target="_blank" className="button is-icon w-inline-flex">
+      <button onClick={addMaticNetwork} className="button is-icon w-inline-flex">
         <div className="button-icon_left-element is-icon-medium">
           <div className="text-size-small">Start Learning</div>
         </div>
@@ -53,8 +74,8 @@ function Buttonizer({docsUrl, linkUrl}) {
             </svg>
           </div>
         </div>
-      </a>
-      <a href={useBaseUrl(linkUrl)} target="_blank" className="button is-icon is-secondary w-inline-flex">
+      </button>
+      <a href={linkUrl} target="_blank" className="button is-icon is-secondary w-inline-flex">
         <div className="button-icon_left-element is-icon-medium">
           <div className="text-size-small">Start Building</div>
         </div>
@@ -90,6 +111,8 @@ function Home() {
                   extensive documentation, community resources, and guides for enthusiasts 
                   and developers interested in learning about or building on zkEVM.
                 </p>
+                <div class="padding-bottom custom-padding"></div>
+                <Buttonizer linkUrl={'https://wallet.polygon.technology/zkEVM-Bridge/bridge'} />
               </div>
               <div className="col-lg-4">
                 <div className="tabs_animation-wrapper"><iframe src="https://player.vimeo.com/video/791154651?h=f4d511386d&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameBorder="0" allow="autoplay" className="tabs-frame" title="Hero" data-ready="true" width="500"height="450" /></div>

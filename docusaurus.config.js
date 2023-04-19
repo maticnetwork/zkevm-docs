@@ -53,84 +53,6 @@ module.exports = {
       style: 'light',
       links: [
         {
-          title: "Resources",
-          items: [
-              {
-                href: 'https://support.polygon.technology/support/home',
-                label: 'Polygon Support',
-              },
-              {
-                  label: "Advocate Program",
-                  href: "https://polygon.technology/advocate-program/"
-              },
-              {
-                label: "Polygon Funds",
-                href: "https://polygon.technology/funds/"
-              },
-              {
-                  label: "Bug Bounty",
-                  href: "https://immunefi.com/bounty/polygon/"
-              },
-              {
-                href: 'https://www.dappstorekit.io/',
-                label: 'Build your own dApp',
-                target: '_blank',
-                rel: null,
-                position: 'right',
-              },
-          ]
-        },
-        {
-          title: "Reference",
-          items: [
-              {
-                label: "Whitepaper",
-                href: "https://github.com/maticnetwork/whitepaper/"
-              },
-              {
-                label: "Lightpaper",
-                href: "https://polygon.technology/lightpaper-polygon.pdf"
-              },
-              {
-                label: "zkEVM",
-                href: "https://polygon.technology/polygon-zkevm"
-              },
-              {
-                label: "Miden",
-                href: "https://polygon.technology/polygon-miden"
-              },
-          ]
-        },
-        {
-          title: "Native dApps",
-          items: [
-                  {
-                    href: 'https://wallet.polygon.technology',
-                    label: 'PoS Wallet',
-                    target: '_blank',
-                    rel: null,
-                  },
-                  {
-                    href: 'https://staking.polygon.technology/',
-                    label: 'PoS Staking',
-                    target: '_blank',
-                    rel: null,
-                  },
-                  {
-                    href: 'https://polygonscan.com/',
-                    label: 'PoS Explorer',
-                    target: '_blank',
-                    rel: null,
-                  },
-                  {
-                    href: 'https://explorer.hermez.io/',
-                    label: 'Hermez',
-                    target: '_blank',
-                    rel: null,
-                  },
-                ],
-        },
-        {
           title: "Polygon Labs",
           items: [
               {
@@ -138,24 +60,113 @@ module.exports = {
                 href: "https://polygon.technology/about/"
               },
               {
-                label: "Contact",
+                label: "Blog",
+                href: "https://blog.polygon.technology/"
+              },
+              {
+                label: "Careers",
+                href: "https://polygon.technology/careers"
+              },
+              {
+                label: "Matic Token",
+                href: "https://polygon.technology/matic-token"
+              },
+              {
+                label: "Contact Us",
                 href: "https://polygon.technology/contact-us/"
               },
-              {
-                  label: "Blogs",
-                  href: "https://blog.polygon.technology/"
-              },
-              {
-                label: "Brand Kit",
-                href: "https://www.notion.so/polygontechnology/Brand-Resources-2cd18ae436584e98a6c5aae56db73058/"
-              },
             ]
+        },
+        {
+          title: "Solutions",
+          items: [
+              {
+                label: "Polygon PoS",
+                href: "https://polygon.technology/polygon-pos"
+              },
+              {
+                label: "Polygon zkEVM",
+                href: "https://polygon.technology/polygon-zkevm"
+              },
+              {
+                label: "Polygon Supernets",
+                href: "https://polygon.technology/polygon-supernets"
+              },
+              {
+                label: "Polygon Miden",
+                href: "https://polygon.technology/polygon-miden"
+              },
+              {
+                label: "Polygon ID",
+                href: "https://polygon.technology/polygon-id"
+              },
+          ]
+        },
+        {
+          title: "Use Polygon",
+          items: [
+                  {
+                    href: 'https://wallet.polygon.technology',
+                    label: 'Polygon Wallet Suite',
+                    target: '_blank',
+                    rel: null,
+                  },
+                  {
+                    href: 'https://staking.polygon.technology/',
+                    label: 'Staking',
+                    target: '_blank',
+                    rel: null,
+                  },
+                  {
+                    href: 'https://polygonscan.com/',
+                    label: 'Polygon Scan',
+                    target: '_blank',
+                    rel: null,
+                  },
+                  {
+                    href: 'https://mapper.polygon.technology/',
+                    label: 'Token Mapper',
+                    target: '_blank',
+                    rel: null,
+                  },
+                  {
+                    href: 'https://polygon.technology/ecosystem',
+                    label: 'Ecosystem dApps',
+                    target: '_blank',
+                    rel: null,
+                  },
+                ],
+        },
+        {
+          title: "Resources",
+          items: [
+              {
+                href: 'https://support.polygon.technology/support/home',
+                label: 'Polygon Support',
+              },
+              {
+                label: "Advocate Program",
+                href: "https://polygon.technology/advocate-program/"
+              },
+              {
+                label: "Polygon Funds",
+                href: "https://polygon.technology/funds/"
+              },
+              {
+                label: "Bug Bounty",
+                href: "https://immunefi.com/bounty/polygon/"
+              },
+              {
+                href: 'https://www.dappstorekit.io/',
+                label: 'Build your own dApp',
+              },
+          ]
         },
         {
           title: "Community",
           items: [
               {
-                href: 'https://twitter.com/0xPolygon',
+                href: 'https://twitter.com/0xPolygonLabs',
                 label: 'Twitter',
               },
               {
@@ -176,6 +187,23 @@ module.exports = {
               },
             ]
           },
+        {
+          title: "Legal",
+          items: [
+              {
+                href: 'https://polygon.technology/terms-of-use',
+                label: 'Terms of Use',
+              },
+              {
+                label: "Privacy Policy",
+                href: "https://polygon.technology/privacy-policy"
+              },
+              {
+                label: "Cookie Policy",
+                href: "https://polygon.technology/cookie-policy"
+              },
+          ]
+        },
     ],
     copyright: `Copyright © ${new Date().getFullYear()} Polygon Labs UI (Cayman) Ltd.`,
     },

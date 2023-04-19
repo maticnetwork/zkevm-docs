@@ -43,16 +43,7 @@ You can **add zkEVM Network to your MetaMask wallet** instantly by clicking the 
 
 :::
 
-### Bridge Assets to zkEVM
-
-For moving assets across chains (L1 &harr; zkEVM), you will need to use the zkEVM Bridge. The bridge interface is available for both **Mainnet Beta** and **Testnet** in the [Polygon Wallet Suite](https://wallet.polygon.technology/zkEVM/bridge). Also, bridging can be done with the help of [MaticJS](https://wiki.polygon.technology/docs/develop/ethereum-polygon/matic-js/zkevm/initialize-zkevm/) SDK.
-
-Check out this video guide on **how to bridge tokens from L1 to the zkEVM Testnet**. The same video will apply to the zkEVM Mainnet Beta.
-
-<video loop autoplay width="100%" height="100%" controls="true" >
-  <source type="video/mp4" src="/img/zkevm/zkevmwallettestnet.mp4"></source>
-  <p>Your browser does not support the video element.</p>
-</video>
+The next step is to [bridge your assets](bridge-to-zkevm.md) from Ethereum &rarr; Polygon zkEVM. You can use the zKEVM Bridge natively built inside Polygon Wallet Suite to bridge your assets.
 
 ### Deploying Smart Contracts
 

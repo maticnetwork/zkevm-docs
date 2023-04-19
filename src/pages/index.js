@@ -65,7 +65,7 @@ function Buttonizer({linkUrl}) {
     <div className="button-group">
       <button onClick={addMaticNetwork} className="button is-icon w-inline-flex">
         <div className="button-icon_left-element is-icon-medium">
-          <div className="text-size-small">Start Learning</div>
+          <div className="text-size-small">Add zkEVM Network</div>
         </div>
         <div className="button-icon_right-element is-icon-medium">
           <div className="icon-1x1-medium w-embed">
@@ -77,7 +77,7 @@ function Buttonizer({linkUrl}) {
       </button>
       <a href={linkUrl} target="_blank" className="button is-icon is-secondary w-inline-flex">
         <div className="button-icon_left-element is-icon-medium">
-          <div className="text-size-small">Start Building</div>
+          <div className="text-size-small">Bridge to zkEVM</div>
         </div>
         <div className="button-icon_right-element is-icon-medium">
           <div className="icon-1x1-medium w-embed">
@@ -179,7 +179,7 @@ function Home() {
                 <div class="newsletter-form_max-width">
                   <div class="tiny-text">STAY UP TO DATE</div>
                   <div class="padding-bottom padding-xsmall"></div>
-                  <h3 class="heading-style-h4"><span className="white-text">Get our newsletter</span></h3>
+                  <h3 class="heading-style-h4"><span className="white-text">get our dev newsletter</span></h3>
                   <div class="padding-bottom padding-custom2"></div>
                   <div class="w-form">
                     <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" method="get" class="newsletter_form" aria-label="Newsletter Form">

@@ -1557,7 +1557,6 @@ strong {
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  text-transform: capitalize;
   cursor: pointer;
 }
 
@@ -1598,6 +1597,7 @@ strong {
 
 .text-size-small {
   font-size: .875rem;
+  font-weight: 600;
 }
 
 .button-icon_right-element {
@@ -2069,7 +2069,7 @@ p {
 
 .newsletter-form_max-width {
   width: 100%;
-  max-width: 370px;
+  max-width: 400px;
 }
 
 .tiny-text {

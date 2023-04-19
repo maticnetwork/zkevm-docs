@@ -2,9 +2,9 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 module.exports = {
-  title: "Polygon zkEVM Developers",
-  tagline: "The official documentation for Polygon zkEVM.",
-  url: "https://wiki.polygon.technology",
+  title: "Polygon zkEVM Builders",
+  tagline: "The official developer documentation hub for Polygon zkEVM.",
+  url: "https://zkevm.polygon.technology",
   baseUrl: "/",
   favicon: "img/logo-round-purple.png",
   organizationName: "maticnetwork",
@@ -29,14 +29,14 @@ module.exports = {
 
   onBrokenLinks: 'log',
   themeConfig: {
-    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Developers, the official documentation for Polygon zkEVM.'}],
+    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Builders, the official documentation for Polygon zkEVM.'}],
     announcementBar: {
       id: 'banner',
       content: `
         <div class="announcement-bar">
           Infinitely scaling Ethereum with Zero-Knowledge technology. 
             Polygon zkEVM Mainnet Beta is now Live! 
-            <a href="/docs/zkEVM/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
+            <a href="/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
         </div>
       `,
       textColor: '#ffffff',
@@ -184,7 +184,7 @@ module.exports = {
     },
     copyright: `Copyright © ${new Date().getFullYear()}`,
     },
-    image: 'https://wiki.polygon.technology/zkEVM/img/thumbnail.png',
+    image: 'img/thumbnail.png',
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/dracula"),
@@ -192,6 +192,7 @@ module.exports = {
       additionalLanguages: ['solidity']
     },
     algolia: {
+      // need to update this
       indexName: "matic_developer",
       appId: '16JCDEHCCN',
       apiKey: "757c19b23127e9c6959da7f13b71cfab",
@@ -307,8 +308,9 @@ module.exports = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-LLNECLTBDN',
-          anonymizeIP: true,
+          // Need to create new tags for zkEVM docs
+          // trackingID: 'G-LLNECLTBDN',
+          // anonymizeIP: true,
         },
       },
     ],

@@ -10,7 +10,7 @@ export const firstRow = [
         imageUrl: 'https://player.vimeo.com/video/791149020?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1',
     },
     {
-        title: "Bridge to zkEVM",
+        title: "Bridge Assets to zkEVM",
         linkUrl: "/bridge-to-zkevm",
         imageUrl: 'https://player.vimeo.com/video/791153931?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1',
     },

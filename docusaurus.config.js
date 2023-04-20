@@ -40,7 +40,7 @@ module.exports = {
         </div>
       `,
       textColor: '#ffffff',
-      isCloseable: true,
+      isCloseable: false,
     },
 
     colorMode: {

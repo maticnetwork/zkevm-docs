@@ -176,30 +176,10 @@ function Home() {
           <div className="padding-global">
             <div class="container-medium">  
               <div class="padding-section-large">
-                <div class="newsletter-form_max-width">
+                <div class="newsletter-section_max-width">
                   <div class="tiny-text">STAY UP TO DATE</div>
                   <div class="padding-bottom padding-xsmall"></div>
-                  <h3 class="heading-style-h4"><span className="white-text">get our dev newsletter</span></h3>
-                  <div class="padding-bottom padding-custom2"></div>
-                  <div class="w-form">
-                    <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" method="get" class="newsletter_form" aria-label="Newsletter Form">
-                      <input type="email" class="form_input is-newsletter w-input" maxlength="256" name="Newsletter-Email" data-name="Newsletter Email" placeholder="Enter your email" id="Newsletter-Email" required="" />
-                        <div class="newsletter_form-embed w-embed w-script">
-                          <input type="hidden" name="Path" id="titleinput" value="" />
-                            <script>
-                            const slg = window.location.pathname.slice(1);
-                            document.getElementById("titleinput").value = slg;
-                            </script>
-                          </div>
-                        <input type="submit" id="newsletter-submit" value="" data-wait="" class="newsletter_submit-icon w-button" />
-                    </form>
-                    <div class="newsletter_success-state w-form-done" tabindex="-1" role="region" aria-label="Newsletter Form success">
-                      <div>Thank You! We have received your submission!<br/></div>
-                    </div>
-                    <div class="newsletter_error-state w-form-fail" tabindex="-1" role="region" aria-label="Newsletter Form failure">
-                      <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
-                  </div>
+                  <h3 class="heading-style-h4"><a href="https://polygondeveloperstudio.substack.com/" target="_blank"><span className="white-text">read our dev newsletter</span><span class="newsletter_link-icon" /></a></h3>
                 </div>
               </div>
             </div>

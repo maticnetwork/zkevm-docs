@@ -6,10 +6,10 @@
  */
 
 module.exports = {
-  explore: [
+  specifications: [
     {
       type: 'html',
-      value: 'zkEVM Protocol',
+      value: 'Specifications',
       className: 'sidebar-title',
     },
     "introduction",

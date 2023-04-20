@@ -240,8 +240,8 @@ module.exports = {
         {
           type: 'docSidebar',
           position: 'left',
-          sidebarId: 'explore',
-          label: 'Protocol',
+          sidebarId: 'specifications',
+          label: 'Specifications',
           target: '_self',
         },
         {

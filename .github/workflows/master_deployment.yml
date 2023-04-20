@@ -30,7 +30,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
           aws-region: eu-west-1
-          role-to-assume: arn:aws:iam::042947190491:role/zkevm-docs-GithubActionsRole
+          role-to-assume: arn:aws:iam::042947190491:role/zkevm-GithubActionsRole
           role-session-name: GitHubActionsDeployment
       # Fetch Git history
       - name: Fetch Git history

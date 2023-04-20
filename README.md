@@ -21,7 +21,7 @@
 
 Polygon zkEVM Builders is the documentation hub providing extensive documentation, community resources, and guides for enthusiasts and developers interested in learning about or building on zkEVM.
 
-The [Polygon zKEVM Developers](https://wiki.polygon.technology/zkEVM) website is built using [Docusaurus](https://docusaurus.io/), 
+The [Polygon zKEVM Builders](https://wiki.polygon.technology/zkEVM) website is built using [Docusaurus](https://docusaurus.io/), 
 a modern static website generator to build optimized websites quickly.
 
 ## Contribute to Polygon zkEVM Builders

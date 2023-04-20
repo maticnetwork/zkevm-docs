@@ -76,7 +76,7 @@ module.exports = {
       link: {
         type: "generated-index",
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         "zkProver/overview",
         {
@@ -136,6 +136,7 @@ module.exports = {
           ],
         },
         "zkProver/arithmetic-sm",
+        "zkProver/binary-sm",
         "zkProver/memory-sm",
         "zkProver/mem-align-sm",
         {
@@ -156,26 +157,13 @@ module.exports = {
         },
       ],
     },
-  ],
-
-  build: [
-    {
-      type: 'html',
-      value: 'Developer Guides',
-      className: 'sidebar-title',
-    },
-    "develop",
-    "bridge-to-zkevm",
-    "setup-local-node",
-    "setup-production-node",
-    "zkevm-gas-station",
     {
       type: "category",
       label: "zk Assembly",
       link: {
         type: "generated-index",
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         "zkASM/introduction",
         "zkASM/basic-syntax",
@@ -188,7 +176,7 @@ module.exports = {
       link: {
         type: "generated-index",
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         "PIL/introduction",
         "PIL/simple-program",
@@ -205,6 +193,29 @@ module.exports = {
         "PIL/generate-proof",
       ],
     },
+  ],
+
+  build: [
+    {
+      type: 'html',
+      value: 'Developer Guides',
+      className: 'sidebar-title',
+    },
+    "develop",
+    "bridge-to-zkevm",
+    {
+      type: "category",
+      label: "Setup zkNode",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "setup-local-node",
+        "setup-production-node",
+      ],
+    },
+    "zkevm-gas-station",
     "open-source-repos",
     "glossary",
   ],
@@ -218,5 +229,6 @@ module.exports = {
     "faq/zkevm-general-faq",
     "faq/zkevm-protocol-faq",
     "faq/zkevm-eth-faq",
+    "risk-disclosure"
   ],
 };

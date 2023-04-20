@@ -143,7 +143,7 @@ function Footer() {
             ))}
           </div>
           <div className="text--center" style={{color: "#67666e"}}>
-            {copyright}
+            Copyright © {new Date().getFullYear()} | Polygon Labs UI (Cayman) Ltd.
           </div>
       </div>
     </footer>

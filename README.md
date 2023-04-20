@@ -21,7 +21,7 @@
 
 Polygon zkEVM Builders is the documentation hub providing extensive documentation, community resources, and guides for enthusiasts and developers interested in learning about or building on zkEVM.
 
-The [Polygon zKEVM Builders](https://wiki.polygon.technology/zkEVM) website is built using [Docusaurus](https://docusaurus.io/), 
+The [Polygon zKEVM Builders](https://zkevm.polygon.technology) website is built using [Docusaurus](https://docusaurus.io/), 
 a modern static website generator to build optimized websites quickly.
 
 ## Contribute to Polygon zkEVM Builders
@@ -141,7 +141,7 @@ You can apply UI changes, sidebar, and configuration design through the followin
 
 You can easily submit an edit suggestion. Note that you must have a GitHub account and good knowledge of Markdown syntax.
 
-1. Navigate to the [Polygon zkEVM Builders page](https://wiki.polygon.technology/zkEVM) that you want to edit.
+1. Navigate to the [Polygon zkEVM Builders page](https://zkevm.polygon.technology) that you want to edit.
 
 2. Scroll down until the end of that page.
 

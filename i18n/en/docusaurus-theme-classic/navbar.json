@@ -1,0 +1,86 @@
+{
+  "item.label.dApps": {
+    "message": "dApps",
+    "description": "Navbar item with label dApps"
+  },
+  "item.label.Developer Resources": {
+    "message": "Developer Resources",
+    "description": "Navbar item with label Developer Resources"
+  },
+  "item.label.Community": {
+    "message": "Community",
+    "description": "Navbar item with label Community"
+  },
+  "item.label.Support": {
+    "message": "Support",
+    "description": "Navbar item with label Support"
+  },
+  "item.label.FAQs": {
+    "message": "FAQs",
+    "description": "Navbar item with label FAQs"
+  },
+  "item.label.Contribute to the Wiki": {
+    "message": "Contribute to the Wiki",
+    "description": "Navbar item with label Contribute to the Wiki"
+  },
+  "item.label.PoS Wallet": {
+    "message": "PoS Wallet",
+    "description": "Navbar item with label PoS Wallet"
+  },
+  "item.label.PoS Bridge": {
+    "message": "PoS Bridge",
+    "description": "Navbar item with label PoS Bridge"
+  },
+  "item.label.PoS Staking": {
+    "message": "PoS Staking",
+    "description": "Navbar item with label PoS Staking"
+  },
+  "item.label.PoS Widget": {
+    "message": "PoS Widget",
+    "description": "Navbar item with label PoS Widget"
+  },
+  "item.label.PoS Explorer": {
+    "message": "PoS Explorer",
+    "description": "Navbar item with label PoS Explorer"
+  },
+  "item.label.Hermez Wallet": {
+    "message": "Hermez Wallet",
+    "description": "Navbar item with label Hermez Wallet"
+  },
+  "item.label.Hermez Explorer": {
+    "message": "Hermez Explorer",
+    "description": "Navbar item with label Hermez Explorer"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
+  },
+  "item.label.Forum": {
+    "message": "Forum",
+    "description": "Navbar item with label Forum"
+  },
+  "item.label.Reddit": {
+    "message": "Reddit",
+    "description": "Navbar item with label Reddit"
+  },
+  "item.label.Twitter": {
+    "message": "Twitter",
+    "description": "Navbar item with label Twitter"
+  },
+  "item.label.Telegram": {
+    "message": "Telegram",
+    "description": "Navbar item with label Telegram"
+  },
+  "item.label.View all communities": {
+    "message": "View all communities",
+    "description": "Navbar item with label View all communities"
+  },
+    "item.label.End-user support": {
+    "message": "End-user support",
+    "description": "Navbar item with label End-user support"
+  },
+  "item.label.Edge FAQ": {
+    "message": "Edge FAQ",
+    "description": "Navbar item with label Edge FAQ"
+  }
+}

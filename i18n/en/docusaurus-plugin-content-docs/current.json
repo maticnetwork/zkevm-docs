@@ -1,0 +1,322 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.basics.category.Blockchain Basics": {
+    "message": "Blockchain Basics",
+    "description": "The label for category Blockchain Basics in sidebar basics"
+  },
+  "sidebar.basics.category.Polygon Basics": {
+    "message": "Polygon Basics",
+    "description": "The label for category Polygon Basics in sidebar basics"
+  },
+  "sidebar.develop.category.Nodes": {
+    "message": "Nodes",
+    "description": "The label for category Nodes in sidebar develop"
+  },
+  "sidebar.develop.category.Wallets": {
+    "message": "Wallets",
+    "description": "The label for category Wallets in sidebar develop"
+  },
+  "sidebar.develop.category.Metamask": {
+    "message": "Metamask",
+    "description": "The label for category MetaMask in sidebar develop"
+  },
+  "sidebar.develop.category.Wallet Link": {
+    "message": "Wallet Link",
+    "description": "The label for category Wallet Link in sidebar develop"
+  },
+  "sidebar.develop.category.Arkane": {
+    "message": "Arkane",
+    "description": "The label for category Arkane in sidebar develop"
+  },
+  "sidebar.develop.category.Polygon Web Wallet": {
+    "message": "Polygon Web Wallet",
+    "description": "The label for category Polygon Web Wallet in sidebar develop"
+  },
+  "sidebar.develop.category.Matic.js": {
+    "message": "Matic.js",
+    "description": "The label for category Matic.js in sidebar develop"
+  },
+  "sidebar.develop.category.Setup": {
+    "message": "Setup",
+    "description": "The label for category Setup in sidebar develop"
+  },
+  "sidebar.develop.category.POS": {
+    "message": "POS",
+    "description": "The label for category POS in sidebar develop"
+  },
+  "sidebar.develop.category.ERC20": {
+    "message": "ERC20",
+    "description": "The label for category ERC20 in sidebar develop"
+  },
+  "sidebar.develop.category.ERC721": {
+    "message": "ERC721",
+    "description": "The label for category ERC721 in sidebar develop"
+  },
+  "sidebar.develop.category.ERC1155": {
+    "message": "ERC1155",
+    "description": "The label for category ERC1155 in sidebar develop"
+  },
+  "sidebar.develop.category.Plasma": {
+    "message": "Plasma",
+    "description": "The label for category Plasma in sidebar develop"
+  },
+  "sidebar.develop.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category Advanced in sidebar develop"
+  },
+  "sidebar.develop.category.Assets": {
+    "message": "Assets",
+    "description": "The label for category Assets in sidebar develop"
+  },
+  "sidebar.develop.category.Matic": {
+    "message": "Matic",
+    "description": "The label for category Matic in sidebar develop"
+  },
+  "sidebar.develop.category.NFTs": {
+    "message": "NFTs",
+    "description": "The label for category NFTs in sidebar develop"
+  },
+  "sidebar.develop.category.Smart Contracts": {
+    "message": "Smart Contracts",
+    "description": "The label for category Smart Contracts in sidebar develop"
+  },
+  "sidebar.develop.category.Deploying Contracts": {
+    "message": "Deploying Contracts",
+    "description": "The label for category Deploying Contracts in sidebar develop"
+  },
+  "sidebar.develop.category.ERC Standards": {
+    "message": "ERC Standards",
+    "description": "The label for category ERC Standards in sidebar develop"
+  },
+  "sidebar.develop.category.Plasma Contracts": {
+    "message": "Plasma Contracts",
+    "description": "The label for category Plasma Contracts in sidebar develop"
+  },
+  "sidebar.develop.category.Transactions": {
+    "message": "Transactions",
+    "description": "The label for category Transactions in sidebar develop"
+  },
+  "sidebar.develop.category.Meta Transactions": {
+    "message": "Meta Transactions",
+    "description": "The label for category Meta Transactions in sidebar develop"
+  },
+  "sidebar.develop.category.Bridges": {
+    "message": "Bridges",
+    "description": "The label for category Bridges in sidebar develop"
+  },
+  "sidebar.develop.category.PoS Bridge": {
+    "message": "PoS Bridge",
+    "description": "The label for category PoS Bridge in sidebar develop"
+  },
+  "sidebar.develop.category.Using Polygon Edge": {
+    "message": "Using Polygon Edge",
+    "description": "The label for category Using Polygon Edge in sidebar develop"
+  },
+  "sidebar.develop.category.Calling Contracts": {
+    "message": "Calling Contracts",
+    "description": "The label for category Calling Contracts in sidebar develop"
+  },
+  "sidebar.develop.category.Plasma Bridge": {
+    "message": "Plasma Bridge",
+    "description": "The label for category Plasma Bridge in sidebar develop"
+  },
+  "sidebar.develop.category.Oracles": {
+    "message": "Oracles",
+    "description": "The label for category Oracles in sidebar develop"
+  },
+  "sidebar.develop.category.Storage": {
+    "message": "Storage",
+    "description": "The label for category Storage in sidebar develop"
+  },
+  "sidebar.develop.category.Data": {
+    "message": "Data",
+    "description": "The label for category Data in sidebar develop"
+  },
+  "sidebar.develop.category.Indexing and Querying": {
+    "message": "Indexing and Querying",
+    "description": "The label for category Indexing and Querying in sidebar develop"
+  },
+  "sidebar.develop.category.Resources": {
+    "message": "Resources",
+    "description": "The label for category Resources in sidebar develop"
+  },
+  "sidebar.develop.category.Faucets": {
+    "message": "Faucets",
+    "description": "The label for category Faucets in sidebar develop"
+  },
+  "sidebar.develop.category.Gas Station": {
+    "message": "Gas Station",
+    "description": "The label for category Gas Station in sidebar develop"
+  },
+  "sidebar.develop.category.Widget": {
+    "message": "Widget",
+    "description": "The label for category Widget in sidebar develop"
+  },
+  "sidebar.develop.link.Covalent": {
+    "message": "Covalent",
+    "description": "The label for link Covalent in sidebar develop, linking to https://www.covalenthq.com/docs/api/"
+  },
+  "sidebar.maintain.category.Validator Overview": {
+    "message": "Validator Overview",
+    "description": "The label for category Validator Overview in sidebar maintain"
+  },
+  "sidebar.maintain.category.Core Components": {
+    "message": "Core Components",
+    "description": "The label for category Core Components in sidebar maintain"
+  },
+  "sidebar.maintain.category.Validate": {
+    "message": "Validate",
+    "description": "The label for category Validate in sidebar maintain"
+  },
+  "sidebar.maintain.category.Node Deployment": {
+    "message": "Node Deployment",
+    "description": "The label for category Node Deployment in sidebar maintain"
+  },
+  "sidebar.maintain.category.Node Management": {
+    "message": "Node Management",
+    "description": "The label for category Node Management in sidebar maintain"
+  },
+  "sidebar.maintain.category.Staking Operations": {
+    "message": "Staking Operations",
+    "description": "The label for category Staking Operations in sidebar maintain"
+  },
+  "sidebar.maintain.category.FAQ": {
+    "message": "FAQ",
+    "description": "The label for category FAQ in sidebar maintain"
+  },
+  "sidebar.integrate.category.Network Information": {
+    "message": "Network Information",
+    "description": "The label for category Network Information in sidebar integrate"
+  },
+  "sidebar.integrate.category.Network Details": {
+    "message": "Network Details",
+    "description": "The label for category Network Details in sidebar integrate"
+  },
+  "sidebar.integrate.category.Advanced": {
+    "message": "Advanced",
+    "description": "The label for category Advanced in sidebar integrate"
+  },
+  "sidebar.integrate.link.Polygon-Mainnet": {
+    "message": "Polygon-Mainnet",
+    "description": "The label for link Polygon-Mainnet in sidebar integrate, linking to https://github.com/maticnetwork/static/blob/master/network/mainnet/v1/index.json"
+  },
+  "sidebar.integrate.link.Mumbai": {
+    "message": "Mumbai",
+    "description": "The label for link Mumbai in sidebar integrate, linking to https://static.matic.network/network/testnet/mumbai/index.json"
+  },
+  "sidebar.integrate.link.Polygon Faucet": {
+    "message": "Polygon Faucet",
+    "description": "The label for link Polygon Faucet in sidebar integrate, linking to https://faucet.polygon.technology/"
+  },
+  "sidebar.pos.category.Architecture": {
+    "message": "Architecture",
+    "description": "The label for category Architecture in sidebar pos"
+  },
+  "sidebar.pos.category.Heimdall": {
+    "message": "Heimdall",
+    "description": "The label for category Heimdall in sidebar pos"
+  },
+  "sidebar.pos.category.Core Concepts": {
+    "message": "Core Concepts",
+    "description": "The label for category Core Concepts in sidebar pos"
+  },
+  "sidebar.pos.category.Modules": {
+    "message": "Modules",
+    "description": "The label for category Modules in sidebar pos"
+  },
+  "sidebar.pos.category.Bor": {
+    "message": "Bor",
+    "description": "The label for category Bor in sidebar pos"
+  },
+  "sidebar.pos.category.Contracts": {
+    "message": "Contracts",
+    "description": "The label for category Contracts in sidebar pos"
+  },
+  "sidebar.pos.category.Plasma Contracts": {
+    "message": "Plasma Contracts",
+    "description": "The label for category Plasma Contracts in sidebar pos"
+  },
+  "sidebar.pos.category.State Sync": {
+    "message": "State Sync",
+    "description": "The label for category State Sync in sidebar pos"
+  },
+  "sidebar.faq.category.Wallet FAQs": {
+    "message": "Wallet FAQs",
+    "description": "The label for category Wallet FAQs in sidebar faq"
+  },
+  "sidebar.develop.category.Using Matic.js": {
+    "message": "Using Matic.js",
+    "description": "The label for category Using Matic.js in sidebar develop"
+  },
+  "sidebar.develop.category.Miscellaneous": {
+    "message": "Miscellaneous",
+    "description": "The label for category Miscellaneous in sidebar develop"
+  },
+  "sidebar.contribute.category.Become a Contributor": {
+    "message": "Become a Contributor",
+    "description": "The label for category Become a Contributor in sidebar contribute"
+  },
+  "sidebar.contribute.category.Style Guide": {
+    "message": "Style Guide",
+    "description": "The label for category Style Guide in sidebar contribute"
+  },
+  "sidebar.contribute.category.Translations": {
+    "message": "Translations",
+    "description": "The label for category Translations in sidebar contribute"
+  },
+  "sidebar.edge.category.Get started": {
+    "message": "Get started",
+    "description": "The label for category Get started in sidebar edge"
+  },
+  "sidebar.edge.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar edge"
+  },
+  "sidebar.edge.category.Secret Managers": {
+    "message": "Secret Managers",
+    "description": "The label for category Secret Managers in sidebar edge"
+  },
+  "sidebar.edge.category.Working with a node": {
+    "message": "Working with a node",
+    "description": "The label for category Working with a node in sidebar edge"
+  },
+  "sidebar.edge.category.Consensus": {
+    "message": "Consensus",
+    "description": "The label for category Consensus in sidebar edge"
+  },
+  "sidebar.edge.category.Additional features": {
+    "message": "Additional features",
+    "description": "The label for category Additional features in sidebar edge"
+  },
+  "sidebar.edge.category.Chainbridge": {
+    "message": "Chainbridge",
+    "description": "The label for category Chainbridge in sidebar edge"
+  },
+  "sidebar.edge.category.Architecture": {
+    "message": "Architecture",
+    "description": "The label for category Architecture in sidebar edge"
+  },
+  "sidebar.edge.category.Modules": {
+    "message": "Modules",
+    "description": "The label for category Modules in sidebar edge"
+  },
+  "sidebar.edge.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category Concepts in sidebar edge"
+  },
+  "sidebar.edge.category.Community": {
+    "message": "Community",
+    "description": "The label for category Community in sidebar edge"
+  },
+  "sidebar.edge.category.Performance Reports": {
+    "message": "Performance Reports",
+    "description": "The label for category Performance Reports in sidebar edge"
+  },
+  "sidebar.edge.category.Test History": {
+    "message": "Test History",
+    "description": "The label for category Test History in sidebar edge"
+  }
+}

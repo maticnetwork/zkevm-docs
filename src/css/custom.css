@@ -2155,11 +2155,11 @@ p {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
+  transition: 0.3s;
 }
 
 .heading-style-h4:hover {
   transform: translate3d(20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transition: 0.8s;
 }
 
 .newsletter_link-icon {

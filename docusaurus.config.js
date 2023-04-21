@@ -6,11 +6,11 @@ module.exports = {
   tagline: "The official developer documentation hub for Polygon zkEVM.",
   url: "https://zkevm.polygon.technology",
   baseUrl: "/",
-  favicon: "img/logo-round-purple.png",
+  favicon: "/img/logo-round-purple.png",
   organizationName: "maticnetwork",
   projectName: "zkevm-docs",
   customFields: {
-    description: "Build your next blockchain app on Polygon zkEVM.",
+    description: "Build your next blockchain dApp on Polygon zkEVM.",
   },
   i18n: {
     defaultLocale: 'en',
@@ -210,7 +210,7 @@ module.exports = {
         },
       ],
     },
-    image: 'img/thumbnail.png',
+    image: '/img/thumbnail.png',
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/dracula"),
@@ -329,7 +329,7 @@ module.exports = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/maticnetwork/matic-docs/tree/master/",
+          editUrl: "https://github.com/maticnetwork/zkevm-docs/tree/main/",
           path: "docs",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,

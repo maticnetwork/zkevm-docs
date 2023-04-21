@@ -120,6 +120,19 @@ module.exports = {
         },
         {
           type: "category",
+          label: "STARK Recursion",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "zkProver/intro-stark-recursion",
+            "zkProver/proving-tools",
+            "zkProver/stark-recursion-detail",
+            "zkProver/recursion-sub-process",
+          ],
+        },
+        {
+          type: "category",
           label: "Storage SM",
           link: {
             type: "generated-index",

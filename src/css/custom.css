@@ -884,7 +884,7 @@ html[data-theme="dark"] .header-twitter-link::before {
   height: 100%;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -892,7 +892,7 @@ html[data-theme="dark"] .header-twitter-link::before {
 }
 
 [data-theme='dark'] .show-card {
-  background: radial-gradient(75% 75% at 50% 25.87%, #472582 0%, #6A23E7 100%);
+  background: #141217;
   border: 2px solid #222;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -900,6 +900,7 @@ html[data-theme="dark"] .header-twitter-link::before {
 }
 
 .show-card:hover {
+  background: radial-gradient(80% 80% at 50% 32%, #2c1c47 0%, #6A23E7 100%);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
   background-color: #c7a8ff;
   border-color: #9d79dd;
@@ -925,7 +926,7 @@ html[data-theme="dark"] .header-twitter-link::before {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   color: #061024;
   font-family: 'Montserrat', sans-serif;
@@ -1018,6 +1019,10 @@ html[data-theme="dark"] .header-twitter-link::before {
     font-size: 26px;
     margin-bottom: 0.5em;
     margin-top: 0.5em;
+  }
+
+  .call-to-action {
+    display: block !important;
   }
 }
 
@@ -1308,7 +1313,7 @@ strong {
   background-color: #000;
   color: #ffffff;
   padding: 44px 0;
-  border-top: thin dotted;
+  border-top: thin solid;
 }
 
 .footer-container {
@@ -2007,13 +2012,12 @@ code:not(.language-text) {
 .call-to-action {
   display: grid;
   margin-right: 0;
-  padding: 20px 36px;
+  padding: 16px 20px;
   align-items: center;
   align-content: center;
   grid-auto-columns: 1fr;
   grid-column-gap: 60px;
   grid-row-gap: 16px;
-  grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
   grid-template-rows: auto;
   border-radius: 24px;
@@ -2172,4 +2176,13 @@ p {
   position: absolute;
   margin-top:0.2rem;
   margin-left: 0.5rem;
+}
+
+.grey-text {
+  color: #969696;
+}
+
+.underline-text:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff !important;
 }

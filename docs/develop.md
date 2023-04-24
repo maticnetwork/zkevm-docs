@@ -45,7 +45,7 @@ You can **add zkEVM Network to your MetaMask wallet** instantly by clicking the 
 
 The next step is to [bridge your assets](bridge-to-zkevm.md) from Ethereum &rarr; Polygon zkEVM. You can use the zKEVM Bridge natively built inside Polygon Wallet Suite to bridge your assets.
 
-### Deploying Smart Contracts
+## Deploying Smart Contracts
 
 The development experience on zkEVM is seamless and identical to Ethereum Virtual Machine. Developers on zkEVM can use their existing code and toolings to deploy on zkEVM with much higher throughput and lower fees.
 

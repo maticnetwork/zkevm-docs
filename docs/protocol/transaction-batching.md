@@ -34,11 +34,11 @@ struct BatchData {
 
 ​These are byte arrays containing the concatenated batch transactions. 
 
-​Each transaction is **encoded according to the Ethereum pre-EIP-115 or EIP-115 formats using RLP (Recursive-length prefix) standard**, but the signature values, `v`, `r` and `s`, are concatenated as shown below;
+​Each transaction is **encoded according to the Ethereum pre-EIP-155 or EIP-155 formats using RLP (Recursive-length prefix) standard**, but the signature values, `v`, `r` and `s`, are concatenated as shown below;
 
-1. EIP-155: $\mathtt{\ rlp(nonce, gasprice, gasLimit, to, value, data, chainid, 0, 0,) \#v\#r\#s}$ 
+1. `EIP-155`: $\mathtt{\ rlp(nonce, gasprice, gasLimit, to, value, data, chainid, 0, 0,) \#v\#r\#s}$ 
 
-2. pre-EIP-155: $\mathtt{\ rlp(nonce, gasprice, gasLimit, to, value, data) \#v\#r\#s }$.
+2. `pre-EIP-155`: $\mathtt{\ rlp(nonce, gasprice, gasLimit, to, value, data) \#v\#r\#s }$.
 
 ### `globalExitRoot`
 

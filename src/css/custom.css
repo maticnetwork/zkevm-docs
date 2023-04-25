@@ -1702,8 +1702,8 @@ strong {
 }
 
 .button.is-icon.is-secondary {
-  background-image: none;
-  box-shadow: rgb(34 33 33) 0px 4px 4px 0px;
+  background-image: linear-gradient(#151417,#1b1a1a);
+  transition: all .2s ease-in-out;
 }
 
 .button.is-icon.is-secondary:hover {

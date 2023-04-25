@@ -2,7 +2,7 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 module.exports = {
-  title: "Polygon zkEVM Builders",
+  title: "Polygon zkEVM Documentation",
   tagline: "The official developer documentation hub for Polygon zkEVM.",
   url: "https://zkevm.polygon.technology",
   baseUrl: "/",
@@ -29,7 +29,7 @@ module.exports = {
 
   onBrokenLinks: 'log',
   themeConfig: {
-    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Builders, the official documentation for Polygon zkEVM.'}],
+    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Documentation, the official documentation for Polygon zkEVM.'}],
     announcementBar: {
       id: 'banner',
       content: `

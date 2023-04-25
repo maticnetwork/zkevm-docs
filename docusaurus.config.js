@@ -2,7 +2,7 @@ const math = require('remark-math');
 const katex = require('rehype-katex');
 
 module.exports = {
-  title: "Polygon zkEVM Builders",
+  title: "Polygon zkEVM Documentation",
   tagline: "The official developer documentation hub for Polygon zkEVM.",
   url: "https://zkevm.polygon.technology",
   baseUrl: "/",
@@ -29,14 +29,14 @@ module.exports = {
 
   onBrokenLinks: 'log',
   themeConfig: {
-    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Builders, the official documentation for Polygon zkEVM.'}],
+    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Documentation, the official documentation for Polygon zkEVM.'}],
     announcementBar: {
       id: 'banner',
       content: `
         <div class="announcement-bar">
           Polygon zkEVM Mainnet Beta is now Live! 
-          <a href="/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
-          <a href="/risk-disclosure" class="announcement-link" style="color: #ffffff;">Risk Disclosures</a>
+          <a href="/docs/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
+          <a href="/docs/risk-disclosure" class="announcement-link" style="color: #ffffff;">Risk Disclosures</a>
         </div>
       `,
       textColor: '#ffffff',
@@ -210,7 +210,7 @@ module.exports = {
         },
       ],
     },
-    image: '/img/thumbnail.png',
+    image: 'img/thumbnail.png',
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/dracula"),
@@ -231,8 +231,8 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt: "Polygon logo",
-        src: "/img/polygon-zkevm.svg",
-        srcDark: "/img/polygon-zkevm.svg",
+        src: "img/polygon-zkevm.svg",
+        srcDark: "img/polygon-zkevm.svg",
         href: 'https://zkevm.polygon.technology',
         target: "_self",
        },
@@ -327,7 +327,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/maticnetwork/zkevm-docs/tree/main/",
           path: "docs",

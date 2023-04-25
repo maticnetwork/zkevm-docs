@@ -107,7 +107,7 @@ function Home() {
                 </h2>
                 <h4 className="mt-0">Ethereum scalability with zkEVM <span className="white-text">performance and security</span></h4>
                 <p className="lead grey-text">
-                  Polygon zkEVM Builders is the documentation hub providing 
+                  Polygon zkEVM Documentation is the documentation hub providing 
                   extensive documentation, community resources, and guides for enthusiasts 
                   and developers interested in learning about or building on zkEVM.
                 </p>

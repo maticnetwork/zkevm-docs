@@ -19,7 +19,7 @@ This documentation is still a **Work In Progress**. Some topics have been discus
 
 :::
 
-**Welcome to the Polygon zkEVM Builders portal.**
+**Welcome to the Polygon zkEVM Documentation portal.**
 
 Polygon zkEVM is a decentralized Ethereum Layer 2 scalability solution that uses cryptographic zero-knowledge proofs to offer validity and quick finality to off-chain transaction computation, also known as a **ZK-Rollup**.
 

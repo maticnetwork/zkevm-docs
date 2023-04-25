@@ -30,7 +30,7 @@ function FirstRow({ title, linkUrl, imageUrl }) {
   return (
     <div className="col-md-4 p-8">
       <Link to={useBaseUrl(linkUrl)}>
-        <div className="show-card">
+        <div className="show-card underline-text">
           <div className="icon-wrapper">
             <iframe src={imageUrl} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style={{position:"absolute", height: "80%"}} title="Hero" data-ready="true"></iframe>
           </div>
@@ -43,9 +43,9 @@ function FirstRow({ title, linkUrl, imageUrl }) {
 
 function SecondRow({ title, linkUrl }) {
   return (
-    <div className="col-md-6 p-8">
+    <div className="col-md-4 p-8">
       <Link to={useBaseUrl(linkUrl)} activeClassName="active">
-        <div className="show-card">
+        <div className="show-card underline-text">
           <div className="title">
             <span className="github-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
@@ -103,11 +103,11 @@ function Home() {
             <div className="row justify-content-center">
               <div className="col-lg-8 pop-text">
                 <h2 className="mt-0">
-                  zkEVM <span className="white-text">for Builders</span>
+                  zkEVM <span className="white-text">for Everyone</span>
                 </h2>
                 <h4 className="mt-0">Ethereum scalability with zkEVM <span className="white-text">performance and security</span></h4>
-                <p className="lead">
-                  <b>Polygon zkEVM Builders</b> is the documentation hub providing 
+                <p className="lead grey-text">
+                  Polygon zkEVM Builders is the documentation hub providing 
                   extensive documentation, community resources, and guides for enthusiasts 
                   and developers interested in learning about or building on zkEVM.
                 </p>
@@ -132,10 +132,10 @@ function Home() {
           </div>
           <div className="row" style={{marginBottom: 32}}>
             <a href="https://github.com/0xpolygonhermez" style={{color: "white", display: "inline-flex"}} className="pop-text">
-              <h1 style={{fontSize: 40}}>GitHub <span className="white-text">Repositories</span></h1>
+              <h1>Open Source <span className="white-text">Repositories</span></h1>
               <span className="button-icon_right-element is-icon-medium">
                 <div className="w-embed">
-                  <svg width="3rem" height="3rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
@@ -151,7 +151,7 @@ function Home() {
           </div>
           <div className="row" style={{marginBottom: 32}}>
               <div className="col-md-12 p-8" style={{padding: "0px"}}>
-                  <div className="show-card">
+                  <div className="show-card" style={{ background: "radial-gradient(75% 75% at 50% 25.87%,#472582 0,#6a23e7 100%)" }}>
                     <div className="call-to-action">
                       <div>
                         NETWORK STATUS

@@ -240,15 +240,15 @@ module.exports = {
         {
           type: 'docSidebar',
           position: 'left',
-          sidebarId: 'specifications',
-          label: 'Specifications',
+          sidebarId: 'build',
+          label: 'Guides',
           target: '_self',
         },
         {
           type: 'docSidebar',
           position: 'left',
-          sidebarId: 'build',
-          label: 'Guides',
+          sidebarId: 'specifications',
+          label: 'Specs',
           target: '_self',
         },
         {

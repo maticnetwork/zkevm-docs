@@ -5,7 +5,7 @@ module.exports = {
   title: "Polygon zkEVM Documentation",
   tagline: "The official developer documentation hub for Polygon zkEVM.",
   url: "https://zkevm.polygon.technology",
-  baseUrl: "/",
+  baseUrl: "/docs",
   favicon: "/img/logo-round-purple.png",
   organizationName: "maticnetwork",
   projectName: "zkevm-docs",
@@ -210,7 +210,7 @@ module.exports = {
         },
       ],
     },
-    image: '/img/thumbnail.png',
+    image: 'https://zkevm.polygon.technology/img/thumbnail.png',
     prism: {
       theme: require("prism-react-renderer/themes/github"),
       darkTheme: require("prism-react-renderer/themes/dracula"),
@@ -231,8 +231,8 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt: "Polygon logo",
-        src: "/img/polygon-zkevm.svg",
-        srcDark: "/img/polygon-zkevm.svg",
+        src: "https://zkevm.polygon.technology/img/polygon-zkevm.svg",
+        srcDark: "https://zkevm.polygon.technology/img/polygon-zkevm.svg",
         href: 'https://zkevm.polygon.technology',
         target: "_self",
        },

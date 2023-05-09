@@ -13,6 +13,12 @@ keywords:
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+:::caution Risks
+
+To see the potential list of risks associated with the use of Polygon zkEVM, check out the [<ins>Risks FAQ</ins>](/risk-disclosure.md) section.
+
+:::
+
 Users can deposit assets from Ethereum and transact off-chain on Polygon zkEVM. For moving assets across chains (L1 &harr; zkEVM), you will need to use the zkEVM Bridge. The bridge interface is available for both **Mainnet Beta** and **Testnet** in the [Polygon Wallet Suite](https://wallet.polygon.technology/zkEVM/bridge). Also, bridging can be done with the help of [MaticJS](https://wiki.polygon.technology/docs/develop/ethereum-polygon/matic-js/zkevm/initialize-zkevm/) SDK.
 
 Check out this video guide on **how to bridge tokens from L1 to the zkEVM Testnet**. The same video will apply to the zkEVM Mainnet Beta.
@@ -26,7 +32,7 @@ Check out this video guide on **how to bridge tokens from L1 to the zkEVM Testne
 
 :::tip Quick Connect
 
-You can **add zkEVM Network to your MetaMask wallet** instantly by clicking the **Add to Wallet** button in the Wallet Suite interface.
+You can **add zkEVM Network to your wallet** instantly by clicking the **Add zkEVM Network** button on the [<ins>Polygon zkEVM Documentation</ins>](/) website.
 
 :::
 

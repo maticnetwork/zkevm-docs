@@ -15,7 +15,7 @@ keywords:
 
 :::info
 
-This documentation is still a **Work In Progress**. Some topics have been discussed in greater depth, while others require additional clarification. Sections of this documentation might later be reorganized in order to achieve a better flow.
+This documentation is still a **Work In Progress**. Some topics have been discussed in greater depth, while others require additional clarification.
 
 :::
 

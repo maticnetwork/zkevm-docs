@@ -3,7 +3,7 @@ const katex = require('rehype-katex');
 
 module.exports = {
   title: "Polygon zkEVM Documentation",
-  tagline: "The official developer documentation hub for Polygon zkEVM.",
+  tagline: "The official developer documentation portal for Polygon zkEVM protocol.",
   url: "https://zkevm.polygon.technology",
   baseUrl: "/",
   favicon: "/img/logo-round-purple.png",
@@ -29,14 +29,14 @@ module.exports = {
 
   onBrokenLinks: 'log',
   themeConfig: {
-    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Documentation, the official documentation for Polygon zkEVM.'}],
+    metadata: [{name: 'description', content: 'Welcome to Polygon zkEVM Documentation, the official documentation portal for Polygon zkEVM.'}],
     announcementBar: {
       id: 'banner',
       content: `
         <div class="announcement-bar">
           Polygon zkEVM Mainnet Beta is now Live! 
           <a href="/docs/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
-          <a href="/docs/risk-disclosure" class="announcement-link" style="color: #ffffff;">Risk Disclosures</a>
+          <a href="/docs/risk-disclosure" class="announcement-link" style="color: #ffffff;">Risks</a>
         </div>
       `,
       textColor: '#ffffff',
@@ -203,7 +203,7 @@ module.exports = {
                 href: "https://polygon.technology/cookie-policy"
               },
               {
-                label: "Risk Disclosures",
+                label: "Risks",
                 href: "/risk-disclosure"
               },
           ]

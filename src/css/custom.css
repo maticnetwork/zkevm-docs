@@ -2186,3 +2186,7 @@ p {
   text-decoration: underline;
   text-decoration-color: #fff !important;
 }
+
+a code {
+  color: #fff;
+}

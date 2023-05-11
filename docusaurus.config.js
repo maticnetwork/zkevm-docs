@@ -339,8 +339,7 @@ module.exports = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          // Need to create new tags for zkEVM docs
-           trackingID: 'G-LLNECLTBDN',
+           trackingID: 'G-FCVXSX7563',
            anonymizeIP: true,
         },
       },

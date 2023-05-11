@@ -218,10 +218,9 @@ module.exports = {
       additionalLanguages: ['solidity']
     },
     algolia: {
-      // need to update this
-      indexName: "matic_developer",
-      appId: '16JCDEHCCN',
-      apiKey: "757c19b23127e9c6959da7f13b71cfab",
+      indexName: "zkevm-polygon",
+      appId: '7OGWPLU80E',
+      apiKey: "43743b7a07c349fb251cea12958582c0",
       contextualSearch: true,
       algoliaOptions: {
         attributesToSnippet: ['content:20'],

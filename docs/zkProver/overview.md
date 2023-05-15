@@ -198,14 +198,15 @@ This way, **hundreds of zk-STARK proofs are represented and proved with only one
 
 The **single zk-STARK proof** produced by the STARK Recursion Component is the **input to a CIRCOM** component.
 
-CIRCOM is a [circuits library](https://github.com/socathie/circomlib-ml) used in the zkProver to generate the **witness** for the zk-STARK proof produced by the STARK Recursion Component.
+The original CIRCOM [paper](https://www.techrxiv.org/articles/preprint/CIRCOM_A_Robust_and_Scalable_Language_for_Building_Complex_Zero-Knowledge_Circuits/19374986/1) describes it as both a circuits programming language to define Arithmetic circuits, and a compiler that generates two things; 
 
-The original CIRCOM [paper](https://www.techrxiv.org/articles/preprint/CIRCOM_A_Robust_and_Scalable_Language_for_Building_Complex_Zero-Knowledge_Circuits/19374986/1) describes it as both a circuits programming language to define Arithmetic circuits, and a compiler that generates, 
+1. A file containing a set of **Rank-1 Constraints System** (or **R1CS**) constraints associated with an Arithmetic circuit, and
+2. A program (written either in C++ or WebAssembly) for computing a valid assignment to all wires of the Arithmetic circuit, called a **witness**.
 
-1. A file containing a set of associated Rank-1 Constraints System (R1CS) constraints, and 
-2. A program (written either in C++ or WebAssembly) to efficiently compute a valid assignment to all wires of the Arithmetic circuit
+As implemented in the zkProver, CIRCOM takes as input a zk-STARK proof in order to perform two tasks;
 
-Arithmetic circuits are mostly used as standard models for studying the complexity of computations involving polynomials. The CIRCOM component uses the **zk-STARK evidence** from the STARK Recursion Component and the **Verifier Data** as inputs to generate a **witness**. In actuality, this witness is an Arithmetic circuit stated in terms of its R1CS restrictions.
+- Defining and creating an **Arithmetic circuit** corresponding to the input zk-STARK proof. This Arithmetic circuit is expressed in terms of its equivalent **R1CS**.
+- Generating the **witness**, which is in fact a set of valid input, intermediate and output values of the circuit wires satisfying the above R1CS.
 
 ### zk-SNARK Prover
 

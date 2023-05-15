@@ -36,7 +36,9 @@ In a nutshell, a state machine's execution trace is expressed in PIL, and this e
 
 In the non-recursive case, a PIL specification is transformed into a verifiable **STARK** proof by using PIL-STARK.
 
-Subsequently, CIRCOM takes the above **STARK** proof as an input and generates its corresponding **Witness**. Such a Witness is in fact an Arithmetic circuit stated in terms of its **Rank-1 Constraint System (R1CS)**.
+Subsequently, CIRCOM takes the above **STARK** proof as an input and generates an **Arithmetic circuit** and its corresponding **witness**. 
+
+The Arithmetic circuit is expressed in terms of its equivalent **Rank-1 Constraint System (R1CS)**, while the **witness** is actuallly a set of input, intermediate and output values of the circuit wires, satisfying the R1CS.
 
 Finally, **Rapid SNARK** takes the above Witness together with the **STARK Verifier data** and generates a **SNARK** proof corresponding to the previous **STARK** proof.
 

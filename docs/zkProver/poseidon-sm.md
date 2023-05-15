@@ -45,7 +45,7 @@ $$
 f(x) = x^7.
 $$
 
-**Maximum distance separable (MDS)** matrices are used as the **Linear Diffusion Layer** in Poseidon, where an MDS matrix $\mathbf{M} \in \mathbb{F}^{t \times t} $ is characterised by the following known result;
+**Maximum distance separable (MDS)** matrices are used as the **Linear Diffusion Layer** in Poseidon, where an MDS matrix $\mathbf{M} \in \mathbb{F}^{t \times t}$ is characterised by the following known result;
 
 $$
 \text{A matrix } \mathbf{M} \text{ is an MDS matrix } \text{ iff } \text{ every submatrix of } \mathbf{M} \text{ is non-singular. }

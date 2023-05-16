@@ -14,7 +14,7 @@ keywords:
 
 Focusing specifically on the **Proving Phase** of the **Recursion** process; it is a process that starts with proofs of batches (these are sequenced batches of transactions) and culminates in a ready-to-be-published validity proof, which is a SNARK proof.
 
-There are five intemediate stages to achieving this; the **Compression Stage**, the **Normalization Stage**, the **Aggregation Stage**, the **Final Stage** and the **SNARK Stage**.
+There are five intermediate stages to achieving this; the **Compression Stage**, the **Normalization Stage**, the **Aggregation Stage**, the **Final Stage** and the **SNARK Stage**.
 
 An overview of the overall process can be seen in the below figure.
 
@@ -26,7 +26,7 @@ Recall that the first STARK, in the sequence of Recursive provers seen in the **
 
 Henceforth, in each proof of batches, a **Compression Stage** is invoked, aiming at reducing the number of polynomials used. This allows the blowup factor to be augmented, and thus reduce the proof size.
 
-A component called the $\mathtt{c12a\ Prover}$ is utilized in this stage which takes a batch proof $\mathtt{{\pi}_{proof}}$ as input and outputs a 'compressed' proof, denoted by $\mathtt{{\pi}_{\texttt{c12a}}}$ in the above figure.
+A component called the $\mathtt{c12a\ Prover}$ is utilized in this stage which takes a batch proof $\mathtt{{\pi}_{batch}}$ as input and outputs a 'compressed' proof, denoted by $\mathtt{{\pi}_{\texttt{c12a}}}$ in the above figure.
 
 ## Normalization Stage
 
@@ -68,7 +68,7 @@ This step is very much similar to the $\mathtt{recursive_2\ Prover}$ circuit. It
 
 The last step of the whole process is called the **SNARK Stage**, and its purpose is to produce a $\texttt{Groth16}$ proof $\mathtt{{\pi}_{groth16}}$ which validates the previous $\mathtt{{\pi}_{recf}}$ proof.
 
-In fact, $\texttt{Groth16}$ can be replaced with any other SNARKs. One alternative SNARK to $\texttt{Groth16}$, which requires no trusted setup is $\texttt{FFLONK}$.
+In fact, $\texttt{Groth16}$ can be replaced with any other SNARKs. One alternative SNARK to $\texttt{Groth16}$, which requires no trusted setup, is $\texttt{FFLONK}$.
 
 A SNARK is chosen to replace a STARK with the aim to reduce both verification complexity and proof size. SNARKs, unlike STARK proofs, have constant complexity.
 

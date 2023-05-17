@@ -2,14 +2,12 @@
 id: some-examples
 title: Some Examples
 sidebar_label: Some Examples
-description: Compendium of useful examples
+description: This document provides useful code snippet examples in zkASM.
 keywords:
-  - docs
   - polygon
   - zkASM
   - zkEVM
   - examples
-  - Polygon zkEVM
 ---
 
 ## EVM ADD

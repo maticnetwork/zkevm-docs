@@ -4,13 +4,11 @@ title: Transaction Execution & Trusted State
 sidebar_label: Transaction Execution
 description: A guide to help developers understand the transaction life cycle in zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - zkEVM
-  - zkevm protocol
-  - Transaction Batching
-  - Polygon zkEVM
+  - protocol
+  - Transaction Execution
+  - Trusted State
 ---
 
 :::info

@@ -4,14 +4,13 @@ title: Resistance To Trusted Aggregator's Inactivity Or Malfunction
 sidebar_label: Trusted Aggregator
 description: A guide to help developers understand the unique censorship and malfunction resistance methods of Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - zkevm protocol
-  - Polygon zkEVM
-  - censorship
-  - aggregator
-  - malfunction
+  - protocol
+  - zkEVM
+  - censorship resistance
+  - trsuted aggregator
+  - malfunction resistance
+  - Ethereum L2
 ---
 
 In the same way that the system cannot reach L2 State finality without an active and well-functioning Sequencer, there can be no finality without an active and well-functioning Aggregator.
@@ -48,12 +47,12 @@ mapping(uint256 => PendingState) public pendingStateTransitions;
 
 The struct used looks like this:
 
-```pil
+```
 struct PendingState {
-    uint64	timestamp;
-    uint64	lastVerifiedBatch;
-    bytes32	exitRoot;
-    bytes32 stateRoot;
+  uint64	timestamp;
+  uint64	lastVerifiedBatch;
+  bytes32	exitRoot;
+  bytes32 stateRoot;
 }
 ```
 
@@ -71,7 +70,7 @@ The storage variable `lastVerifiedBatch` keeps track of the index of the most re
 
 If there are any pending state transitions, this function returns the index of the last batch in that state; otherwise, it returns the `lastVerifiedBatch`.
 
-```pil
+```
 function getLastVerifiedBatch() public view returns (uint64)
 ```
 

@@ -2,15 +2,14 @@
 id: upgradability
 title: Protocol Upgradability
 sidebar_label: Protocol Upgradability
-description: A guide to help developers understand the update mechanism of Polygon zkEVM protocol.
+description: A guide to help developers understand the update mechanism of the Polygon zkEVM protocol.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - zkEVM Protocol
-  - Polygon zkEVM
-  - upgradability
+  - Protocol
+  - zkEVM
+  - protocol upgradability
   - Transparent Upgradeable Proxy
+  - openzeppelin-upgrades
 ---
 
 To allow for future updates to the zkEVM Protocol implementation (either in the case of adding new features, fixing bugs, or optimizations upgrades), the following contracts are deployed using a **Transparent Upgradeable Proxy (TUP)** pattern:

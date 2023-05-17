@@ -4,11 +4,12 @@ title: Differences between EVM and zkEVM
 sidebar_label: EVM vs zkEVM
 description: A guide to help developers understand the differences between the EVM and Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - zkevm protocol
-  - Polygon zkEVM
+  - protocol
+  - zkEVM
+  - opcodes
+  - evm equivalence
+  - precompiled contracts
 ---
 
 This document provides a comprehensive list of differences between the Ethereum Virtual Machine (EVM) and the Polygon Zero-Knowledge Ethereum Virtual Machine (zkEVM). The list includes supported EIPs, opcodes, and additional changes made to build the zkEVM.

@@ -4,12 +4,11 @@ title: zkEVM and EVM Equivalence FAQs
 sidebar_label: EVM Equivalence
 description: This document compiles some of the frequently asked questions related to the Polygon zkEVM and its EVM equivalence.
 keywords:
-  - docs
-  - zk rollups
-  - polygon
-  - proof
   - Polygon zkEVM
-  - faq
+  - compatibility faq
+  - evm equivalence
+  - EVM
+  - opcodes
 ---
 
 This document compiles some of the frequently asked questions related to the Polygon zkEVM's equivalence with EVM. For more details, check out [this documentation](/protocol/evm-differences.md).
@@ -71,4 +70,3 @@ Polygon zkEVM has a high level of compatibility with Ethereum errors. You need t
 You can deploy any smart contract on Polygon zkEVM, just like you would on Ethereum, so you can deploy any token. If you want to send the token to Ethereum, the bridge will convert it to an ERC20 token (bi-directional bridge).
 
 The bridge also has **low-level message passing functionality** that can be used to bridge any type of value, including NFTs and other token standards.
-

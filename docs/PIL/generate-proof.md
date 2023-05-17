@@ -2,22 +2,22 @@
 id: generate-proof
 title: Generating Proofs Using pil-stark
 sidebar_label: Generating Proofs
-description: A description of how proofs of execution correctness are generated.
+description: The following document describes how proofs of execution correctness are generated using pil-stark package.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
-  - proofs of execution
+  - zkEVM
+  - proofs of execution correctness
+  - starkSetup
+  - starkGen
+  - starkVerify
 ---
 
 Once the constant and the committed polynomials are filled (as seen in the [Filling Polynomial section](filling-polynomial.md)), the next step is generation of a proof of correctness.
 
 A Javascript package called `pil-stark` has been specially designed to work together with `pilcom` to generate STARK proofs for execution correctness of programs being verified.
 
-The `pil-stark` package utilizes three functions; `starkSetup`, `starkGen` and `starkVerify`.
+The `pil-stark` package utilizes three functions; `starkSetup`, `starkGen`, and `starkVerify`.
 
 ## `starkSetup`
 

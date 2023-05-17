@@ -4,10 +4,10 @@ title: Polygon zkEVM Gas Station
 sidebar_label: zkEVM Gas Station
 description: Gas price recommendations on the Polygon zkEVM.
 keywords:
-  - docs
   - polygon
   - zkevm
   - gas price prediction
+  - Gas Station
 ---
 
 import Tabs from '@theme/Tabs';

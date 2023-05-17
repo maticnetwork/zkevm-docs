@@ -2,14 +2,13 @@
 id: introduction
 title: Polynomial Identity Language
 sidebar_label: Introduction
-description: The concept of Polynomial Identity Language
+description: Polynomial Identity Language (PIL) is a domain-specific language (DSL) created to provide developers with a holistic framework for constructing programs through an easy-to-use interface, and abstracting the complexity of proof/verification mechanisms.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
+  - introduction to PIL
+  - Polynomial Identity Language
 ---
 
 ## Overview

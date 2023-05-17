@@ -2,14 +2,13 @@
 id: develop
 title: Start Building on Polygon zkEVM
 sidebar_label: Build on zkEVM
-description: A guide to help developers get started building on the Polygon zkEVM
+description: Polygon zkEVM provides a complete EVM-like experience for Developers and Users alike. Simply switch to the zkEVM network and start building on a network with much higher throughput and lower fees.
 keywords:
-  - docs
   - polygon
   - develop
-  - zkEVM mainnet
-  - deploy on zkEVM
-  - Polygon zkEVM
+  - zkEVM
+  - deploy smart contracts
+  - connecting to zkEVM
 ---
 
 :::caution Risks

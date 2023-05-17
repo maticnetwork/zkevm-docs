@@ -4,12 +4,12 @@ title: Flow of Assets in zKEVM
 sidebar_label: Flow of Assets
 description: Introduction to the Polygon zkEVM bridge and flow of assets between L1 and L2.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - bridge
-  - Polygon zkEVM
+  - zkEVM
   - flow of assets
+  - L1 to L2
+  - L1 to L1
 ---
 
 ## Asset Flow from L1 &rarr; L2
@@ -44,9 +44,9 @@ Note that there is an intermediate step which, for the sake of simplicity, is no
 
 3. The Aggregator generates a ZK-proof attesting to the computational integrity in the execution of sequenced batches (where one of these batches includes the user's bridging transaction).
 
-4. For verification purposes, the Aggregator sends the ZK-proof together with all relevant batch information that led to the new L2 Exit Tree Root (computed in step 2 above), to the Consensus SC (`PolygonZkEVM.sol`).
+4. For verification purposes, the Aggregator sends the ZK-proof together with all relevant batch information that led to the new L2 Exit Tree Root (computed in step 2 above), to the Consensus Contract (`PolygonZkEVM.sol`).
 
-5. The Consensus SC utilizes the `verifyBatches` function to verify validity of the received ZK-proof. If valid, the Consensus SC sends the new L2 Exit Tree Root to the Global Exit Root Manager SC (`PolygonZkEVMGlobalExitRoot.sol`) in order to update the Global Exit Tree.
+5. The Consensus Contract utilizes the `verifyBatches` function to verify validity of the received ZK-proof. If valid, the Consensus Contract sends the new L2 Exit Tree Root to the Global Exit Root Manager SC (`PolygonZkEVMGlobalExitRoot.sol`) in order to update the Global Exit Tree.
 
 6. In order to complete the bridging process on the L1 network, the user calls the `Claim` function of the Bridge SC, and provides a Merkle proof of the fact that the correct exit leaf was included in the compution of Global Exit Root.
 
@@ -56,9 +56,9 @@ Note that there is an intermediate step which, for the sake of simplicity, is no
 
 Please note that the architecture shown in below figure is rather simplistic. It focuses on depicting the relationship between the various Bridge elements.
 
-For example, the interaction between the Consensus SC and the Sequencer is omitted in the figure. 
+For example, the interaction between the Consensus Contract and the Sequencer is omitted in the figure. 
 
-For a more wholistic view of the interaction between the Consensus SC and the Sequencer, the reader is referred to earlier subsections of this documentation, specifically on the [<ins>Consensus SC</ins>](/architecture.md#consensus-contract).
+For a more wholistic view of the interaction between the Consensus Contract and the Sequencer, the reader is referred to earlier subsections of this documentation, specifically on the [<ins>Consensus Contract</ins>](/architecture.md#consensus-contract).
 
 :::
 

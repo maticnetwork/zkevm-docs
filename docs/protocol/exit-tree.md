@@ -2,14 +2,14 @@
 id: exit-tree
 title: Exit Trees And Global Exit Root
 sidebar_label: Exit Tree
-description: Introduction to the Polygon zkEVM bridge architecture.
+description: Exit Tree refers to an append-only Sparse Merkle Tree (SMT) whose leaf nodes record information about assets being transferred out of the zkEVM network. Exit Trees of depth 32 are utilized by Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - bridge
-  - Polygon zkEVM
-  - exit tree
+  - zkEVM
+  - merkle tree
+  - Global Exit Tree
+  - transfer
 ---
 
 The zkEVM's Bridge SC utilizes a special Merkle Tree called **Exit Tree** for each of the networks participating in the communication or asset-exchange.

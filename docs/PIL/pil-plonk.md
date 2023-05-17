@@ -2,14 +2,12 @@
 id: pil-plonk
 title: PLONK In PIL
 sidebar_label: PLONK in PIL
-description: A description of how PLONK verification is implemented in PIL.
+description: This document describes how PLONK verification is implemented in Polynomial Identity Language.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
+  - PLONK
 ---
 
 This document will help us in understanding how to implement $\mathcal{PlonK}$ verification by using **connection arguments**. Let's begin!

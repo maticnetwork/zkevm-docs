@@ -179,7 +179,7 @@ function Home() {
                 <div class="newsletter-section_max-width">
                   <div class="tiny-text">STAY UP TO DATE</div>
                   <div class="padding-bottom padding-xsmall"></div>
-                  <h3 class="heading-style-h4"><a href="https://polygondeveloperstudio.substack.com/" target="_blank"><span className="white-text">read our dev newsletter</span><span class="newsletter_link-icon" /></a></h3>
+                  <h3 class="heading-style-h4"><a href="https://share.hsforms.com/10t6UMV_rRRyCNRluFRqEiAc8xid" target="_blank"><span className="white-text">subscribe to our newsletter</span><span class="newsletter_link-icon" /></a></h3>
                 </div>
               </div>
             </div>

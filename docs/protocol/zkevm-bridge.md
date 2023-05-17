@@ -11,7 +11,7 @@ keywords:
   - Polygon zkEVM
 ---
 
-The ability of any blockchain to exchange data with other blockchains is critical for it to participate in an ecosystem of other blockchains; this is known as **interoperability**. Many interoperability-enabling solutions have been developed, each with their own set of advantages and disadvantages.
+The ability of any blockchain to exchange data with other blockchains is critical, as it allows the blockchain to participate in an ecosystem of other blockchains; this is known as **interoperability**. Many interoperability-enabling solutions have been developed, each with their own set of advantages and disadvantages.
 
 The Polygon team has created an interoperability solution in the form of a bridge for the Polygon zkEVM L2 network. The zkEVM Bridge is a component that enables communication and asset migration between the Polygon zkEVM network and other networks, such as the L1 (Ethereum Mainnet) or any L2 built on top of Ethereum.
 

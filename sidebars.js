@@ -129,6 +129,7 @@ module.exports = {
             "zkProver/proving-tools",
             "zkProver/stark-recursion-detail",
             "zkProver/recursion-sub-process",
+            "zkProver/proving-architecture",
           ],
         },
         {

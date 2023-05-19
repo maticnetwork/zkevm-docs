@@ -2,14 +2,13 @@
 id: circom-intro-brief
 title: CIRCOM
 sidebar_label: CIRCOM
-description: CIRCOM is a domain-specific language (DSL) used to define Arithmetic circuits, and it has an associated compiler of Arithmetic circuits to their respective Rank-1 Constraint Systems (or R1CSs).
+description: CIRCOM is a domain-specific language (DSL) used to define Arithmetic circuits, and it has an associated compiler of Arithmetic circuits to their respective Rank-1 Constraint Systems.
 keywords:
   - docs
   - polygon
   - CIRCOM
   - zkEVM
 ---
-
 
 :::info
 
@@ -19,7 +18,6 @@ In this document, we describe the CIRCOM component of the zkProver. It is one of
 You may refer to the original [CIRCOM research paper](https://www.techrxiv.org/articles/preprint/CIRCOM_A_Robust_and_Scalable_Language_for_Building_Complex_Zero-Knowledge_Circuits/19374986/1) for more details.
 
 :::
-
 
 As seen in the [zkProver Overview](/zkProver/overview.md) document, the output of the STARK Recursion component is STARK proof.
 
@@ -61,7 +59,7 @@ CIRCOM was developed for the very purpose of scaling complex Arithmetic circuits
 
 ## What is CIRCOM?
 
-CIRCOM is a domain-specific language (DSL) used to define Arithmetic circuits, and it has an associated compiler of Arithmetic circuits to their respective Rank-1 Constraint Systems (or R1CSs).
+CIRCOM is a Domain-Specific Language (DSL) used to define Arithmetic circuits, and it has an associated compiler of Arithmetic circuits to their respective Rank-1 Constraint System (or R1CS).
 
 ![CIRCOM Overall Context](figures/02circom-overall-context.png)
 
@@ -79,7 +77,7 @@ In this regard, CIRCOM users can use templates to create their own custom circui
 
 However, CIRCOM users can also use templates from [CIRCOMLIB](https://github.com/iden3/circomlib), which is a publicly available library that contains hundreds of circuits such as; comparators, hash functions, digital signatures, binary and decimal converters.
 
-### Circuits' Compiler
+### Circuit Compiler
 
 In addition to being a DSL used to define and create Arithmetic circuits, CIRCOM has a special compiler of Arithmetic circuits into their equivalent R1CS.
 
@@ -104,11 +102,11 @@ $$
 \texttt{a} \times \texttt{b} \texttt{ - c = 0}
 $$
 
-### The $\texttt{pragma}$ Instruction
+### The `pragma` Instruction
 
 The `pragma` instruction specifies the version of the CIRCOM compiler being used. It is meant to ensure compatibility between the circuit and the compiler version. If the two are incompatible, the compiler throws a warning.
 
-```circom
+```
 pragma circom 2.0.0;
 ```
 
@@ -123,19 +121,19 @@ In CIRCOM, each signal is given an identifier. However, the same sympols; $\text
 The three signals are declared as follows,
 
 ```
-  signal input a;
-  signal input b;
-  signal output c;
+signal input a;
+signal input b;
+signal output c;
 ```
 
-### The "$\mathtt{<==}$" Operator
+### The <== Operator
 
 The functionality of this operator is twofold;
 
 - On the one hand, it sets a constraint that expresses that the value of $\texttt{c}$ must be the result of multiplying $\texttt{a}$ by $\texttt{b}$,
 - On the other hand, the operator instructs the compiler in how to generate the program that computes the assignment of circuit signals.
 
-```circom
+```
 c <== a * b;
 ```
 
@@ -150,16 +148,16 @@ They are general descriptions of circuits, that have some input and output signa
 The following code shows how a `Multiplier template` is created:
 
 ```
- pragma circom 2.0.0;
+pragma circom 2.0.0;
 
- template Multiplier () {
-     // declaration of signals
-     signal input a;
-     signal input b;
-     signal output c;
-     // constraints
-     c <== a * b;
- }
+template Multiplier () {
+  // declaration of signals
+  signal input a;
+  signal input b;
+  signal output c;
+  // constraints
+  c <== a * b;
+}
 ```
 
 ### Instantiation Of Templates
@@ -260,7 +258,7 @@ template Multiplier() {
   signal input b;
   signal output c;
 	c <== a * b;
-	}
+}
 
-	component main {public [a]} = Multiplier();
+component main {public [a]} = Multiplier();
 ```

@@ -131,6 +131,9 @@ module.exports = {
             "zkProver/stark-recursion-detail",
             "zkProver/recursion-sub-process",
             "zkProver/proving-architecture",
+            "zkProver/circom-in-zkprover",
+            "zkProver/proving-setup-phase",
+            "zkProver/intermediate-recursion-steps",
           ],
         },
         {

@@ -13,8 +13,6 @@ keywords:
 image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 ---
 
-# CIRCOM
-
 :::info
 
 In this document we describe the CIRCOM component of the zkProver. It is one of the four main components of the zkProver, as outlined [here](https://wiki.polygon.technology/docs/zkEVM/zkProver/overview). These main components are; the Executor or Main State Machine, the STARK Recursion, CIRCOM and Rapid SNARK.
@@ -91,8 +89,8 @@ In addition to being a DSL used to define and create Arithmetic circuits, CIRCOM
 
 The term "CIRCOM" is in fact short for "Circuit Compiler", implying that the CIRCOM compiler takes an Arithmetic circuit as input and outputs the following;
 
-- A file with the R1CS description (the _witness_), containing the set of associated R1CS constraints, and
-- A program written either in C++ or WebAssembly, for efficiently computing a valid assignment to all wires of the circuit.
+- A file with the R1CS description, containing the set of associated R1CS constraints, and
+- A program written either in C++ or WebAssembly, for efficiently computing a valid assignment to all wires of the circuit (the _witness_).
 
 The CIRCOM compiler is mainly written in Rust and it is open source.
 

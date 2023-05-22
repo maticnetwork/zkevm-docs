@@ -8,7 +8,7 @@ keywords:
   - protocol
   - zkEVM
   - censorship resistance
-  - trsuted aggregator
+  - trusted aggregator
   - malfunction resistance
   - Ethereum L2
 ---

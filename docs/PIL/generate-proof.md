@@ -17,7 +17,7 @@ Once the constant and the committed polynomials are filled (as seen in the [Fill
 
 A Javascript package called `pil-stark` has been specially designed to work together with `pilcom` to generate STARK proofs for execution correctness of programs being verified.
 
-The `pil-stark` package utilizes three functions; `starkSetup`, `starkGen`, and `starkVerify`.
+The `pil-stark` package utilizes three functions: `starkSetup`, `starkGen`, and `starkVerify`.
 
 ## `starkSetup`
 

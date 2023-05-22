@@ -2,15 +2,17 @@
 id: state-management
 title: Polygon zkEVM State Management
 sidebar_label: State Management
-description: A guide to help developers understand the unique Polygon zkEVM protocol.
+description: This document explains how the Polygon zkEVM Protocol manages L2 Rollup's states while providing state transition verifiability and security.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - zkEVM
-  - zkevm protocol
-  - deploy on zkEVM
-  - state transitions
+  - protocol
+  - State Management
+  - trustless
+  - L2 states
+  - trusted state
+  - virtual state
+  - consolidated state
 ---
 
 This document aims to explain how the Polygon zkEVM Protocol manages the L2 Rollup's states while providing state transition verifiability and security.

@@ -1,20 +1,18 @@
 ---
 id: emergency-state
-title: Emergency State And Resistance To Soundness Attack
+title: Emergency State in zkEVM
 sidebar_label: Emergency State
-description: A guide to help developers understand the unique censorship and malfunction resistance methods of Polygon zkEVM.
+description: The emergency state is a Consensus Contract state that, when activated, terminates batch sequencing and bridge operations. It is a security measure used to protect users' assets in zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - zkevm protocol
-  - Polygon zkEVM
-  - censorship
+  - protocol
+  - zkEVM
   - emergency state
-  - malfunction
+  - Consensus Contract
+  - pending state
 ---
 
-The emergency state is a Consensus Contract state (of 'PolygonZkEVM.sol' and 'PolygonZkEVMBridge.sol') that, when activated, terminates batch sequencing and bridge operations. The goal of enabling the emergency state is to allow the Polygon team to solve cases of soundness vulnerabilities or exploitation of any smart contract bugs. It is a security measure used to protect users' assets in L2.
+The emergency state is a Consensus Contract state (of 'PolygonZkEVM.sol' and 'PolygonZkEVMBridge.sol') that, when activated, terminates batch sequencing and bridge operations. The goal of enabling the emergency state is to allow the Polygon team to solve cases of soundness vulnerabilities or exploitation of any smart contract bugs. It is a security measure used to protect users' assets in zkEVM.
 
 The following functions will be disabled while in the emergency state:
 

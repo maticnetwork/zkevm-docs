@@ -2,15 +2,13 @@
 id: open-source-repos
 title: Polygon zkEVM Source Code
 sidebar_label: Source Code
-description: Github source code repositories related to Polygon zkEVM
+description: Github source code repositories related to Polygon zkEVM.
 keywords:
-  - docs
   - polygon
-  - repository
+  - zkEVM
+  - github repository
   - source code
-  - github
-  - zkevm
-  - zkprover
+  - open source
 ---
 
 This document provides the complete list of all available source code repositories related to Polygon zkEVM and its components including the zkProver. Feel free to check out the [Polygon zkEVM](https://github.com/0xPolygonHermez) organization on Github.

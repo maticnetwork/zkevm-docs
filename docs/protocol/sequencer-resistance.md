@@ -4,14 +4,12 @@ title: Resistance To Trusted Sequencer's Censorship Or Malfunction
 sidebar_label: Trusted Sequencer
 description: A guide to help developers understand the unique censorship and malfunction resistance methods of Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - zkevm protocol
-  - Polygon zkEVM
-  - censorship
-  - sequencer
-  - malfunction
+  - protocol
+  - zkEVM
+  - censorship resistance
+  - trusted sequencer
+  - forced batch
 ---
 
 Users must rely on a Trusted Sequencer for their transactions to be executed in the L2. However, users can include their transactions in a **forced batch** if they are unable to execute them through the Trusted Sequencer.
@@ -22,7 +20,7 @@ Users must rely on a Trusted Sequencer for their transactions to be executed in 
 
 The `PolygonZkEVM.sol` contract has a `forcedBatches` mapping, as shown in the above figure, in which users can submit transaction batches to be forced. The `forcedBatches` mapping serves as an immutable notice board where forced batches are timestamped and published before being included in a sequence.
 
-```pil
+```
 // ForceBatchNum --> hashedForcedBatchData
 
 mapping(uint64 => bytes32) public forcedBatches;
@@ -40,7 +38,7 @@ In order to ensure finality in the case of Trusted Sequencer's malfunction, the 
 
 Any user can publish a batch to be forced by directly calling `forceBatch` function:
 
-```pil
+```
 function forceBatch(
 	bytes memory transactions ,
 	uint256 maticAmount
@@ -61,7 +59,7 @@ In order to successfully publish forced batch to the `forcedBatches` mapping, th
 
 The forced batch is entered in `forcedBatches` mapping keyed by its force batch index.
 
-```pil
+```
 struct ForcedBatchData { 
     bytes transactions; 
     bytes32 globalExitRoot; 
@@ -71,7 +69,7 @@ struct ForcedBatchData {
 
 The `lastForceBatch` storage variable, which is incremented for each forced batch published, serves as a forced batch counter and thus provides a specific index number. The value entered is a hash digest of the ABI-encoded packed struct fields from the `lastForceBatch`.
 
-```pil
+```
 keccak256(
 	abi.encodePacked(
 		keccak256(bytes transactions), 
@@ -87,7 +85,7 @@ The contract sets the `minTimestamp` to the L1 block timestamp, at which point t
 
 In the extremely unlikely event that **the Trusted Sequencer fails, any user can use the `sequenceForceBatches` function to sequence forced batches**:
 
-```pil
+```
 function sequenceForceBatches(
 	ForcedBatchData[] memory batches
 ) public ifNotEmergencyState isForceBatchAllowed
@@ -101,7 +99,7 @@ The `sequenceForceBatches` function determines whether each batch in the submitt
 
 If the sequence of forced batches meets all of the sequence conditions, it will be added to the `sequencedBatches` mapping as a regular one. As a result, a `sequenceForceBatches` event will be generated.
 
-```pil
+```
 event SequenceForceBatches(uint64 indexed numBatch);
 ```
 

@@ -2,14 +2,11 @@
 id: cyclic-nature
 title: Cyclic Nature of PIL
 sidebar_label: Cyclic Nature
-description: A description of how to introduce cyclicity to execution traces in PIL.
+description: This document describes how to introduce cyclicity to execution traces in Polynomial Identity Language.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
   - cyclic nature
 ---
 
@@ -66,7 +63,7 @@ $$
 \texttt{a}(g^i) = \texttt{a}[i]\ \ \text{and}\ \ \texttt{b}(g^i) = \texttt{b}[i].
 $$
 
-For the sake of conveniecne, in this particular example, the row index starts at $0$ just so it syncs with the normal array indexing.
+For the sake of convenience, in this particular example, the row index starts at $0$ just so it syncs with the normal array indexing.
 :::
 
 ### Constraints And Cyclicity

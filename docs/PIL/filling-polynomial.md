@@ -2,19 +2,17 @@
 id: filling-polynomial
 title: Filling Polynomials
 sidebar_label: Filling Polynomials
-description: A description of how to fill Polynomials in PIL.
+description: This document describes how to fill Polynomials in PIL using JavaScript and Pilcom.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
+  - pilcom
+  - Filling Polynomials
+  - execution trace
 ---
 
-## Overview
-
-In this section, we are going to use **Javascript** and **pilcom** to generate a specific execution trace for a given PIL. 
+In this document, we are going to use **Javascript** and **pilcom** to generate a specific execution trace for a given PIL. 
 
 To do so, we are going to use the execution trace of a program previously discussed in the [Connecting Programs](connect-programs.md) section.
 

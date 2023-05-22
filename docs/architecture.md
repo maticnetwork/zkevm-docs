@@ -4,21 +4,17 @@ title: Architecture
 sidebar_label: Architecture
 description: Introduction to Polygon zkEVM and it's architecture.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - proof
-  - Polygon zkEVM
-  - efficiency
-  - hermez
   - zkEVM
-  - polygon zkEVM
   - architecture
+  - Consensus Contract
+  - Synchronizer
+  - zkProver
+  - zkEVM Bridge
+  - Verifier
 ---
 
-## Overview
-
-Polygon zkEVM handles state transitions caused by Ethereum Layer 2 transaction executions (transactions that users send to the network). Following that, it creates validity proofs that attest to the accuracy of these off-chain state change calculations by utilising zero-knowledge features.
+Polygon zkEVM handles state transitions caused by Ethereum Layer 2 transaction executions (transactions that users send to the network). Following that, it creates validity proofs that attest to the accuracy of these off-chain state change calculations by utilizing zero-knowledge features.
 
 The major components of zkEVM are:
 
@@ -75,7 +71,7 @@ Unless, among other things, the proving module can be highly accelerated to miti
 ​
 ### PolygonZkEVM.sol
 ​
-The underlying protocol in zkEVM ensures that the state transitions are correct by employing a validity proof. To ensure that a set of pre-determined rules have been followed for allowing state transitions, the **Consensus Contract** (PolygonZkEVM.sol, deployed on L1) is utilized.
+The underlying protocol in zkEVM ensures that the state transitions are correct by employing a validity proof. To ensure that a set of pre-determined rules have been followed for allowing state transitions, the **Consensus Contract** (`PolygonZkEVM.sol`, deployed on L1) is utilized.
 ​
 :::info
 ​
@@ -91,9 +87,9 @@ To carry out these procedures, zkEVM employs two sorts of participants: **Sequen
 ​
 - [**Aggregators**](/zknode/overview.md#aggregators) &rarr; check the validity of the transaction batches and provide validity proofs. Any permissionless Aggregator can submit the proof to demonstrate the correctness of the state transition computation.
 
-The  Smart Contract, therefore, makes two calls: One to receive batches from Sequencers, and another to Aggregators, requesting batches to be validated.
+The  Smart Contract, therefore, makes two calls: one to receive batches from Sequencers, and another to Aggregators, requesting batches to be validated.
 ​
-![Figure 2: Simplified Proof of Efficiency](figures/fig2-simple-poe.png)
+![Simplified Proof of Efficiency](figures/fig2-simple-poe.png)
 ​
 ### Tokenomics
 ​
@@ -161,7 +157,7 @@ Layer 2 interoperability allows a native mechanism to migrate assets between dif
 
 Verifier is a Smart Contract which is able to verify any ZK-SNARK cryptographic proof. This SNARK Verifier proves the validity of every transaction in the batch. It is the key entity in any zk-Rollup architechture for the prime reason that it verifies the correctness of a Proof ensuring a valid state transition.
 
-The Verifier contract is deployed on the Goerli testnet and can be found [here](https://goerli.etherscan.io/address/0x8EdA1d8c254a77a57A6A7A1C0262e9A44A7C6D6d).
+The Verifier contract is currently deployed on the [Ethereum Mainnet](https://etherscan.io/address/0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9) and [Goerli Testnet](https://goerli.etherscan.io/address/0x8EdA1d8c254a77a57A6A7A1C0262e9A44A7C6D6d).
 
 ## [Transaction Life Cycle](/protocol/l2-transaction-cycle-intro.md)
 

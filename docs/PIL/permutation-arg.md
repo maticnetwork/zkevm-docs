@@ -2,14 +2,13 @@
 id: permutation-arg
 title: Permutation Arguments
 sidebar_label: Permutation Arguments
-description: A description of Permutation Arguments and how they are used in PIL.
+description: This document describes Permutation Arguments and how they are used in Polynomial Identity Language.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
+  - permutation arguments
+  
 ---
 
 ## Definition

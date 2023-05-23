@@ -23,7 +23,7 @@ Users can deposit assets from Ethereum and transact off-chain on Polygon zkEVM. 
 
 Check out this video guide on **how to bridge tokens from L1 to the zkEVM Testnet**. The same video will apply to the zkEVM Mainnet Beta.
 
-<video loop autoplay width="100%" height="100%" controls="true" >
+<video loop autoPlay width="100%" height="100%" controls={true} >
   <source type="video/mp4" src="/img/zkevm/zkevmwallettestnet.mp4"></source>
   <p>Your browser does not support the video element.</p>
 </video>

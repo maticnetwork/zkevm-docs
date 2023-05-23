@@ -32,7 +32,7 @@ function FirstRow({ title, linkUrl, imageUrl }) {
       <Link to={useBaseUrl(linkUrl)}>
         <div className="show-card underline-text">
           <div className="icon-wrapper">
-            <iframe src={imageUrl} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style={{position:"absolute", height: "80%"}} title="Hero" data-ready="true"></iframe>
+            <iframe src={imageUrl} frameBorder="0" allow="autoPlay; fullscreen; picture-in-picture" allowFullScreen="" style={{position:"absolute", height: "80%"}} title="Hero" data-ready="true"></iframe>
           </div>
           <div className="title">{title}</div>
         </div>
@@ -69,8 +69,8 @@ function Buttonizer({linkUrl}) {
         </div>
         <div className="button-icon_right-element is-icon-medium">
           <div className="icon-1x1-medium w-embed">
-            <svg width="auto" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <svg width="2rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
             </svg>
           </div>
         </div>
@@ -81,8 +81,8 @@ function Buttonizer({linkUrl}) {
         </div>
         <div className="button-icon_right-element is-icon-medium">
           <div className="icon-1x1-medium w-embed">
-            <svg width="auto" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <svg width="2rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
             </svg>
           </div>
         </div>
@@ -111,11 +111,11 @@ function Home() {
                   extensive documentation, community resources, and guides for enthusiasts 
                   and developers interested in learning about or building on zkEVM.
                 </p>
-                <div class="padding-bottom custom-padding"></div>
+                <div className="padding-bottom custom-padding"></div>
                 <Buttonizer linkUrl={'https://wallet.polygon.technology/zkEVM-Bridge/bridge'} />
               </div>
               <div className="col-lg-4">
-                <div className="tabs_animation-wrapper"><iframe src="https://player.vimeo.com/video/791154651?h=f4d511386d&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameBorder="0" allow="autoplay" className="tabs-frame" title="Hero" data-ready="true" width="500"height="450" /></div>
+                <div className="tabs_animation-wrapper"><iframe src="https://player.vimeo.com/video/791154651?h=f4d511386d&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoPlay=1&background=1" frameBorder="0" allow="autoPlay" className="tabs-frame" title="Hero" data-ready="true" width="500"height="450" /></div>
               </div>
             </div>
             </section>
@@ -136,7 +136,7 @@ function Home() {
               <span className="button-icon_right-element is-icon-medium">
                 <div className="w-embed">
                   <svg width="2.5rem" height="2.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                   </svg>
                 </div>
               </span>
@@ -158,8 +158,8 @@ function Home() {
                         <p className="c2a-text">You can check the live status of Polygon zkEVM network using the following links for Mainnet Beta and Public Testnet.</p>
                       </div>
                       <div>
-                        <a href="https://status.zkevm-rpc.com/" target="_blank" class="button white-button" style={{marginRight: 8}}>Mainnet Beta</a>
-                        <a href="https://status.zkevm-test.net/" target="_blank" class="button white-button">Public Testnet</a>
+                        <a href="https://status.zkevm-rpc.com/" target="_blank" className="button white-button" style={{marginRight: 8}}>Mainnet Beta</a>
+                        <a href="https://status.zkevm-test.net/" target="_blank" className="button white-button">Public Testnet</a>
                       </div>
                     </div>
                   </div>
@@ -170,16 +170,16 @@ function Home() {
         <section className="newsletter">
           <div className="newsletter_anim-wrapper pb_intersection">
             <div className="animation_embed w-embed w-iframe">
-              <iframe src="https://player.vimeo.com/video/791149043?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style={{position: 'absolute', top:0, left:0, width:'100%', height:'100%'}} title="Hero" data-ready="true"></iframe>    
+              <iframe src="https://player.vimeo.com/video/791149043?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoPlay=1&amp;background=1" frameBorder="0" allow="autoPlay; fullscreen; picture-in-picture" allowFullScreen="" style={{position: 'absolute', top:0, left:0, width:'100%', height:'100%'}} title="Hero" data-ready="true"></iframe>    
             </div>
           </div>
           <div className="padding-global">
-            <div class="container-medium">  
-              <div class="padding-section-large">
-                <div class="newsletter-section_max-width">
-                  <div class="tiny-text">STAY UP TO DATE</div>
-                  <div class="padding-bottom padding-xsmall"></div>
-                  <h3 class="heading-style-h4"><a href="https://share.hsforms.com/10t6UMV_rRRyCNRluFRqEiAc8xid" target="_blank"><span className="white-text">subscribe to our newsletter</span><span class="newsletter_link-icon" /></a></h3>
+            <div className="container-medium">  
+              <div className="padding-section-large">
+                <div className="newsletter-section_max-width">
+                  <div className="tiny-text">STAY UP TO DATE</div>
+                  <div className="padding-bottom padding-xsmall"></div>
+                  <h3 className="heading-style-h4"><a href="https://share.hsforms.com/10t6UMV_rRRyCNRluFRqEiAc8xid" target="_blank"><span className="white-text">subscribe to our newsletter</span><span className="newsletter_link-icon" /></a></h3>
                 </div>
               </div>
             </div>

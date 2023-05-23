@@ -1,5 +1,6 @@
 ## Describe your changes
-
+- Few invalid DOM property fixed. Eg: `stroke-width` to `strokeWidth`.
+- Few svg height and width fixed.
 ## Issue ticket number and link
 
 ## Requirements

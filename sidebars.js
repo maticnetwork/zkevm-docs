@@ -8,9 +8,9 @@
 module.exports = {
   specifications: [
     {
-      type: 'html',
-      value: 'Specifications',
-      className: 'sidebar-title',
+      type: "html",
+      value: "Specifications",
+      className: "sidebar-title",
     },
     "introduction",
     "architecture",
@@ -25,18 +25,18 @@ module.exports = {
         "protocol/protocol-components",
         "protocol/state-management",
         {
-              type: "category",
-              label: "Transaction Life Cycle",
-              link: {
-                type: "generated-index"
-              },
-              items:[
-                "protocol/l2-transaction-cycle-intro",
-                "protocol/transaction-execution",
-                "protocol/transaction-batching",
-                "protocol/transaction-sequencing",
-                "protocol/transaction-aggregation",
-              ]
+          type: "category",
+          label: "Transaction Life Cycle",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "protocol/l2-transaction-cycle-intro",
+            "protocol/transaction-execution",
+            "protocol/transaction-batching",
+            "protocol/transaction-sequencing",
+            "protocol/transaction-aggregation",
+          ],
         },
         "protocol/incentive-mechanism",
         "protocol/upgradability",
@@ -54,20 +54,20 @@ module.exports = {
           ],
         },
         {
-              type: "category",
-              label: "zkEVM Bridge",
-              link: {
-                type: "generated-index"
-              },
-              items:[
-               "protocol/zkevm-bridge",
-               "protocol/exit-tree",
-               "protocol/bridge-smart-contract",
-               "protocol/flow-of-asset",
-              ]
+          type: "category",
+          label: "zkEVM Bridge",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "protocol/zkevm-bridge",
+            "protocol/exit-tree",
+            "protocol/bridge-smart-contract",
+            "protocol/flow-of-asset",
+          ],
         },
         "protocol/evm-diff",
-      ]
+      ],
     },
     "zknode/zknode-overview",
     {
@@ -85,38 +85,38 @@ module.exports = {
           link: {
             type: "generated-index",
           },
-          items:[
+          items: [
             "zkProver/zkprover-design",
             {
               type: "category",
               label: "mFibonacci SM",
               link: {
-                type: "generated-index"
+                type: "generated-index",
               },
-              items:[
+              items: [
                 "zkProver/mfibonacci-overview",
                 "zkProver/mfibonacci-example",
                 "zkProver/commitment-scheme",
                 "zkProver/verification-scheme",
                 "zkProver/pil-stark",
                 "zkProver/pil-stark-demo",
-              ]
+              ],
             },
             {
               type: "category",
               label: "Generic SM",
               link: {
-                type: "generated-index"
+                type: "generated-index",
               },
-              items:[
+              items: [
                 "zkProver/intro-generic-sm",
                 "zkProver/exec-trace-correct",
                 "zkProver/ending-program",
                 "zkProver/program-counter",
                 "zkProver/plookup",
-              ]
+              ],
             },
-          ]
+          ],
         },
         {
           type: "category",
@@ -127,8 +127,10 @@ module.exports = {
           items: [
             "zkProver/intro-stark-recursion",
             "zkProver/proving-tools",
+            "zkProver/circom-intro-brief",
             "zkProver/stark-recursion-detail",
             "zkProver/recursion-sub-process",
+            "zkProver/proving-architecture",
           ],
         },
         {
@@ -210,9 +212,9 @@ module.exports = {
 
   build: [
     {
-      type: 'html',
-      value: 'Developer Guides',
-      className: 'sidebar-title',
+      type: "html",
+      value: "Developer Guides",
+      className: "sidebar-title",
     },
     "develop",
     "bridge-to-zkevm",
@@ -223,10 +225,7 @@ module.exports = {
         type: "generated-index",
       },
       collapsed: false,
-      items: [
-        "setup-local-node",
-        "setup-production-node",
-      ],
+      items: ["setup-local-node", "setup-production-node"],
     },
     "zkevm-gas-station",
     "open-source-repos",
@@ -235,13 +234,13 @@ module.exports = {
 
   faq: [
     {
-      type: 'html',
-      value: 'FAQs',
-      className: 'sidebar-title',
+      type: "html",
+      value: "FAQs",
+      className: "sidebar-title",
     },
     "faq/zkevm-general-faq",
     "faq/zkevm-protocol-faq",
     "faq/zkevm-eth-faq",
-    "risk-disclosure"
+    "risk-disclosure",
   ],
 };

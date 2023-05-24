@@ -2,15 +2,13 @@
 id: pil-config
 title: PIL Configuration File
 sidebar_label: PIL Configuration
-description: A description of why PIL uses a special configuration file.
+description: The following document describes why Polynomial Identity Language uses a special configuration file.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
-  - config
+  - zkEVM
+  - configuration
+  - dependency inclusion
 ---
 
 In order for PIL to securely enable modularity, especially in complex settings such as the Polygon zkEVM's, where the Main SM has several secondary state machines executing different computations, a **dependency inclusion feature** among different `.pil` files needed to be developed.
@@ -27,7 +25,7 @@ Therefore, the file `config.pil` gets included in the PIL codes of relevant prog
 
 Below is the PIL code of the Optimized Multiplier SM, with the `config.pil` file.
 
-```json title="multiplier.pil"
+```
 include "config.pil"; 
 
 namespace Multiplier(%N);
@@ -47,7 +45,7 @@ out' = RESET*freeIn + (1-RESET)*carry;
 
 Observe that the number $\mathtt{2^{10}}$ does not appear in the PIL code but the symbol "$\texttt{\%N}$". In this particular example, it means the `config.pil` file contains the value $\mathtt{2^{10}}$ as indicated below.
 
-```json title="config.pil"
+```
 constant %N = 2**10;
 ```
 

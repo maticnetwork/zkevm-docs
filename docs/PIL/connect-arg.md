@@ -2,14 +2,13 @@
 id: connect-arg
 title: Connection Arguments
 sidebar_label: Connection Arguments
-description: A description of Connection Arguments and how they are used in PIL.
+description: This document describes the Connection Arguments and how they are used in Polynomial Identity Language.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
+  - connection arguments
+  - Copy Satisfiability
 ---
 
 ## Copy Satisfiability

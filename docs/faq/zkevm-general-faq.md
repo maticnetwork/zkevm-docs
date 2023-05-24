@@ -4,12 +4,13 @@ title: General FAQs related to zkEVM
 sidebar_label: General FAQs
 description: This document compiles some of the general frequently asked questions related to the Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
+  - zkEVM
+  - general faq
+  - token
+  - RPC
+  - EVM
   - polygon
-  - proof
-  - Polygon zkEVM
-  - faq
+  - open source
 ---
 
 This document compiles some of the frequently asked questions related to the Polygon zkEVM. For more details, check out [this documentation](/introduction.md).

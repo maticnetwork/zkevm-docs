@@ -4,13 +4,12 @@ title: Transaction Batching
 sidebar_label: Transaction Batching
 description: A guide to help developers understand the transaction life cycle in zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - zkEVM
-  - zkevm protocol
+  - protocol
   - Transaction Batching
-  - Polygon zkEVM
+  - Sequencer
+  - global exit tree
 ---
 
 :::info

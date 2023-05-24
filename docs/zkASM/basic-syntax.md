@@ -2,22 +2,17 @@
 id: basic-syntax
 title: Basic Syntax
 sidebar_label: Basic Syntax
-description: "Basic syntax of zkASM from a high-level point of view."
+description: This document explains the basic syntax of zkASM from a high-level perspective. Advanced syntax is totally dependant on the use case.
 keywords:
-  - docs
   - polygon
-  - Polygon zkEVM
-  - comment
+  - zkEVM
   - module
   - register
   - opcode
   - assert
   - zkASM
-  - basic syntax
-  - zkEVM
+  - syntax
 ---
-
-## Overview
 
 This section is devoted to explain the basic syntax of zkASM from a high-level perspective. Advanced syntax is totally dependant on the use case (e.g. the design of a zkEVM) and will be explained in more detail with more complete examples later on.
 

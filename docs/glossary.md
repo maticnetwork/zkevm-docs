@@ -2,14 +2,11 @@
 id: glossary
 title: Polygon zkEVM Glossary
 sidebar_label: Glossary
-description: Definition of key terms related to the Polygon zkEVM
+description: Definition of key terms related to the Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - zkEVM
   - glossary
-  - Polygon zkEVM
 ---
 
 ### Layer 1

@@ -4,21 +4,19 @@ title: Introduction to zkASM
 sidebar_label: Introduction
 description: The ideas behind zkASM
 keywords:
-  - docs
   - polygon
   - zkASM
-  - Polygon zkEVM
-  - assembly
-  - programming language
   - zkEVM
+  - assembly programming language
   - introduction
+  - Microprocessor
 ---
 
 Ethereum is a state machine that transitions from an old state to a new state by reading a series of transactions. It is a natural choice, in order to interpret the set of EVM opcodes, to design another state machine as for the interpreter.
 
 One should think of it as building a state machine inside another state machine, or more concretely, building an Ethereum inside the Ethereum itself. The distinction here is that the former contains a virtual machine, the zkEVM, that is zero-knowledge friendly.
 
-## The zkEVM as a Microprocessor
+## zkEVM as a Microprocessor
 
 Following the previous discussion, it is good to see the outer state machine as a microprocessor. What we have done is creating a microprocessor, composed by a series of assembly instructions and its associate program (i.e., the ROM) running on top of it, that interprets the EVM opcodes.
 

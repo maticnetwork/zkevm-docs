@@ -2,13 +2,13 @@
 id: bridge-to-zkevm
 title: Bridge Assets to zkEVM
 sidebar_label: Bridge to zkEVM
-description: Learn how to bridge assets on Polygon zkEVM Wallet Suite.
+description: Learn how to bridge assets from Ethereum to Polygon zkEVM using the Wallet Suite.
 keywords:
-  - docs
   - polygon
-  - Polygon zkEVM
+  - zkEVM
   - wallet
-  - bridge
+  - Bridge to zkEVM
+  - guide
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';

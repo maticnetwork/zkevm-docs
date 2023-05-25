@@ -125,6 +125,7 @@ module.exports = {
             type: "generated-index",
           },
           items: [
+            "zkProver/evm-basics",
             "zkProver/intro-main-sm",
           ],
         },

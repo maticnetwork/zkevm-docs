@@ -1,242 +1,228 @@
 ---
 id: intro-main-sm
-title: Understanding Ethereum Virtual Machine
-sidebar_label: EVM Basics
-description: This comprehensive guide outlines the basics of Ethereum Virtual Machine.
+title: Introduction to Main State Machine
+sidebar_label: Introduction
+description: This document describes Main State Machine of the zkProver alongwith detailed information regarding ROM and zkEVM State Trie.
 keywords:
-  - main state machine
   - polygon
   - zkEVM
-  - ethereum virtual machine
+  - main state machine
+  - zkevm state trie
+  - zkevm rom
 ---
 
-In this series of documents, we will dig deeper into the Main State Machine Executor component of the zkProver. It is one of the four main components of the zkProver, outlined [here](overview.md). These are - **Executor**, **STARK Recursion**, **CIRCOM**, and **Rapid SNARK**.
+Main State Machine is a component of the zkProver that can be instantiated with various computations pertaining to transactions submitted by users to the Polygon zkEVM network. See an outline of the zkProver [here](/zkProver/overview.md).
 
-Since the design of the zkProver emulates that of the EVM, this document focuses on explaining the basics of **Ethereum Virtual Machine** (EVM).
+In addition to carrying out these computations, the Main SM also generates fixed-length, easy-to-verify cryptographic proofs of Computational Integrity (CI). These proofs can be verified by spending only a minimal amount of computational resources.
 
-## Overview of Polygon zkEVM
+It achieves this by using cutting-edge zero-knowledge technology. In particular, these proofs are STARK proofs that are recursively aggregated into one STARK proof, which is in turn proved with a SNARK proof. This last SNARK proof is published as the validity proof. You can read a summary of the STARK proofs recursion [here](/zkProver/overview.md#stark-recursion-component), and its complete documentation [here](/zkProver/intro-stark-recursion.md).
 
-**Polygon zkEVM is an L2 network that implements a special instance of the Ethereum Virtual Machine (EVM)**. It emulates the EVM in that the zkProver, which is core to proving and verifying computation correctness, is also designed as a state machine or a cluster of state machines. 
+![zkEVM batch prover structure](figures/02msm-prover-structure.png)
 
-The terms **state machine** and **virtual machine** are used interchangeably in this documentation.
+## The ROM
 
-Although the Polygon zkEVM architecture and state differ from the Ethereum, **communication with the Polygon zkEVM is done through a JSON-RPC interface, which is fully compatible with Ethereum RPC**. This allows all Ethereum-compatible applications and tools to be natively compatible with the Polygon zkEVM.
+The ROM is a program written in zero-knowledge Assembly (zkASM) and contains all the instructions the Main SM must execute. Since the ROM is in fact analogous to computer memory, it is named with a well-known acronym that stands for **Read-Only Memory**.
 
-Since Polygon zkEVM is a separate instance, with a state distinct from Ethereum, balances in accounts may differ and therefore **L1 smart contracts cannot be directly accessed through L2 transactions**.
+The Main SM can be viewed as a processor capable of interpreting a set of instructions, and the ROM as the memory containing the firmware. The term firmware here refers to a piece of low-level software that is infrequently subjected to changes.
 
-A special zkEVM bridge and cross-chain messaging mechanism have been developed so as to enable the exchange of data between both networks. More details on the zkEVM Bridge are documented [here](/protocol/zkevm-bridge.md).
+It is a piece of software, composed of a set of instructions, which implements a special EVM interpreter for Polygon zkEVM's L2 architecture.
 
-## Basics of EVM
+All EVM opcodes are interpreted in the ROM, as well as interpretation of batches and the execution logic of transactions. The ROM is therefore the interpreter of all opcodes to the Polygon zkEVM, allowing the Main SM to execute Polygon zkEVM's L2 state transitions with Computational Integrity (CI).
 
-The Ethereum blockchain is a distributed digital ledger that keeps track of all transactions and interactions that occur on the Ethereum network. In addition to recording transactions, the EVM can store and execute smart contracts. These smart contracts are low-level codes that can perform a variety of tasks and operations on the network.
+:::info
 
-The **Ethereum Virtual Machine (EVM) is therefore the computational engine of the Ethereum blockchain responsible for smart contract deployment and execution**.
+In order to avoid any misunderstandings in the future, it is helpful to distinguish between the set of ROM instructions and EVM opcodes:
 
-The EVM is categorized as a **quasi–Turing-complete state machine** because it can handle all execution processes except that, due to the gas limit set in every smart contract, it is limited to computations with a finite number of steps.
+**ROM Instructions** &rarr; Set of instructions created and developed by Polygon to target a ”special” zero-knowledge virtual machine (Main SM) that can execute computations with probable Computational Integrity (CI).
 
-At any given point in time, the current state of the Ethereum blockchain is defined by a collection of the blockchain data. An Ethereum state therefore includes **account balances**, **smart contract code**, **smart contract storage**, and other information relevant to the operation of the network.
+**EVM opcodes** &rarr; Set of instructions designed to target the EVM, used to define smart contract’s computations.
 
-Since Ethereum is a distributed digital ledger, its state is maintained by each of the network's full-nodes. 
+:::
 
-## Key features of EVM
+Although zkASM instructions and EVM opcodes are different types of instructions, the Polygon zkEVM's ROM contains a piece of code written in zkASM instructions to implement each EVM opcode.
 
-In terms of how it operates, the EVM is described as; **deterministic**, **sandboxed**, and **Stack**-based.
+## Public Parameters
 
-**Deterministic &rarr;** for any given input, it always produces the exact same output. This feature is critical for ensuring dependability and predictability of smart contract execution, as well as enabling reliable verification of execution.
+Polygon zkEVM's proofs of Computational Integrity (CI) are zero-knowledge proofs. That is, the proofs do not reveal any information about the executed computations to effect the state transition.
 
-**Sandboxed &rarr;** because transactions processed by smart contracts run in an environment that is isolated from the rest of the system, making it impossible for transactions to access or modify data outside this environment. This contributes towards network security by preventing unauthorized access to sensitive data.
+**How then is the L1 verifier smart contract enabled to verify the proofs?**
 
-**Stack-based &rarr;** because it employs a **Last-In First-Out (LIFO) memory data structure** for processing operations, with data being **pushed** onto a **Stack** and **popped** off as needed.
+The proofs are made verifiable by disclosing certain parameters pertaining to the executed computations. These are **public parameters** because they are in fact publicly disclosed. Since the proof is derived from the actual execution of the computations being specified, verification of the proofs will not succeed if falsified parameters are used.
 
-## Components of EVM
+These public parameters form part of the **data availability** of L2 batches, which is provided by the L1 contracts.
 
-The EVM is made up of several components that work together to execute smart contracts on the Ethereum blockchain and provide the above-mentioned features.
+Here is a complete list of the public parameters;
 
-![EVM Components Involved in the Processing of a Transaction](figures/01msm-evm-components.png)
+- `oldStateRoot`: the root of **old state** refers to the root of the Merkle tree representing the L2 State before the state transition was executed.
 
-The main components of the EVM involved in the processing of a transaction are:
+- `newAccInputHash`: the new accumulating input hash is a unique cryptographic identifier of the batch whose execution is currently being proved and verified. And it is computed as the **Keccak256** digest of the quintuple;
 
-1. **Smart Contract Bytecode**, which is the low-level code executed by the EVM. 
+    $$
+    \texttt{oldAccInputHash},\ \texttt{batchHashData},\ \texttt{globalExitRoot},\ \texttt{timestamp},\ \texttt{msg.sender}.
+    $$
+  
+- `oldAccInputHash`: the old accumulating input hash is the Keccak-$256$ digest of the previous batch in a sequence of batches. It is a unique cryptographic identifier of the previous batch in the batch chain (i.e., the batch whose execution led to the old L2 state before the state transition).
 
-    Each bytecode is a sequence of opcodes (machine-level instructions). And each opcode in an EVM bytecode corresponds to a specific operation, such as arithmetic, conditional branching or memory manipulation. The EVM executes bytecode in a step-by-step fashion, with each opcode being processed in a given sequence. 
+- `oldBatchNum`: the old Batch Number is a unique batch index of the previous batch (i.e., the batch whose execution led to the L2 state that existed before the state transition currently being proved and verified).
 
-    In general, smart contracts are written in a high-level programming language, such as [Solidity](https://docs.soliditylang.org/en/v0.8.20/) or [Vyper](https://docs.vyperlang.org/en/stable/), and then compiled into an EVM bytecode.
+- `newStateRoot`: the new state root is the root of the newly amended Merkle tree (representing the new L2 State) due to the state transition being proved and verified.
 
-2. **Processing Environment** refers to the component responsible for executing smart contracts. It provides a runtime environment for the smart contract bytecode to execute in and manage the memory and storage used by smart contract.
+- `newBatchNum`: the new Batch Number is a unique batch index of the the batch whose execution is currently being proved and verified.
 
-3. **Stack** is the **Last-In First-Out (LIFO)** data structure used to execute the EVM's operations, and thus turning the EVM into a Stack-based machine.
+- `localExitRoot`: the local Exit Root is the root of the L2 Bridge contract’s Exit Merkle Tree, at the end of the batch execution.
 
-4. **Memory** is the component that allows smart contracts to store and retrieve data. It is organized as a linear array of bytes, while data is accessed by specifying its location in memory.
+- `chainID`: the chain ID is a unique chain ID of the Polygon zkEVM network, ensures that the computation can only be proven for a specific network.
 
-5. `calldata` refers to the set of parameters & values required for a smart contract to perform its function.
+- `forkID`: the fork ID is a unique identifier of the version of the ROM that is currently being used. It ensures that computations can only be proved and verified for a specific version of the ROM code.
 
-    The transaction that invokes a particular smart contract must contain the right `calldata`, and thus pass the `calldata` to that smart contract. `calldata` is read-only and therefore smart contracts cannot modify it during execution.
+## State Trie
 
-    The smart contract's input data is part of the transaction which is stored on the blockchain, and therefore any changes to the input data would result in a different transaction-hash and hence a different state of the blockchain.
+The state of a Blockchain is typically recorded in the form of a Merkle Tree. Both the EVM and the Polygon zkEVM store their states in their respective especially modified Merkle Trees.
 
-6. **Storage** is the EVM’s storage component where smart contracts can also store data. It is a persistent key-value store that is associated with each smart contract, and it can be used to store state information.
+### EVM State Trie
 
-The EVM is a variant of the [**Von Neumann architecture**](https://en.wikipedia.org/wiki/Von_Neumann_architecture) which means it uses a single shared memory for both data and instructions.
+An Ethereum state is stored in the form of a **Modified Patricia Merkle Tree**.
 
-&rarr; The smart contract’s bytecode is stored in memory in the EVM, and the Program Counter (PC) keeps track of the current instruction being executed.
+At each level, a branch node is an array of $17$ items composed of $1$ node value and $16$ child-nodes.
 
-&rarr; Stack is used for storing small values, such as integers and booleans, values needed for immediate use, such as function parameters, local variables, and return values.
+The user key is the Keccak-256 digest of the user's Ethereum address,
 
-&rarr; Memory is used for storing large data structures, such as arrays and strings.
+$$
+\texttt{Key = keccak256(ethereumAddress)}
+$$
 
-### EVM Computational Costs
+The value in a leaf is the Keccak-256 digest of the RLP-encoding of an Ethereum account,
 
-The EVM has its own instruction set or list of available **opcodes**, which is a set of low-level commands used to manipulate data in the Stack, Memory and Storage components. 
+$$
+\texttt{Value = keccak256(RLP(ethereumAccount))}
+$$
 
-The instruction set includes operations such as Arithmetic, Bit manipulation and Control flow.
+where the Ethereum Account is composed of; the Nonce, Balance, Storage Root, and Code hash.
 
-Additionally, in order to prevent **spam** and **Denial of Service (DoS)** attacks, the EVM employs a **gas system**. **Gas** is a unit of measurement for the computational resources required to execute a smart contract, and each operation in the **instruction set** has its own **gas** cost.
+The Storage Root is basically all the storage of the State that a smart contract has, and is coded into another Modified Patricia Merkle Tree. 
 
-## Stack
+Here is how the tree in the EVM looks like:
 
-The **EVM is a Stack-based machine** because it uses a Stack data structure to execute its operations. When an operation is performed, values that are currently top of the Stack are popped off, used in the executed operation, and then the result of the operation is pushed back onto the Stack.
+![A simplified EVM's State Trie](figures/06msm-eth-state-trie.png)
 
-Some of the main Stack operations executed in the EVM are:
+### zkEVM State Trie
 
-1. `PUSH`: This opcode pushes a value onto the Stack. It is usually followed by:
+There are some differences between the zkEVM Merkle tree and EVM Merkle tree. 
 
-    - A byte which indicates the number of bytes to be pushed onto the Stack, and
+A zkEVM State is stored in the form of a Sparse Merkle Tree (SMT), which is a binary tree. Instead of **Keccak-256**, the `POSEIDON` Hash Function is used to build the SMTs, mainly due to its STARK-friendliness.
 
-    - The actual bytes to be pushed onto the Stack.
+It is important to note that unlike the EVM tree, the zkEVM SMT does not add all the parameters in one leaf of the Merkle tree.
 
-    For example, the opcode `PUSH2 0x0123` pushes the bytes `0x01` and `0x23` onto the Stack as one word `0x0123`.
+For convenience and achieving faster computations, each of the parameters (the Nonce, Balance, Storage Root and Code hash) is stored in its respective leaf.
 
-2. `POP`: Removes the top value from the Stack and discards it.
+An additional parameter called `codeHashLen` is used to store the length of the Code hash. A fifth leaf-type is used for this zkEVM-specific parameter.
 
-3. `DUP`: Duplicates the top value on the Stack and pushes the duplicate onto the Stack.
+Also, each value in a leaf is an array of eight values, $[\texttt{V0}, \texttt{V1}, \texttt{V2}, \dots , \texttt{V7}]$, where each $\texttt{Vi}$ is a $32$-bit element. That field is the Goldilocks prime field $\mathbb{F}_p$ where $p = 2^{64} - 2^{32} + 1$.
 
-4. `SWAP`: Swaps the top two values on the Stack.
+The $32$-bit field elements are $8$ in number, so as to be compatible with the $256$-bit EVM words.
 
-5. `ADD`, `SUB`, `MUL`, `DIV`, `MOD`: These opcodes perform specific Arithmetic operations on the top two values of the Stack, and push the result back onto the Stack.
+So although in the EVM context computation work with $256$-bit words, internally the zkEVM uses $8$ times $32$-bit field elements. 
 
-6. `AND`, `OR`, `XOR`, `NOT`: These opcodes perform bitwise logic operations on the top two values of the Stack, and push the result back onto the Stack.
+Each of the values; $\texttt{V0}, \texttt{V1}, \texttt{V2}, \dots , \texttt{V7}$; is composed of the $32$ less significant bits of the $63.99$-bit Goldilocks prime field elements.
 
-7. `EQ`, `LT`, `GT`: These opcodes perform comparison operations on the top two values of the Stack, and push the result back onto the Stack as a Boolean.
+The figure below depicts the 5 leaf-types together with the corresponding keys:
 
-8. `SHA3`: Computes the `SHA3` hash of the top value on the Stack, and pushes the hash onto the Stack.
+![A simplified Polygon zkEVM's State Trie](figures/07msm-zkevm-state-trie.png)
 
-9. `JUMP`, `JUMPI`: These opcodes modify the program counter, allowing the program to jump to a different part of the code.
+## Memory Regions
 
-The EVM Stack is limited to $1024$ elements. This yields the capacity of $(1024 \times 256)$ bits because each EVM word is 256 bits long.
+Memory is a volatile Read-Write data storage that exists only during the execution of a ROM instruction.
 
-If a contract attempts to `PUSH` more elements onto the Stack, exceeding the $1024$-limit, a `Stack overflow error` will occur, causing the transaction to fail.
+In Ethereum, whenever a call is made, a new **Context** together with its new Stack and new Memory is created. Each created **Context** is referred to as volatile because it is temporarily available for the call being executed.
 
-## Memory
+### zkEVM Memory map
 
-The EVM Memory is used for storing large data structures, such as arrays and strings. It is a linear array of bytes used by smart contracts to store and retrieve data. The size of the memory is dynamically allocated at runtime, meaning that the amount of memory available to a smart contract can grow depending on its needs. 
+The Polygon zkEVM uses Context-based Memory. And, by **Context** we refer to an environment of every Ethereum call.
 
-EVM Memory is byte-addressable, which means that each byte in the memory can be individually addressed using a unique index.
+As in Ethereum, when a transactions begins, a new Context is created for that transaction:
 
-EVM word size is 256 bits (or 32 bytes), which means data is typically loaded and stored in 32-byte chunks. The EVM also provides instructions for loading and storing smaller chunks of data, such as individual bytes or $16$-bit words.
+$$
+\texttt{msg.sender},\ \texttt{msg.value},\ \texttt{stack},\ \texttt{memory},\ \texttt{the\ smart\ contract\ to\ call},\ \texttt{and}\ \texttt{gas}.
+$$
 
-EVM Memory is referred to as non-persistent or volatile, because the data it stores gets cleared as soon as the execution of a smart contract is completed. This means the EVM needs to have a special component, called the **EVM Storage**, for permanently storing results of smart contract execution.
+The `Stack` and `Memory` are each filled with relevant values in accordance with the call that has been made. Similar to how the EVM uses the Stack, zkEVM operations can be performed by pushing and popping values on and off the Stack.
 
-It’s also worth noting that, since accessing and modifying EVM Memory consumes computational resources, which are paid for in the form of gas, its use is subject to gas costs.
+`Memory` is divided into different Contexts of $\mathtt{0x40000}$ words. 
 
-### Managing EVM Memory
+Each word is $256$ bits in length, so each Context is $8$ Megabytes (MB) in size.
 
-- When a contract calls another contract, a new execution environment is created with its own memory space.
+#### Contexts in Memory
 
-- The parent contract’s memory space is saved, and the new contract’s memory space is initialized. The new contract can then make use of its memory as needed.
+There can be several Contexts within one transaction. Specific registers are used to handle any necessary switching between Contexts as pertaining to the made call.
 
-- When the called contract’s execution is completed, the memory space is released and the parent contract’s saved memory is restored. 
+As depicted in the figure below, each Context is divided into three word-blocks. And these are:
 
-It is worth noting that if a smart contract does not actually use the memory it has been allocated, that memory cannot be reclaimed or reused in the execution context of another contract.
+- `VARS`: contains the local Context's variables which are pre-defined in the language. 
 
-The opcodes related to memory are as follows:
+  It has a relative offset of `0x00000` and a height of `0x10000` words (taking $2$ MB of the $8$ MB allocated for a Context).
 
-- `MLOAD` is an opcode used to load a $32$-byte word from Memory into the Stack. It takes a Memory address as its input and pushes the value stored at that address onto the Stack.
+  The list of all Context variables can be found in the [`vars.zkasm`](https://github.com/0xPolygonHermez/zkevm-rom/blob/main/main/vars.zkasm) file.
 
-- `MSTORE` is an opcode used to store a $32$-byte word from the Stack into Memory. It takes a Memory address and a value from the Stack as its input, and stores the value at the specified address.
+- `STACK`: contains the stack of the the EVM. So, a `STACK` is defined per Context. 
 
-- `MSTORE8` is an opcode similar to `MSTORE`, except that it stores a single byte of data instead of a $32$-byte word. It takes a Memory address and a byte value from the Stack as its input, and stores the byte at the specified address.
+  It has a relative offset of `0x10000`, a height of `0x10000` words and takes $2$MB of the $8$MB allocated for a Context.
 
-- `MSIZE` is an opcode that returns the size of the current Memory area in bytes.
+- `MEM`: contains the free memory that can be freely used.
 
-## Storage
+  It has a relative offset of `0x20000`, a height of `0x20000` words and takes $4$ MB of the $8$ MB allocated for a Context.
 
-**EVM storage is a persistent key-value storage associated with each smart contract**. It is organized as a large array of $32$-byte words and each word is identified by a unique $256$-bit key, which is used to access and modify the value stored in that word. Since the EVM Storage is non-volatile, **data stored in it persists even after the smart contract execution has been completed**.
+  `MEM`, like `STACK`, is also defined per Context.
 
-Accessing and modifying storage is a relatively expensive operation in terms of gas costs. EVM storage is implemented as a modified version of the **Merkle Patricia Tree** data structure, which allows for efficient access and modification of the storage data.
+![Schema of contexts and memory regions of the zkEVM](figures/08msm-zkevm-memory-regions.png)
 
-A **Patricia Tree** is a specific type of a trie designed to be more space-efficient than a standard trie, by storing only the unique parts of the keys in the tree. Patricia Trees are particularly useful in scenarios where keys share common prefixes, as they allow for more efficient use of memory and faster lookups compared to standard tries. 
+For a given slot in memory, its pointer is computed as:
 
-The following opcodes are used to manipulate the storage of a smart contract:
+$$
+\texttt{memoryAddress} \mathtt{ = 0x40000 \cdot CTX + isStack \cdot (0x10000 + SP) + isMem · (0x20000 + offset)}
+$$
 
-- `SLOAD` loads a $256$-bit word from Storage at a given index, and pushes it onto the Stack.
-- `SSTORE` stores a $256$-bit word to Storage at a given index. The value to be stored is popped from the Stack, and its index is specified as the next value on the Stack.
+where,
 
-## Transaction Process
+- `CTX`: an integer variable indicating to the Context being accessed in the EVM’s memory.
+- `isStack`: a Boolean value indicating whether the Memory operation being performed is related to the EVM’s Stack or not.
+- `SP`: a variable referring to the current position of the Stack Pointer in the EVM’s stack. The Stack Pointer keeps track of the top of the Stack.
+- `isMem`: a Boolean value indicating whether the Memory operation being performed is related to the EVM’s memory. Observe that `isStack` and `isMem` cannot be $1$ at the same time.
+- `offset`: a set `addr` in Memory to which the `zkPC` jumps to within the currently accessed Context.
 
-Processing transactions in the EVM involves,
+### Memory Alignment
 
-- the Recursive Length Prefix (RLP) encoding and decoding of transaction data,
-- the verification of signatures,
-- the execution of transactions,
-- storing output values.
+There is a major difference between the EVM Memory and the zkEVM Memory.
 
-### RLP Decoding
+That difference is the EVM Memory is created in the form of slots where each slot has $8$-bit capacity, while each Memory slot in the zkEVM can store $256$ bits of data.
 
-Transaction data are encoded for storage and decoded for processing. The Recursive Length Prefix (RLP) encoding and decoding is used for this purpose. The first step in processing an Ethereum transaction is to therefore decode the transaction.
+It was therefore necessary to align the EVM's $8$-bit slots with the zkEVM's $256$-bit slots. 
 
-Transactions are decoded so as to obtain relevant information such as; the recipient's address, the amount of ETH being transferred, and the data payload.
+A mapping to synchronize the two Memories comes in the form a special state machine called the [**Mem-Align State Machine**](/zkProver/mem-align-sm.md). It is a specialized SM solely dealing with the alignment of the EVM Memory with the zkEVM Memory.
 
-### Signature Verification
+![Aligning the EVM Memory to the zkEVM Memory](figures/09msm-evm-zkevm-mem-align.png)
 
-Every transaction is digitally signed with a signature, which is generated using the **Elliptic Curve Digital Signature Algorithm (ECDSA)**. 
+### zkEVM Stack
 
-The ECDSA signature is represented by three (3) values, generally denoted as $\texttt{r}, \texttt{s}, \texttt{v}$.
+The zkEVM Stack is exactly the same as the EVM Stack except for the number of steps. It has $65536$ steps instead of $1024$.
 
-Since the signature, or in particular the triplet $(\texttt{r}, \texttt{s}, \texttt{v})$, was computed from the secret key which is uniquely associated with the address of the Ethereum account (being debited), the three values $(\texttt{r}, \texttt{s}, \texttt{v})$ are sufficient to accurately verify that the transaction has been signed by the owner of the Ethereum account. 
+Note that the EVM works with $256$-bit words, and thus the elements of the EVM Stack are also $256$-bit. 
 
-The Ethereum account is identified by a 20-byte (160-bit) address. The address is derived from the public key associated with the Ethereum account. It is in fact the last 20 bytes of the 256-bit Keccak hash of the public key.
+The zkEVM Stack therefore, with its $8 \times 32$-bits representation of values, naturally mimicks the $256$-bit architecture of the EVM Stack.
 
-### Processing A Transaction
+But since there are more steps in the zkEVM Stack than the $1024$ slots of the EVM Stack, only the first $1024$ slots of the zkEVM Stack are used for the EVM Stack.
 
-The EVM begins by creating a context with an empty stack and memory space. 
+The rest of the zkEVM Stack slots are used to store `CALLDATA` and its interpretation.
 
-The bytecode instructions are then executed. The execution involves values being pushed and popped onto and from the Stack as required.
+The figure below displays a schematic representation of the zkEVM Stack and the EVM Stack:
 
-EVM uses a Program Counter to keep track of which instruction to execute next. Each opcode has a fixed number of bytes, so the Program Counter increments by the appropriate number of bytes after each instruction is executed. 
+![Schematic comparison of the zkEVM Stack and the EVM Stack](figures/10msm-zkevm-stack-slots.png)
 
-### Stack Elements And Word Size
+## TLDR;
 
-Stack elements are 32 bytes in size. This means each value pushed onto the Stack by an opcode, as well as each value popped off the Stack by an opcode, are each 32 bytes in size. 
+&rarr; The ROM is a program written in zkASM. It contain the instructions that the zkProver must execute in order to produce verifiable Computational Integrity proofs. The ROM contains the rules and logic that forms the firmware of the zkProver. Its code can be found [here](https://github.com/0xPolygonHermez/zkevm-rom) in the GitHub repository.
 
-The 32-byte size limit for Stack elements is a fundamental design choice in Ethereum, and is purely based on the size of the **EVM word**. The **EVM word is the basic unit of storage and processing in the EVM, defined as a 256-bit (32-byte) unsigned integer**. Since the EVM word is the smallest unit of data that can be processed by the EVM, the stack elements are conveniently set to be of the same size.
+&rarr; The zkEVM uses SMT with five different leaf types. 
 
-### Summary
+&rarr; Memory alignment between the EVM and the zkEVM is handled by a specialist state machine, the [**Mem-Align State Machine**](/zkProver/mem-align-sm.md).
 
-The EVM sequentially executes the opcodes in the bytecode, by following the Program Counter. It also manipulates $32$-byte values on the Stack and in Memory, in accordance with computations required to be performed, and permanently stores relevant values as required.
-
-## EVM Interpreter
-
-**EVM Interpreter** is a software component that processes and executes Ethereum transactions.
-
-Ethereum smart contracts are written in a high-level programming language such as Solidity, Vyper, Fe or Yul, but are compiled into bytecodes. A bytecode is a set of instructions which the **EVM Interpreter** processes and executes.
-
-Each bytecode is a sequence of Ethereum opcodes. The Ethereum opcodes are low-level instructions set for the EVM, and represent the basic operations that the EVM can perform during the execution of a smart contract triggered by a transaction.
-
-A complete list of Ethereum opcodes includes over 200 different operations, ranging from general Arithmetic and Logical operations to more advanced and blockchain environment-specific operations, like **calls to other contracts**, **contract creation**, and **storage management**.
-
-Some of the most commonly used opcodes include:
-
-- `ADD`, `SUB`, `MUL`, `DIV`, which are basic arithmetic operations.
-- `CALL`, `DELEGATECALL`, `CALLCODE`, which are calls to other contracts.
-- `PUSH`, `POP`, which are Stack management operations.
-- `JUMP`, `JUMPI`, which respectively refer to jumps and conditional jumps, from one line of a program to another.
-- `SLOAD`, `SSTORE`, which are Storage management operations.
-- `MLOAD`, `MSTORE`, which are Memory management operations.
-
-## References
-
-The [Ethereum yellow paper](https://ethereum.github.io/yellowpaper/paper.pdf) entails technical details on the Ethereum with some of the opcodes listed and described on Pages 30 to 38. 
-
-A more elaborate exposition of the Ethereum Blockchain is provided in the book [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by Andreas M. Antonopoulos and Gavin Wood. 
-
-The shortest and less technical paper on Ethereum is [Beigepaper: An Ethereum Technical Specification](https://github.com/chronaeon/beigepaper/blob/master/beigepaper.pdf) by Micah Dameron.
+&rarr; The two Stacks are exactly the same except that the zkEVM has many more slots compared to the EVM.

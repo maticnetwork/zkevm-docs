@@ -120,6 +120,18 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Main State Machine",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "zkProver/evm-basics",
+            "zkProver/intro-main-sm",
+            "zkProver/the-processor",
+          ],
+        },
+        {
+          type: "category",
           label: "STARK Recursion",
           link: {
             type: "generated-index",

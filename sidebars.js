@@ -134,6 +134,8 @@ module.exports = {
             "zkProver/circom-in-zkprover",
             "zkProver/proving-setup-phase",
             "zkProver/intermediate-recursion-steps",
+            "zkProver/final-recursion-step",
+            "zkProver/proof-generation-phase",
           ],
         },
         {

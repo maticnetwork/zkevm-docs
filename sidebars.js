@@ -127,6 +127,7 @@ module.exports = {
           items: [
             "zkProver/evm-basics",
             "zkProver/intro-main-sm",
+            "zkProver/the-processor",
           ],
         },
         {

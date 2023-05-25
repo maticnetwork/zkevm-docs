@@ -21,7 +21,7 @@ It achieves this by using cutting-edge zero-knowledge technology. In particular,
 
 ## The ROM
 
-The ROM is a program written in zero-knowledge Assembly (zkASM) and contains all the instructions the Main SM must execute. Since the ROM is in fact analogous to computer memory, it is named with a well-known acronym that stands for **Read-Only Memory**.
+The ROM is a program written in zero-knowledge Assembly (zkASM) and contains all the instructions the Main SM must execute. It is to the Polygon zkEVM what the EVM Interpreter is to Ethereum. Since the ROM is in fact analogous to computer memory, it is named with a well-known acronym that stands for **Read-Only Memory**.
 
 The Main SM can be viewed as a processor capable of interpreting a set of instructions, and the ROM as the memory containing the firmware. The term firmware here refers to a piece of low-level software that is infrequently subjected to changes.
 

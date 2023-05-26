@@ -70,7 +70,7 @@
 @font-face {
   font-family: "Sora";
   font-weight: 500;
-  src: url("/fonts/Sora/Sora-Medium.ttf") format("opentype");
+  src: url("/fonts/Sora/Sora-SemiBold.ttf") format("opentype");
 }
 
 @font-face {
@@ -1822,11 +1822,10 @@ pre[class*="language-"] {
   background-color: #121117;
   color: #F8F8F2;
   border-radius: 5px;
-  padding: 1em;
+  padding: 0.5em;
   overflow: auto;
-  font-size: 0.9rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 pre[class*="language-"] button {
@@ -1880,13 +1879,13 @@ details[open] summary::before {
 code {
   background-color: #9a60ff;
   color: #F8F8F8;
-  padding: 2px 4px;
+  padding: 2px 2px;
   border-radius: 6px;
   font-weight: normal;
 }
 
 code:not(.language-text) {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 /* SIDEBAR */

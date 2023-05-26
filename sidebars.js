@@ -232,6 +232,20 @@ module.exports = {
     "bridge-to-zkevm",
     {
       type: "category",
+      label: "MaticJS SDK",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: true,
+      items: [
+        "maticjs/install-sdk",
+        "maticjs/initialize-zkevm",
+        "maticjs/zkevm-client-erc20",
+        "maticjs/common-methods",
+      ],
+    },
+    {
+      type: "category",
       label: "Setup zkNode",
       link: {
         type: "generated-index",

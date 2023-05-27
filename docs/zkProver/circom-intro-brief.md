@@ -83,8 +83,8 @@ In addition to being a DSL used to define and create Arithmetic circuits, CIRCOM
 
 The term "CIRCOM" is in fact short for **Circuit Compiler**, implying that the CIRCOM compiler takes an Arithmetic circuit as input and outputs the following:
 
-- A file with the R1CS description (the witness), containing the set of associated R1CS constraints, and
-- A program written either in C++ or WebAssembly, for efficiently computing a valid assignment to all wires of the circuit.
+- A file with the R1CS description, containing the set of associated R1CS constraints, and
+- A program written either in C++ or WebAssembly, for efficiently computing a valid assignment to all wires of the circuit (the witness).
 
 The CIRCOM compiler is mainly written in Rust and it is open source.
 

@@ -10,14 +10,9 @@ keywords:
   - zkEVM
 ---
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 :::info
 
 In this document, we describe the CIRCOM component of the zkProver. It is one of the four main components of the zkProver, as outlined [here](/zkProver/overview.md). These principal components are; the Executor or Main SM, STARK Recursion, CIRCOM, and Rapid SNARK.
-
 
 You may refer to the original [CIRCOM research paper](https://www.techrxiv.org/articles/preprint/CIRCOM_A_Robust_and_Scalable_Language_for_Building_Complex_Zero-Knowledge_Circuits/19374986/1) for more details.
 
@@ -64,6 +59,7 @@ CIRCOM was developed for the very purpose of scaling complex Arithmetic circuits
 
 ## What is CIRCOM?
 
+
 CIRCOM is a domain-specific language (DSL) used to define Arithmetic circuits, and it has an associated compiler of Arithmetic circuits to their respective Rank-1 Constraint Systems (or R1CSs).
 
 ![CIRCOM Overall Context](figures/02circom-overall-context.png)
@@ -82,19 +78,15 @@ In this regard, CIRCOM users can use templates to create their own custom circui
 
 However, CIRCOM users can also use templates from [CIRCOMLIB](https://github.com/iden3/circomlib), which is a publicly available library that contains hundreds of circuits such as; comparators, hash functions, digital signatures, binary and decimal converters.
 
+
 ### Circuits' Compiler
 
 In addition to being a DSL used to define and create Arithmetic circuits, CIRCOM has a special compiler of Arithmetic circuits into their equivalent R1CS.
 
 The term "CIRCOM" is in fact short for **Circuit Compiler**, implying that the CIRCOM compiler takes an Arithmetic circuit as input and outputs the following:
 
-<<<<<<< HEAD
 - A file with the R1CS description, containing the set of associated R1CS constraints, and
 - A program written either in C++ or WebAssembly, for efficiently computing a valid assignment to all wires of the circuit (the _witness_).
-=======
-- A file with the R1CS description (the witness), containing the set of associated R1CS constraints, and
-- A program written either in C++ or WebAssembly, for efficiently computing a valid assignment to all wires of the circuit.
->>>>>>> main
 
 The CIRCOM compiler is mainly written in Rust and it is open source.
 
@@ -112,12 +104,16 @@ $$
 \texttt{a} \times \texttt{b} \texttt{ - c = 0}
 $$
 
-### The $\texttt{pragma}$ Instruction
+
+### The `pragma` Instruction
 
 The `pragma` instruction specifies the version of the CIRCOM compiler being used. It is meant to ensure compatibility between the circuit and the compiler version. If the two are incompatible, the compiler throws a warning.
 
+
 ```circom
+
 pragma circom 2.0.0;
+
 ```
 
 As a precautionary measure, all files with the `.circom` extension should start with a `pragma` instruction. In the absence of this instruction, it is assumed that the code is compatible with the latest compiler version.
@@ -130,21 +126,27 @@ In CIRCOM, each signal is given an identifier. However, the same sympols; $\text
 
 The three signals are declared as follows,
 
-```
+```circom
+
   signal input a;
   signal input b;
   signal output c;
+
 ```
 
-### The "$\mathtt{<==}$" Operator
+### The <== Operator
+
 
 The functionality of this operator is twofold;
 
 - On the one hand, it sets a constraint that expresses that the value of $\texttt{c}$ must be the result of multiplying $\texttt{a}$ by $\texttt{b}$,
 - On the other hand, the operator instructs the compiler in how to generate the program that computes the assignment of circuit signals.
 
+
 ```circom
-c <== a * b;
+
+  c <== a * b;
+
 ```
 
 ### Creation Of Templates
@@ -157,7 +159,8 @@ They are general descriptions of circuits, that have some input and output signa
 
 The following code shows how a `Multiplier template` is created:
 
-```
+```circom
+
  pragma circom 2.0.0;
 
  template Multiplier () {
@@ -168,7 +171,9 @@ The following code shows how a `Multiplier template` is created:
      // constraints
      c <== a * b;
  }
+
 ```
+
 
 ### Instantiation Of Templates
 
@@ -264,11 +269,12 @@ The `Multiplier template` is again used as an example. But the `pragma` instruct
 
 ```
 template Multiplier() {
-  signal input a;
-  signal input b;
-  signal output c;
-	c <== a * b;
+    signal input a;
+    signal input b;
+    signal output c;
+    c <== a * b;
 	}
 
 	component main {public [a]} = Multiplier();
+
 ```

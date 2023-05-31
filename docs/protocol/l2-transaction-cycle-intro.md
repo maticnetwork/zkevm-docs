@@ -2,15 +2,13 @@
 id: l2-transaction-cycle-intro
 title: Transaction Life Cycle in zkEVM
 sidebar_label: Submit Transaction
-description: A guide to help developers understand the transaction life cycle in zkEVM.
+description: A guide to help developers and researchers understand the transaction life cycle in Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
+  - protocol
   - zkEVM
-  - zkevm protocol
-  - deploy on zkEVM
-  - Polygon zkEVM
+  - Submit Transaction
+  - Transaction Life Cycle
 ---
 
 :::info

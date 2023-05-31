@@ -4,13 +4,12 @@ title: Batch Sequencing and Virtual State
 sidebar_label: Batch Sequencing
 description: A guide to help developers understand the transaction life cycle in zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
   - zkEVM
-  - zkevm protocol
+  - protocol
+  - Batch Sequencing
   - Virtual State
-  - Polygon zkEVM
+  - batch
 ---
 
 :::info
@@ -88,7 +87,7 @@ keccak256 (
 - `timestamp` is the batch timestamp,
 - `seqAddress` is address of Batch sequencer.
 
-![Figure 4: Batch chain structure](figures/04l2-batch-chain-acc-hash.png)
+![Batch chain structure](figures/04l2-batch-chain-acc-hash.png)
 
 As shown in the diagram above, each accumulated input hash ensures the integrity of the current batch's data (i.e., `transactions`, `timestamp`, and `globalExitRoot`, as well as the order in which they were sequenced.
 

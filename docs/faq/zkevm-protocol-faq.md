@@ -4,12 +4,17 @@ title: zkEVM Protocol FAQs
 sidebar_label: Protocol FAQs
 description: This document compiles some of the frequently asked questions related to the Polygon zkEVM protocol.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - proof
-  - Polygon zkEVM
-  - faq
+  - zkEVM
+  - protocol faq
+  - transactions
+  - sequencer
+  - prover
+  - trusted state
+  - virtual state
+  - consolidated state
+  - forced batches
+  - emergency state
 ---
 
 This document compiles some of the frequently asked questions related to the Polygon zkEVM protocol. For more details, check out [this documentation](/protocol/introduction.md).

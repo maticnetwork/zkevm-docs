@@ -120,6 +120,19 @@ module.exports = {
         },
         {
           type: "category",
+          label: "Main State Machine",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "zkProver/evm-basics",
+            "zkProver/intro-main-sm",
+            "zkProver/the-processor",
+          ],
+
+        },
+        {
+          type: "category",
           label: "STARK Recursion",
           link: {
             type: "generated-index",
@@ -223,6 +236,24 @@ module.exports = {
     },
     "develop",
     "bridge-to-zkevm",
+    {
+      type: "category",
+      label: "MaticJS SDK",
+      link: {
+        type: "generated-index",
+      },
+
+      <!-- collapsed: false, --> 
+      <!-- items: ["setup-local-node", "setup-production-node"], --> 
+  
+      collapsed: true,
+      items: [
+        "maticjs/install-sdk",
+        "maticjs/initialize-zkevm",
+        "maticjs/zkevm-client-erc20",
+        "maticjs/common-methods",
+      ],
+    },
     {
       type: "category",
       label: "Setup zkNode",

@@ -204,7 +204,7 @@ module.exports = {
               },
               {
                 label: "Risks",
-                href: "/risk-disclosure"
+                href: "/docs/risk-disclosure"
               },
           ]
         },

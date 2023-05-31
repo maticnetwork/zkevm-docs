@@ -4,11 +4,11 @@ title: Polygon zkEVM Risk Disclosures
 sidebar_label: Risk Disclosures
 description: This article explains the potential risks associated with using Polygon zkEVM Mainnet Beta.
 keywords:
-  - docs
   - zkEVM
-  - wiki
   - polygon
-  - risks
+  - Risk Disclosures
+  - Network Availability
+  - Decentralization
 ---
 
 Polygon zkEVM Mainnet Beta is provided on an **AS-IS** and **AS-AVAILABLE** basis. The documentation contains statements about technical specifications, some of which may relate to future versions of Polygon zkEVM rather than its current implementation.

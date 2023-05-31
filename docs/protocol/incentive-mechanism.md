@@ -2,14 +2,15 @@
 id: incentive-mechanism
 title: zkEVM Incentive Mechanism
 sidebar_label: Incentive Mechanism
-description: A guide to help developers understand the incentive mechanism of Polygon zkEVM.
+description: A guide to help developers understand the incentive mechanisms of Polygon zkEVM.
 keywords:
-  - docs
-  - zk rollups
   - polygon
-  - zkevm protocol
-  - Polygon zkEVM
+  - protocol
+  - zkEVM
   - incentive mechanism
+  - transaction fees
+  - sequencing fees
+  - aggregation reward
 ---
 
 To ensure the system's sustainability, actors must be compensated for correctly performing their roles and giving the protocol finality.
@@ -37,6 +38,7 @@ The net Ether value earned by the Sequencer for sequencing a batch sequence is r
 $$
 \textit{`` }\mathtt{Sequencer\ net\ Ether\ income}\text{'' } \mathtt{ =\ totalL2TxGasFee − (L1SeqTxGasFees + \frac{batchFee ∗ nBatches}{MATIC/ETH})}
 $$
+
 where:
 
 - `totalL2TxGasFees` is the total sum of fees gathered from all L2 transactions included in the sequence of batches,

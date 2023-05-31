@@ -2,14 +2,12 @@
 id: connect-programs
 title: Connecting Programs
 sidebar_label: Connecting Programs
-description: A description of how PIL connects programs.
+description: One of the core features of Polynomial Identity Language is that it allows modular design of its programs. This document describes how PIL connects programs.
 keywords:
-  - docs
   - polygon
   - PIL
-  - state
-  - machine
-  - Polygon zkEVM
+  - zkEVM
+  - modular
 ---
 
 ## Modular Design
@@ -266,14 +264,14 @@ We simply add the following line of code to achieve this:
 
 PIL codes of all the newly developed programs can be found below.
 
-```c title="global.pil"
+```
 include "config.pil"; 
 
 namespace Global(%N);
 pol constant BITS4;
 ```
 
-```c title="main.pil"
+```
 include "global.pil"; 
 include "multiplier.pil"; 
 include "negation.pil"; 
@@ -288,7 +286,7 @@ a in Global.BITS4;
 {a, neg_a, op} in {Multiplier.freeIn1, Multiplier.freeIn2, Multiplier.out};
 ```
 
-```c title="negation.pil"
+```
 include "config.pil";
 
 namespace Negation(%N);

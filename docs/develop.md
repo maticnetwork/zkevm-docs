@@ -50,7 +50,7 @@ You can **add zkEVM Network to your MetaMask wallet** instantly by clicking the 
 
 The next step is to [bridge your assets](bridge-to-zkevm.md) from Ethereum &rarr; Polygon zkEVM. You can use the zKEVM Bridge natively built inside Polygon Wallet Suite to bridge your assets.
 
-You can also view all available public endpoints to connect to **Polygon zkEVM** on [Alchemy's Chain Connect resource](https://www.alchemy.com/chain-connect/chain/polygon-zkevm).
+You can also view all available public endpoints to connect to **Polygon zkEVM** on [Alchemy's Chain Connect](https://www.alchemy.com/chain-connect/chain/polygon-zkevm) and [Chainlist](https://chainlist.org/?search=Polygon+zkEVM).
 
 ## Deploying Smart Contracts
 

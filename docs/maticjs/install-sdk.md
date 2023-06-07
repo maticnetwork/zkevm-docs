@@ -33,13 +33,12 @@ npm install @maticnetwork/maticjs
 
 MaticJS SDK supports popular Web3 libraries via external plugins. By installing these plugins, you can utilize your favorite Ethereum development libraries. You can install them using the following commands:
 
+#### install Web3JS library plugin
 ```bash
-# install Web3JS library plugin
 npm install @maticnetwork/maticjs-web3
 ```
-
+#### install EthersJS library plugin
 ```bash
-# install EthersJS library plugin
 npm install @maticnetwork/maticjs-ethers
 ```
 

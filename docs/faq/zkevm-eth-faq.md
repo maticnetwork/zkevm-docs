@@ -37,15 +37,15 @@ The best way to scale Ethereum is to strive to maintain equivalence with this ec
 
 The following EVM opcodes are different in Polygon zkEVM: **SELFDESTRUCT**, **EXTCODEHASH**, **DIFFICULTY**, **BLOCKCHASH**, and **NUMBER**. For a detailed article on differences between EVM and zkEVM, check out [this document](/protocol/evm-differences.md).
 
-### Which opcodes are missing in the current zkEVM version?
-
-Polygon zkEVM supports all opcodes except **SHA256**, **BLAKE**, and **PAIRINGS**.
-
 ### What precompiled smart contract functions does Polygon zkEVM support?
 
 The following precompiled contracts are supported in the zkEVM: **ecRecover** and **identity**.
 
 Other precompiled contracts have no effect on the zkEVM state tree and are treated as a `revert`, returning all gas to the previous context and setting the `success` flag to "0".
+
+### Which precompiled contracts are missing in the current zkEVM version?
+
+Polygon zkEVM supports all precompiled contracts except **SHA256**, **BLAKE**, and **PAIRINGS**.
 
 ### When will we get Type 2 EVM Equivalence?
 

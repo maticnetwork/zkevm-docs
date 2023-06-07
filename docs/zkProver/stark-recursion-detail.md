@@ -1,6 +1,6 @@
 ---
 id: stark-recursion-detail
-title: STARK Recursion Overview
+title: Composition, Recursion and Aggregation 
 sidebar_label: Composition, Recursion and Aggregation 
 description: Giving an overview of each technique for STARK recursion
 keywords:

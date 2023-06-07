@@ -143,6 +143,11 @@ module.exports = {
             "zkProver/stark-recursion-detail",
             "zkProver/recursion-sub-process",
             "zkProver/proving-architecture",
+            "zkProver/circom-in-zkprover",
+            "zkProver/proving-setup-phase",
+            "zkProver/intermediate-recursion-steps",
+            "zkProver/final-recursion-step",
+            "zkProver/proof-generation-phase",       
           ],
         },
         {
@@ -236,7 +241,7 @@ module.exports = {
       link: {
         type: "generated-index",
       },
-      collapsed: true,
+      collapsed: false,
       items: [
         "maticjs/install-sdk",
         "maticjs/initialize-zkevm",

@@ -48,7 +48,7 @@ The Polygon zkEVM's strategy to reducing the size of the ultimate validity proof
 
 ## CIRCOM Circuits
 
-As outlined in the [Proving Architecture](/zkProver/proving-architecture) subsection, the recursive aggregation of many STARK proofs (aimed at reducing the size of the validity proof) is accomplished in five stages;
+As outlined in the [Proving Architecture](proving-architecture.md) subsection, the recursive aggregation of many STARK proofs (aimed at reducing the size of the validity proof) is accomplished in five stages;
 
 1. Compression Stage using the `c12a` CIRCOM circuit,
 2. Normalization Stage using the $\mathtt{recursive_1}\ \mathtt{Prover}$ CIRCOM template,

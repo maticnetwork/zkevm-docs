@@ -52,7 +52,7 @@ Other precompiled contracts have no effect on the zkEVM state tree and are treat
 
 ## Other Minor Differences
 
--zkEVM doesn't clean storage when a contract is deployed at an address due to the zkEVM state tree specification.
+- zkEVM doesn't clean storage when a contract is deployed at an address due to the zkEVM state tree specification.
 
 - **JUMPDEST** opcode is allowed in push bytes to avoid runtime bytecode analysis.
 

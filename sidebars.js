@@ -76,7 +76,7 @@ module.exports = {
       link: {
         type: "generated-index",
       },
-      collapsed: true,
+      collapsed: false,
       items: [
         "zkProver/overview",
         {

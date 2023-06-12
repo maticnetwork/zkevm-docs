@@ -11,7 +11,7 @@ keywords:
   - sdk
 ---
 
-**MaticJS SDK** is a JavaScript library that allows you to interact with the Polygon zkEVM network. In this tutorial, we will install the MaticJS library and setup along side **Web3JS** library.
+**MaticJS SDK** is a JavaScript library that allows you to interact with the Polygon zkEVM network. In this tutorial, we will install the MaticJS library and setup alongside **Web3JS** library.
 
 If you want to dig deeper into the API architecture of MaticJS SDK, please refer to the guide provided [here](https://wiki.polygon.technology/docs/develop/ethereum-polygon/matic-js/api-architecture).
 

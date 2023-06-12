@@ -35,7 +35,7 @@ The best way to scale Ethereum is to strive to maintain equivalence with this ec
 
 ### What EVM opcodes are different on Polygon zkEVM?
 
-The following EVM opcodes are different in Polygon zkEVM: **SELFDESTRUCT**, **EXTCODEHASH**, **DIFFICULTY**, **BLOCKCHASH**, and **NUMBER**. For a detailed article on differences between EVM and zkEVM, check out [this document](/protocol/evm-differences.md).
+The following EVM opcodes are different in Polygon zkEVM: **SELFDESTRUCT**, **EXTCODEHASH**, **DIFFICULTY**, **BLOCKHASH**, and **NUMBER**. For a detailed article on differences between EVM and zkEVM, check out [this document](/protocol/evm-differences.md).
 
 ### What precompiled smart contract functions does Polygon zkEVM support?
 

@@ -62,4 +62,4 @@ Here is a detailed explanation of how the ADD opcode gets interpreted. Recall th
         GAS-3 => GAS    :JMPN(outOfGas)
                         :JMP(readCode)
 
-Last but not the least, there is an instruction indicating to move forward to the next intruction.
+Last but not the least, there is an instruction indicating to move forward to the next instruction.

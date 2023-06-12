@@ -2,7 +2,7 @@
 id: architecture
 title: Architecture
 sidebar_label: Architecture
-description: Introduction to Polygon zkEVM and it's architecture.
+description: Introduction to Polygon zkEVM and its architecture.
 keywords:
   - polygon
   - zkEVM
@@ -34,7 +34,7 @@ The skeletal architecture of Polygon zkEVM is shown below:
 
 The earlier version, **Polygon Hermez 1.0**, was based on the **Proof of Donation (PoD)** consensus mechanism. PoD was basically a decentralized auction conducted automatically, with participants (coordinators) bidding a certain number of tokens in order to be chosen to create the next batch.
 
-Our latest **Consensus Contract (PolygonZkEVM.sol)** leverages the experience of the existing **PoD** in v1.0 and add support for the permissionless participation of multiple coordinators to produce batches in L2.
+Our latest **Consensus Contract (PolygonZkEVM.sol)** leverages the experience of the existing **PoD** in v1.0 and adds support for the permissionless participation of multiple coordinators to produce batches in L2.
 
 The earlier **Proof of Donation (PoD)** mechanism was based on a decentralized auction model to get the right to produce batches in a specific timeframe. In this mechanism, the economic incentives were set up so the validators need to be very efficient in order to be competitive.
 
@@ -155,7 +155,7 @@ Layer 2 interoperability allows a native mechanism to migrate assets between dif
 
 ## Verifier
 
-Verifier is a Smart Contract which is able to verify any ZK-SNARK cryptographic proof. This SNARK Verifier proves the validity of every transaction in the batch. It is the key entity in any zk-Rollup architechture for the prime reason that it verifies the correctness of a Proof ensuring a valid state transition.
+Verifier is a Smart Contract which is able to verify any ZK-SNARK cryptographic proof. This SNARK Verifier proves the validity of every transaction in the batch. It is the key entity in any zk-Rollup architecture for the prime reason that it verifies the correctness of a Proof ensuring a valid state transition.
 
 The Verifier contract is currently deployed on the [Ethereum Mainnet](https://etherscan.io/address/0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9) and [Goerli Testnet](https://goerli.etherscan.io/address/0x8EdA1d8c254a77a57A6A7A1C0262e9A44A7C6D6d).
 

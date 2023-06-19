@@ -34,9 +34,7 @@ module.exports = {
       id: 'banner',
       content: `
         <div class="announcement-bar">
-          Polygon zkEVM Mainnet Beta is now Live! 
-          <a href="/docs/develop" class="announcement-link" style="color: #ffffff;">Start Building</a>
-          <a href="/docs/risk-disclosure" class="announcement-link" style="color: #ffffff;">Risks</a>
+          Polygon zkEVM Testnet is undergoing maintenance. Expect downtime over the next 45 minutes ⛈️
         </div>
       `,
       textColor: '#ffffff',

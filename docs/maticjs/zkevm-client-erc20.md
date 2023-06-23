@@ -12,7 +12,7 @@ keywords:
 
 :::tip
 
-See the [<ins>MaticJS SDK examples</ins>](https://github.com/maticnetwork/matic.js/tree/master/examples/zkEvm/erc20) on our official Github repo to interact with ERC20 tokens on the zkEVM network.
+See the [<ins>MaticJS SDK examples</ins>](https://github.com/maticnetwork/matic.js/tree/master/examples/zkevm/erc20) on our official Github repo to interact with ERC20 tokens on the zkEVM network.
 
 :::
 

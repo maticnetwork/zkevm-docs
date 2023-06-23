@@ -40,7 +40,8 @@ module.exports = {
         },
         "protocol/incentive-mechanism",
         "protocol/upgradability",
-        "protocol/admin-role",
+        "protocol/admin-role", 
+        "protocol/zkevm-upgrades-process",
         {
           type: "category",
           label: "Malfunction Resistance",

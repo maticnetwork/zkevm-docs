@@ -17,7 +17,7 @@ For the sake of securing the Polygon zkEVM, which is still in its Beta version, 
 
 Although Upgradeability is not a permanent feature of the Polygon zkEVM but only a part of the so-called _Training Wheels_, this document acts as a note on the process followed when upgrading.  
 
-Upgrades on the Polygon zkEVM will only affect the following contracts:
+Upgrades on the Polygon zkEVM will typically affect the following contracts:
 
 - **PolygonZkEVM.sol** (Consensus Contract)
 - **PolygonZkEVMGlobalExitRoot.sol**

@@ -40,7 +40,7 @@ Although built in a smart contract, the encoding of transactions resembles a blo
 
 The main idea, when proving validity of a batch, is for the `oldAccInputHash` and its corresponding `newAccInputHash` to match accordingly.
 
-The resultant STARK proof denoted by $\mathtt{\pi_{batch}}$, which involves $\mathtt{669}$ commited polynomials each of degree $\mathtt{2^{23}}$, is $\mathtt{1.9}$ Megabytes big.
+The resultant STARK proof denoted by $\mathtt{\pi_{batch}}$, which involves $\mathtt{669}$ committed polynomials each of degree $\mathtt{2^{23}}$, is $\mathtt{1.9}$ Megabytes big.
 
 Such a validity proof is not ideal in view of its storage-fee implications in Ethereum.
 

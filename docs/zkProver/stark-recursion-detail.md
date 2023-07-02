@@ -63,7 +63,7 @@ CIRCOM is used as an intermediate representation language for the description of
 
 The circuit definition in the form of R1CS is taken and automatically translated into a new **STARK** definition. 
 
-In this **C2S** sub-process, a circuit Verifier is traslated into a STARK proof. That is, a new `pil` description, new `constants` and a `starkinfo`. 
+In this **C2S** sub-process, a circuit Verifier is translated into a STARK proof. That is, a new `pil` description, new `constants` and a `starkinfo`. 
 
 This translation, is herein referred to as **C2S** (short for **CIRCUIT-to-STARK**).
 

@@ -62,7 +62,7 @@ function trustedVerifyBatches (
 
 - `pendingStateNum` is the number of state transitions pending to be consolidated, which is set to **0** for as long as the Trusted Aggregator is in operation. The `pendingState` functions as a security measure to be used when L2 state is consolidated by an independent Aggregator.
 - `initNumBatch` is the index of the last batch in the last aggregated sequence.
-- `finalNewBatch` is the index of the last batch in the sequence being aggreated.
+- `finalNewBatch` is the index of the last batch in the sequence being aggregated.
 - `newLocalExitRoot` is the root of the Bridge’s L2 Exit Merkle Tree at the end of sequence execution used to compute new Global Exit Root when the sequence is aggregated, and allows bridge claiming transactions to be successfully executed in L1.
 - `newStateRoot` is the L2 StateRoot resulting from the execution of the sequence of batches over an older L2 State.
 - `proof(A,B and C)` is the Zero-Knowledge proof.
@@ -96,7 +96,7 @@ bytes memory snarkHashBytes = getInputSnarkBytes (
   newStateRoot
 );
 
-// Calulate the snark input
+// Calculate the snark input
 uint256 inputSnark = uint256(sha256(snarkHashBytes)) % _RFIELD;
 
 // Verify proof

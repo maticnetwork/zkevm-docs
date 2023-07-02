@@ -207,7 +207,7 @@ The zkEVM Stack is exactly the same as the EVM Stack except for the number of st
 
 Note that the EVM works with $256$-bit words, and thus the elements of the EVM Stack are also $256$-bit. 
 
-The zkEVM Stack therefore, with its $8 \times 32$-bits representation of values, naturally mimicks the $256$-bit architecture of the EVM Stack.
+The zkEVM Stack therefore, with its $8 \times 32$-bits representation of values, naturally mimics the $256$-bit architecture of the EVM Stack.
 
 But since there are more steps in the zkEVM Stack than the $1024$ slots of the EVM Stack, only the first $1024$ slots of the zkEVM Stack are used for the EVM Stack.
 

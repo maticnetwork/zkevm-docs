@@ -42,7 +42,7 @@ Considering some special cases, there are eight secondary [Storage Assembly](htt
 | SET a zero node to zero           | Set_ZeroToZero     | SZTZ       | isSetZeroToZero()                      |
 
 
-Input and ouput states of the Storage SM are literally SMTs, given in the form of; the Merkle roots, the relevant siblings, as well as the key-value pairs.
+Input and output states of the Storage SM are literally SMTs, given in the form of; the Merkle roots, the relevant siblings, as well as the key-value pairs.
 
 Note that state machines use registers in the place of variables. All values needed, for carrying out the basic operations, are stored by the primary Assembly code in the following registers; 
 

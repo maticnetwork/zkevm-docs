@@ -137,7 +137,7 @@ Here is a step-by-step outline of how the system achieves proof / verification o
 - Capture traces of state changes, called execution traces, as rows of a lookup table, 
 - Form polynomial identities / constraints that these state transitions satisfy, 
 - Prover uses a specific polynomial commitment scheme to commit and prove knowledge of the committed polynomials,
-- [Plookup](https://eprint.iacr.org/2020/315.pdf) is one of the ways to check if the Prover's commited polynomials produce correct traces.
+- [Plookup](https://eprint.iacr.org/2020/315.pdf) is one of the ways to check if the Prover's committed polynomials produce correct traces.
 
 While the polynomial constraints are written in the PIL language, the instructions are initially written in zkASM but subsequently expressed and stored in JSON format. Although not all verification involves a Plookup, the diagram below, briefly illustrates the wide role Plookup plays in the zkProver.
 

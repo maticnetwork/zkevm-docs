@@ -47,7 +47,7 @@ Starting with the first subdivision, the $\mathtt{1224}$ rows related with the b
 
 - Therefore, **each complete byte is recorded at the last row of such a 9-row byte block** of the $\texttt{r8}$ register. This row is flagged with a "1" in the same row of another register called $\texttt{latchR8}$. **This ensures that $\texttt{latchR8}$ is 0 in all rows except the last row of a 9-row byte block**.
 
-#### Example: Represention of Two Bytes
+#### Example: Representation of Two Bytes
 
 Here's an example of how two bytes, $\mathtt{0xa1}$ and $\mathtt{0xfe}$, from the Padding-KK SM look like in the Padding-KK-Bit SM. The horizontal lines mark the end of a byte block. 
 

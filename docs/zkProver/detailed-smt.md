@@ -228,7 +228,7 @@ In order to ensure that **checking such a relationship** blends with the usual p
 
 #### The Naïve Solution
 
-The naïve solution is to simpy include keys in the argument of the hash function, when forming leaves.
+The naïve solution is to simply include keys in the argument of the hash function, when forming leaves.
 
 That is, when building a binary SMT, one includes a key-value pair $(K_{\mathbf{x}}, V_\mathbf{{x}})$ by setting the leaf $\mathbf{L_{x}}$ to be the hash of both the value and the key;
 

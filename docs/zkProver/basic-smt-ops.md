@@ -27,7 +27,7 @@ Hence, in addition to $(K_{\mathbf{x}}, \text{HV}_{\mathbf{x}})$, prover has to 
 
 #### What if the key is not set?
 
-The next example demostrates the **READ** operation when a key is not set in the tree. That is, it illustrates how to check whether a value is not on a given SMT. 
+The next example demonstrates the **READ** operation when a key is not set in the tree. That is, it illustrates how to check whether a value is not on a given SMT. 
 
 There are two cases that can occur. The given key may lead either to a zero node or to an existing leaf.
 

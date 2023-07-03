@@ -20,7 +20,7 @@ The Storage Executor is like a slave-worker to the master, the Storage Assembly 
 
 As per instruction of the Main SM, the Storage Executor makes function calls to the Storage ROM for a specific secondary Assembly code stored as a JSON-file, by using the same aforementioned **selectors** of secondary Assembly codes.
 
-For example, if the Main SM requires a new leaf to be created at a found non-zero leaf, the Storage Executor uses `isSetInsertFound` as a function call for the `Set_InsertFound` (or `SIF`) Storage Action. The Storage Executor then proceeds to build commited polynomials and executes the `SIF` Storage Action.
+For example, if the Main SM requires a new leaf to be created at a found non-zero leaf, the Storage Executor uses `isSetInsertFound` as a function call for the `Set_InsertFound` (or `SIF`) Storage Action. The Storage Executor then proceeds to build committed polynomials and executes the `SIF` Storage Action.
 
 As previously observed, in our very first UPDATE example in this document, all values are expressed as quadruplets of unsigned integers. For example, the **Remaining Key** looks like this,
 

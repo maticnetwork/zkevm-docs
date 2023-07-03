@@ -68,7 +68,7 @@ by filling the verifier $\mathtt{stark\_verifier.} \texttt{circom.ejs}$ template
 
 Once the verifier is generated using the template, the template is used to create another CIRCOM that aggregates two verifiers.
 
-Note that, in the previous step, the constant root was passed harcoded from an external file into the circuit.
+Note that, in the previous step, the constant root was passed hardcoded from an external file into the circuit.
 
 That's the very reason for having the Normalization stage: enabling the previous circuit and anyone verifying each or both proofs to have the exact same form, and thus allowing iterated recursion.
 

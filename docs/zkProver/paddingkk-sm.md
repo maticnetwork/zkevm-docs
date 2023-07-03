@@ -534,6 +534,8 @@ $$
 \end{aligned}
 $$
 
+Please note that these quoted code lines will differ with different versions. They should only be taken as examples for a particular code version.
+
 Note that $\texttt{HASHPOS}$ is marking the position in the string of the byte where the reading starts. The Plookup shown above, maps the  committed polynomial $\texttt{HASHPOS}$ in the Main SM to the linear combination of the committed polynomials; $\mathtt{len}$, $\mathtt{rem}$ and $\mathtt{crLen}$; of the Padding-KK SM as,
 
 $$

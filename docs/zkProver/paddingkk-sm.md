@@ -388,7 +388,7 @@ $$
 \end{array}
 $$
 
-Note that the horinzontal line is used to separate every 8 bytes, which are the exact number of bytes stored in a $\mathtt{crV_i}$ register. We will later on see why this is important.
+Note that the horizontal line is used to separate every 8 bytes, which are the exact number of bytes stored in a $\mathtt{crV_i}$ register. We will later on see why this is important.
 
 
 
@@ -534,7 +534,7 @@ $$
 \end{aligned}
 $$
 
-Note that $\texttt{HASHPOS}$ is marking the position in the string of the byte where the reading starts. The Plookup shown above, maps the  committed polynomial $\texttt{HASHPOS}$ in the Main SM to the linear combination of the commited polynomials; $\mathtt{len}$, $\mathtt{rem}$ and $\mathtt{crLen}$; of the Padding-KK SM as,
+Note that $\texttt{HASHPOS}$ is marking the position in the string of the byte where the reading starts. The Plookup shown above, maps the  committed polynomial $\texttt{HASHPOS}$ in the Main SM to the linear combination of the committed polynomials; $\mathtt{len}$, $\mathtt{rem}$ and $\mathtt{crLen}$; of the Padding-KK SM as,
 
 $$
 \mathtt{len−rem−crLen+1} \tag{Eqn.20}

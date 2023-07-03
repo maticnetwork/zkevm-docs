@@ -513,23 +513,23 @@ $$
 
 There are a few subtle details concerning the connection between the Read operation and the Main SM to be taken into account. 
 
-For instance, in order to avoid problems, reading from the last (probably smaller) block is not allowed. A constant column $\mathtt{crValid}$ is therefore created specifically for checking if a read is done at the last block. So, $\mathtt{crValid}$ will be 1 *if and only if* the current state is not at the last block. Hence, the Plookup in the Main SM's PIL code ([main.pil code; lines 452 to 465](https://github.com/0xPolygonHermez/zkevm-proverjs/blob/main/pil/main.pil)):
+For instance, in order to avoid problems, reading from the last (probably smaller) block is not allowed. A constant column $\mathtt{r8Valid}$ is therefore created specifically for checking if a read is done at the last block. So, $\mathtt{r8Valid}$ will be 1 *if and only if* the current state is not at the last block. Hence, the Plookup in the Main SM's PIL code ([main.pil code; lines 663 to 676](https://github.com/0xPolygonHermez/zkevm-proverjs/blob/main/pil/main.pil#L663-L676)):
 
 $$
 \begin{aligned}
-\mathtt{hashK}\text{ } \{ & \text{} \\
+\mathtt{hashK + hashK1}\text{ } \{ & \text{} \\
 &\texttt{addr,}\\
 &\texttt{HASHPOS,}\\
-&\texttt{DO,} \\
+&\texttt{D0 * hashK + hashK1,} \\
 &\texttt{op0, op1, op2, op3,}\\
 &\texttt{op4, op5, op6, op7}\\
 \}\text{ } \mathtt{in}\quad\text{ } \\
-&\mathtt{PaddingKK.crLatch * PaddingKK.crValid}\text{ } \{  \\
-&\mathtt{PaddingKK.addr,} \\
-&\mathtt{PaddingKK.len - PaddingKK.rem - PaddingKK.crLen + 1,}\\
-&\mathtt{PaddingKK.crLen,}\\
-&\mathtt{PaddingKK.crVC0,\ PaddingKK.crVC1,\ PaddingKK.crVC2,\ PaddingKK.crVC3,}\\
-&\mathtt{PaddingKK.crVC4,\ PaddingKK.crVC5,\ PaddingKK.crVC6,\ PaddingKK.crVC7}\\
+&\mathtt{PaddingKK.crLatch * PaddingKK.r8Valid}\text{ } \{  \\
+&\qquad\mathtt{PaddingKK.addr,} \\
+&\qquad\mathtt{PaddingKK.len - PaddingKK.rem - PaddingKK.crLen + 1,}\\
+&\qquad\mathtt{PaddingKK.crLen,}\\
+&\qquad\mathtt{PaddingKK.crV0C,\ PaddingKK.crV1C,\ PaddingKK.crV2C,\ PaddingKK.crV3C,}\\
+&\qquad\mathtt{PaddingKK.crV4C,\ PaddingKK.crV5C,\ PaddingKK.crV6C,\ PaddingKK.crV7C}\\
 \};\qquad\text{ }\text{ }\\ 
 \end{aligned}
 $$

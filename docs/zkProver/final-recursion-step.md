@@ -23,7 +23,7 @@ In order to achieve this, a verifier circuit `recursive2.verifier.circom` is gen
 
 by filling the $\mathtt{stark\_} \texttt{verifier.circom.ejs}$ template.
 
-The output CIRCOM file `recursivef.circom`, obtained by running a different script called `genrecursivef`, is in turn compiled into an R1CS `recursivef.r1cs` file and a $\text{witness calculator program` `recursivef.witnesscal`.
+The output CIRCOM file `recursivef.circom`, obtained by running a different script called `genrecursivef`, is in turn compiled into an R1CS `recursivef.r1cs` file and a \$\text{witness calculator program` `recursivef.witnesscal`.
 
 Both these outputs are used later on, to build and fill the next execution trace.
 
@@ -58,6 +58,6 @@ In order to achieve this, a verifier circuit `recursivef.verifier.circom` is gen
 
 by filling the $\mathtt{stark\_} \texttt{verifier.circom.ejs}$ template.
 
-This verifier CIRCOM file gets imported by the `final.circom` circuit in order to generate the circuit being proved, using `Groth16` procedure.
+This verifier CIRCOM file gets imported by the `final.circom` circuit in order to generate the circuit being proved, using `FFLONK` procedure.
 
 ![Convert the `recursivef` STARK to its verifier circuit called `final.circom}$.](figures/21prf-rec-recursivef-stark-to-final-circom.png)

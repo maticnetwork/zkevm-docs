@@ -42,7 +42,7 @@ However, since the aggregation of two proofs requires the constant root of the p
 
 This step allows each aggregator verifier and the normalization verifier to be exactly the same, permitting successful aggregation via recursion.
 
-## Aggregation Stage 
+## Aggregation Stage
 
 Once the normalization step has been completed, the next stage is the aggregation of proofs (i.e., normalized proofs).
 
@@ -58,21 +58,21 @@ This allows us to aggregate a pair of $\mathtt{\pi_{rec1}}$-type proofs, or a pa
 
 The **Final Stage** is the very last **STARK** step during the recursion process, and it is in charge of verifying a $\mathtt{{\pi}_{rec2}}$ proof over a completely different finite field, the one defined by the $\text{BN}128$ elliptic curve.
 
-More specifically, the hash used in generating the transcript works over the field of the $\text{BN}128$ elliptic curve. Hence, all the challenges (and so, all polynomials) belong to this new field. 
+More specifically, the hash used in generating the transcript works over the field of the $\text{BN}128$ elliptic curve. Hence, all the challenges (and so, all polynomials) belong to this new field.
 
-The reason for the changing to the $\text{BN}128$ elliptic curve is because a SNARK $\texttt{Groth16}$ proof, which works over this type of elliptic curves, is to be generated in the next step of the process.
+The reason for the changing to the $\text{BN}128$ elliptic curve is because a $\texttt{FFLONK}$ SNARK proof, which works over this type of elliptic curves, is to be generated in the next step of the process.
 
 This step is very much similar to the $\mathtt{recursive_2\ Prover}$ circuit. It instantiates a verifier circuit for $\mathtt{{\pi}_{rec2}}$ except that, in this case, $2$ constant roots should be provided (a constant for each of the proofs aggregated in the former step).
 
 ## SNARK Stage
 
-The last step of the whole process is called the **SNARK Stage**, and its purpose is to produce a $\texttt{Groth16}$ proof $\mathtt{{\pi}_{groth16}}$ which validates the previous $\mathtt{{\pi}_{recf}}$ proof.
+The last step of the whole process is called the **SNARK Stage**, and its purpose is to produce a $\texttt{FFLONK}$ proof $\mathtt{{\pi}_{FFLONK}}$ which validates the previous $\mathtt{{\pi}_{recf}}$ proof.
 
-In fact, $\texttt{Groth16}$ can be replaced with any other SNARKs. One alternative SNARK to $\texttt{Groth16}$, which requires no trusted setup, is $\texttt{FFLONK}$.
+In fact, $\texttt{FFLONK}$ can be replaced with any other SNARKs. One alternative SNARK which was previously used is $\texttt{Groth16}$, which requires a trusted setup for every new circuit.
 
 A SNARK is chosen to replace a STARK with the aim to reduce both verification complexity and proof size. SNARKs, unlike STARK proofs, have constant complexity.
 
-The $\mathtt{{\pi}_{groth16}}$ proof or $\mathtt{{\pi}_{FFLONK}}$ proof gets published on-chain as the validity proof. The verifier smart contract living on the L1 verifies the validity proof.
+The $\mathtt{{\pi}_{FFLONK}}$ proof gets published on-chain as the validity proof. The verifier smart contract living on the L1 verifies the validity proof.
 
 ## Remark On Inputs
 

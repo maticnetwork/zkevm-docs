@@ -29,7 +29,7 @@ Users will typically interact with trusted L2 State. However, due to certain pro
 
 Verification of transactions on L1 will take 1 week only in the case when an **Emergency State is activated** or the **aggregator does not batch any proofs at all**.
 
-If a sequenced batch is not aggregated in 7 days, the emergency mode is activated. Please refer to [<ins>this guide</ins>](emergency-state.md) to understand more about the Emergency State.
+Additionally, the emergency mode is activated if a sequenced batch is not aggregated in 7 days. Please refer to [<ins>this guide</ins>](emergency-state.md) to understand more about the Emergency State.
 
 :::
 

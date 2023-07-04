@@ -83,7 +83,7 @@ This will generate the proof and the publics joined in the `recursivef.zkin.proo
 
 ### Proof of the final Stage
 
-The last circuit, `final.circom` is the one used to generate the proof. At this moment a `Groth16` proof is generated.
+The last circuit, `final.circom` is the one used to generate the proof. At this moment a `FFLONK` proof is generated.
 
 ## Remarks
 

@@ -49,9 +49,7 @@ Although taking on this revolutionary design approach was a hard decision to mak
 - Ethereum security
 - ZKP-powered scalability
 
-**Polygon zkEVM** is a Layer 2 scaling solution for Ethereum that leverages the scaling power of zero-knowledge proofs while maintaining Ethereum compatibility. Developers and users on **Polygon zkEVM** can use the same code, tooling, apps, etc that they use on Ethereum, but with much higher throughput and lower fees.
-
-Developers will deploy their existing contracts to the zkEVM, and users can deposit assets from Ethereum and transact off-chain. These transactions are grouped into batches with zero-knowledge proof attesting to the validity of each transaction. This ensures that the operators of the zkEVM can’t steal user funds, so we can say that it inherits the security of Ethereum.
+Developers can deploy their existing smart contracts to the zkEVM, and users can deposit assets from Ethereum and transact off-chain. These transactions are grouped into batches with zero-knowledge proof attesting to the validity of each transaction. This ensures that the operators of the zkEVM can’t steal user funds, so we can say that it inherits the security of Ethereum.
 
 **Polygon zkEVM** offers compatibility and scalability without compromise.
 

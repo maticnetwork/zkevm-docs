@@ -12,7 +12,6 @@ module.exports = {
       value: "Specifications",
       className: "sidebar-title",
     },
-    "introduction",
     "architecture",
     {
       type: "category",
@@ -234,8 +233,21 @@ module.exports = {
       value: "Developer Guides",
       className: "sidebar-title",
     },
+    "introduction",
     "develop",
     "bridge-to-zkevm",
+    {
+      type: "category",
+      label: "Deploy Contracts",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "guides/using-foundry",
+        "guides/using-hardhat",
+      ],
+    },
     {
       type: "category",
       label: "MaticJS SDK",
@@ -260,7 +272,7 @@ module.exports = {
       items: ["setup-local-node", "setup-production-node"],
     },
     "zkevm-gas-station",
-    "zkevm-faucet",
+    "guides/zkevm-faucet",
     "open-source-repos",
     "glossary",
   ],

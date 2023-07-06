@@ -1,7 +1,7 @@
 ---
 id: using-hardhat
 title: Deploy Smart Contracts Using Hardhat
-sidebar_label: Using Hardhat
+sidebar_label: Deploy Using Hardhat
 description: A step-by-step guide to deploying a smart contract using Hardhat on Polygon zkEVM network.
 keywords:
   - docs

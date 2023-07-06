@@ -234,18 +234,32 @@ module.exports = {
       className: "sidebar-title",
     },
     "introduction",
-    "develop",
-    "bridge-to-zkevm",
     {
       type: "category",
-      label: "Deploy Contracts",
+      label: "Start Building",
       link: {
         type: "generated-index",
       },
       collapsed: false,
       items: [
-        "guides/using-foundry",
-        "guides/using-hardhat",
+        "develop",
+        "bridge-to-zkevm",
+        {
+          type: "category",
+          label: "Smart Contracts",
+          link: {
+            type: "generated-index",
+          },
+          collapsed: false,
+          items: [
+            "guides/write-smart-contract",
+            "guides/using-foundry",
+            "guides/using-hardhat",
+            "guides/verify-smart-contract",
+          ],
+        },
+        "guides/zkevm-faucet",
+        "zkevm-gas-station",
       ],
     },
     {
@@ -254,7 +268,7 @@ module.exports = {
       link: {
         type: "generated-index",
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         "maticjs/install-sdk",
         "maticjs/initialize-zkevm",
@@ -271,8 +285,6 @@ module.exports = {
       collapsed: false,
       items: ["setup-local-node", "setup-production-node"],
     },
-    "zkevm-gas-station",
-    "guides/zkevm-faucet",
     "open-source-repos",
     "glossary",
   ],

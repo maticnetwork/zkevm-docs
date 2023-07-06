@@ -38,8 +38,7 @@ zkProver does not work on ARM-based Macs yet, and using WSL/WSL2 on Windows is n
 - 4-core CPU
 - 20GB Storage (This will increase over time)
 
-:::info 
-**About Batch Rate**
+:::info About Batch Rate
 
 Batches are closed every 10s, or whenever they are full (which can happen when there are high network loads).
 Also, how frequent batches are closed is subject to change as it depends on the prevailing configurations. 

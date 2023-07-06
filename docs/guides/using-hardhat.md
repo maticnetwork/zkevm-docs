@@ -52,13 +52,18 @@ Before starting with this deployment, please ensure that your wallet is connecte
 
 - Populate the `.env.sample` file with your `ACCOUNT_PRIVATE_KEY`
 
-    <details>
-    <summary>How to get your Private Key in Metamask</summary>
-    - Click the vertical 3 dots in the upper-right corner of Metamask window
-    - Select **Account details** and then click **Export private key**
-    - Enter your Metamask password to reveal the private key
-    - Copy the private key and paste it into the `.env.sample` file.
-    </details>
+<details>
+<summary>How to get your Private Key in Metamask</summary>
+
+- Click the vertical 3 dots in the upper-right corner of Metamask window
+
+- Select **Account details** and then click **Export private key**
+
+- Enter your Metamask password to reveal the private key
+
+- Copy the private key and paste it into the `.env.sample` file.
+
+</details>
 
 - Copy the contents of the `.env.sample` file to the `.env` file,
 

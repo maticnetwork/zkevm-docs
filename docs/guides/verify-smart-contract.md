@@ -94,9 +94,9 @@ Click **Next** after selecting the **via Standard Input JSON** option.
 
 </details>
 
-9. Once you psate the contents of the newly created `.sol` file to the *Enter the Solodity Contract* field, the **Verify & Publish** button will be active.
+8. Once you paste the contents of the newly created `.sol` file to the *Enter the Solidity Contract* field, the **Verify & Publish** button will be active.
 
-10. Click on **Verify & Publish** to verify your deployed smart contract.
+9. Click on **Verify & Publish** to verify your deployed smart contract.
 
 ## Verify Using Remix
 

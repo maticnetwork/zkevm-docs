@@ -1,7 +1,7 @@
 ---
 id: using-foundry
 title: Deploy Smart Contracts Using Foundry
-sidebar_label: Using Foundry
+sidebar_label: Deploy Using Foundry
 description: A step-by-step guide to deploying an ERC-721 smart contract using Foundry on Polygon zkEVM network.
 keywords:
   - docs

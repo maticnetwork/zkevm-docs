@@ -2189,3 +2189,21 @@ p {
 a code {
   color: #fff;
 }
+
+/* CSS to highlight new docs */
+.latest-docs {
+  -webkit-animation: latest-docs 1s ease-in-out 60 alternate;
+  -moz-animation: latest-docs 1s ease-in-out 60 alternate;
+  animation: latest-docs 1s ease-in-out 60 alternate;
+}
+
+@keyframes latest-docs {
+  0% {
+      text-shadow: 0 0 10px #eeeeee, 0 0 15px #000000, 0 0 20px #9a60ff,
+      0 0 20px #9a60ff, 0 0 20px #9a60ff;
+  }
+}
+
+.latest-docs:has(.menu__link--active) { 
+  animation: none;
+}

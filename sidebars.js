@@ -250,15 +250,41 @@ module.exports = {
           link: {
             type: "generated-index",
           },
+          className: "latest-docs",
           collapsed: false,
           items: [
-            "guides/write-smart-contract",
-            "guides/using-foundry",
-            "guides/using-hardhat",
-            "guides/verify-smart-contract",
+            {
+              // format for new docs
+              type: "doc",
+              id: "guides/write-smart-contract",
+              className: "latest-docs",
+            },
+            {
+              // format for new docs
+              type: "doc",
+              id: "guides/using-foundry",
+              className: "latest-docs",
+            },          
+            {
+              // format for new docs
+              type: "doc",
+              id: "guides/using-hardhat",
+              className: "latest-docs",
+            },
+            {
+              // format for new docs
+              type: "doc",
+              id: "guides/verify-smart-contract",
+              className: "latest-docs",
+            },          
           ],
         },
-        "guides/zkevm-faucet",
+        {
+          // format for new docs
+          type: "doc",
+          id: "guides/zkevm-faucet",
+          className: "latest-docs",
+        },         
         "zkevm-gas-station",
       ],
     },

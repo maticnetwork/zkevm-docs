@@ -911,9 +911,7 @@ sudo usermod -aG docker $USER
 newgrp docker && newgrp $USER
 ```
 
-### L1 Account
-
-To proceed with the setup, you will need an L1 Goerli address that will act as the suggested fee recipient. Make sure you have this address provisioned.
+Additionally, you will need **an L1 Goerli address** to proceed with the setup that will act as the suggested fee recipient. Make sure you have this address provisioned.
 
 ### Preparation
 

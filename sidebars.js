@@ -309,7 +309,7 @@ module.exports = {
         type: "generated-index",
       },
       collapsed: false,
-      items: ["setup-local-node", "setup-production-node"],
+      items: ["setup-local-node", "setup-production-node", "setup-zkevm",],
     },
     "open-source-repos",
     "glossary",

@@ -250,41 +250,15 @@ module.exports = {
           link: {
             type: "generated-index",
           },
-          className: "latest-docs",
           collapsed: false,
           items: [
-            {
-              // format for new docs
-              type: "doc",
-              id: "guides/write-smart-contract",
-              className: "latest-docs",
-            },
-            {
-              // format for new docs
-              type: "doc",
-              id: "guides/using-foundry",
-              className: "latest-docs",
-            },          
-            {
-              // format for new docs
-              type: "doc",
-              id: "guides/using-hardhat",
-              className: "latest-docs",
-            },
-            {
-              // format for new docs
-              type: "doc",
-              id: "guides/verify-smart-contract",
-              className: "latest-docs",
-            },          
+            "guides/write-smart-contract",
+            "guides/using-foundry",         
+            "guides/using-hardhat",
+            "guides/verify-smart-contract",          
           ],
         },
-        {
-          // format for new docs
-          type: "doc",
-          id: "guides/zkevm-faucet",
-          className: "latest-docs",
-        },         
+        "guides/zkevm-faucet",          
         "zkevm-gas-station",
       ],
     },
@@ -309,7 +283,7 @@ module.exports = {
         type: "generated-index",
       },
       collapsed: false,
-      items: ["setup-local-node", "setup-production-node"],
+      items: ["setup-local-node", "setup-production-node", "setup-zkevm",],
     },
     "open-source-repos",
     "glossary",

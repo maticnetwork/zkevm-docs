@@ -264,26 +264,26 @@ module.exports = {
     },
     {
       type: "category",
+      label: "Setup zkEVM",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: ["setup-local-node", "setup-production-node", "setup-zkevm",],
+    },
+    {
+      type: "category",
       label: "MaticJS SDK",
       link: {
         type: "generated-index",
       },
-      collapsed: true,
+      collapsed: false,
       items: [
         "maticjs/install-sdk",
         "maticjs/initialize-zkevm",
         "maticjs/zkevm-client-erc20",
         "maticjs/common-methods",
       ],
-    },
-    {
-      type: "category",
-      label: "Setup zkNode",
-      link: {
-        type: "generated-index",
-      },
-      collapsed: false,
-      items: ["setup-local-node", "setup-production-node", "setup-zkevm",],
     },
     "open-source-repos",
     "glossary",

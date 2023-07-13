@@ -1,7 +1,7 @@
 ---
 id: setup-production-node
 title: Setup Production zkNode
-sidebar_label: Production zkNode
+sidebar_label: Setup Production zkNode
 description: Detailed guide on setting up a live/production Polygon zkEVM Node using Docker.
 keywords:
   - polygon

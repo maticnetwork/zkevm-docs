@@ -1,7 +1,7 @@
 ---
 id: setup-local-node
 title: Setup Local zkNode
-sidebar_label: Local zkNode
+sidebar_label: Setup Local zkNode
 description: Detailed guide on setting up Polygon zkEVM Node locally on your device.
 keywords:
   - polygon

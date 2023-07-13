@@ -1,7 +1,7 @@
 ---
 id: setup-zkevm
 title: Deploy your own zkEVM on Goerli Testnet
-sidebar_label: Deploy Full zkEVM
+sidebar_label: Setup Full zkEVM
 description: Detailed guide on launching your own zkEVM network on the Goerli testnet.
 keywords:
   - polygon

@@ -107,9 +107,9 @@ function Home() {
                 </h2>
                 <h4 className="mt-0">Ethereum scalability with zkEVM <span className="white-text">performance and security</span></h4>
                 <p className="lead grey-text">
-                  Polygon zkEVM Documentation is the documentation portal providing 
-                  extensive documentation, community resources, and guides for enthusiasts 
-                  and developers interested in learning about or building on zkEVM.
+                  Polygon zkEVM Documentation is the portal for extensive knowledge, 
+                  community resources, and guides for enthusiasts and developers 
+                  interested in learning about or building on zkEVM.
                 </p>
                 <div class="padding-bottom custom-padding"></div>
                 <Buttonizer linkUrl={'https://wallet.polygon.technology/zkEVM-Bridge/bridge'} />

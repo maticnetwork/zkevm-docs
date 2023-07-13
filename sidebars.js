@@ -12,7 +12,6 @@ module.exports = {
       value: "Specifications",
       className: "sidebar-title",
     },
-    "introduction",
     "architecture",
     {
       type: "category",
@@ -234,8 +233,44 @@ module.exports = {
       value: "Developer Guides",
       className: "sidebar-title",
     },
-    "develop",
-    "bridge-to-zkevm",
+    "introduction",
+    {
+      type: "category",
+      label: "Start Building",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "develop",
+        "bridge-to-zkevm",
+        {
+          type: "category",
+          label: "Smart Contracts",
+          link: {
+            type: "generated-index",
+          },
+          collapsed: false,
+          items: [
+            "guides/write-smart-contract",
+            "guides/using-foundry",         
+            "guides/using-hardhat",
+            "guides/verify-smart-contract",          
+          ],
+        },
+        "guides/zkevm-faucet",          
+        "zkevm-gas-station",
+      ],
+    },
+    {
+      type: "category",
+      label: "Setup zkEVM",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: ["setup-local-node", "setup-production-node", "setup-zkevm",],
+    },
     {
       type: "category",
       label: "MaticJS SDK",
@@ -250,16 +285,6 @@ module.exports = {
         "maticjs/common-methods",
       ],
     },
-    {
-      type: "category",
-      label: "Setup zkNode",
-      link: {
-        type: "generated-index",
-      },
-      collapsed: false,
-      items: ["setup-local-node", "setup-production-node"],
-    },
-    "zkevm-gas-station",
     "open-source-repos",
     "glossary",
   ],

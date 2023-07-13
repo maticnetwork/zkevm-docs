@@ -1,7 +1,7 @@
 ---
 id: setup-production-node
 title: Setup Production zkNode
-sidebar_label: Production zkNode
+sidebar_label: Setup Production zkNode
 description: Detailed guide on setting up a live/production Polygon zkEVM Node using Docker.
 keywords:
   - polygon
@@ -30,13 +30,21 @@ It is highly recommended that you create a separate folder for installing and wo
 
 :::caution
 
-zkProver doesn't work on ARM-based Macs yet, and using WSL/WSL2 on Windows is not advisable. Currently, zkProver optimizations require certain Intel instructions, which means some non-M1 computers, such as AMD, won't work with the software regardless of the OS.
+zkProver does not work on ARM-based Macs yet, and using WSL/WSL2 on Windows is not advisable. Currently, zkProver optimizations require CPUs that support the AVX2 instruction, which means some non-M1 computers, such as AMD, won't work with the software regardless of the OS.
 
 :::
 
 - 16GB RAM
 - 4-core CPU
-- 20GB SSD (will increase over time)
+- 20GB Storage (This will increase over time)
+
+:::info About Batch Rate
+
+Batches are closed every 10s, or whenever they are full (which can happen when there are high network loads).
+Also, how frequent batches are closed is subject to change as it depends on the prevailing configurations. 
+The batch rate will always need to be updated accordingly.
+
+:::
 
 ### Network Components
 

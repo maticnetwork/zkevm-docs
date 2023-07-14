@@ -39,7 +39,7 @@ module.exports = {
         },
         "protocol/incentive-mechanism",
         "protocol/upgradability",
-        "protocol/admin-role", 
+        "protocol/admin-role",
         "protocol/zkevm-upgrades-process",
         {
           type: "category",
@@ -147,7 +147,7 @@ module.exports = {
             "zkProver/proving-setup-phase",
             "zkProver/intermediate-recursion-steps",
             "zkProver/final-recursion-step",
-            "zkProver/proof-generation-phase",       
+            "zkProver/proof-generation-phase",
           ],
         },
         {
@@ -253,23 +253,40 @@ module.exports = {
           collapsed: false,
           items: [
             "guides/write-smart-contract",
-            "guides/using-foundry",         
+            "guides/using-foundry",
             "guides/using-hardhat",
-            "guides/verify-smart-contract",          
+            "guides/verify-smart-contract",
           ],
         },
-        "guides/zkevm-faucet",          
+        "guides/zkevm-faucet",
         "zkevm-gas-station",
       ],
     },
     {
       type: "category",
-      label: "Setup zkEVM",
+      label: "Setup zkNode",
       link: {
         type: "generated-index",
       },
       collapsed: false,
-      items: ["setup-local-node", "setup-production-node", "setup-zkevm",],
+      items: ["setup-local-node", "setup-production-node"],
+    },
+    {
+      type: "category",
+      label: "Deploy zkEVM",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "deploy-fullzkevm",
+        "step2-fullzkevm",
+        "step3-fullzkevm",
+        "step4-fullzkevm",
+        "step5-fullzkevm",
+        "step6-fullzkevm",
+        "setup-goerlinode",
+      ],
     },
     {
       type: "category",

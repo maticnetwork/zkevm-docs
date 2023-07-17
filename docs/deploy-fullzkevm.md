@@ -136,15 +136,16 @@ Next, ensure that you have checked your system specs, and have at hand all the v
 
 You'll need the following variables.
 
-| Variable                         | Details                                                                                |
-| -------------------------------- | -------------------------------------------------------------------------------------- |
-| INFURA_PROJECT_ID                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own ID.  |
+| Variable                         | Details                                                                                  |
+| -------------------------------- | ---------------------------------------------------------------------------------------- |
+| INFURA_PROJECT_ID                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own ID.    |
+| ETHERSCAN_API_KEY                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own KEY.   |
 | ETHERSCAN_API_KEY                | Open an account with [ETHERSCAN](https://etherscan.io/) in order to obtain your own KEY. |
-| Public IP address                | Find this address in your machine.                                                     |
-| L1 Goërli node RPC               | This is the API Key of your designated L1 node. The L1 here is Goërli.                 |
-| Goerli address with **15 GöETH** | This refers to your MetaMask address, or any wallet of your choice.                    |
+| Public IP address                | Find this address in your machine.                                                       |
+| L1 Goërli node RPC               | This is the API Key of your designated L1 node. The L1 here is Goërli.                   |
+| Goerli address with **15 GöETH** | This refers to your MetaMask address, or any wallet of your choice.                      |
 
-See this guide here for [**setting up your own Goërli node**](deploy-zkevm#setup-goerli-node).
+See this guide here for [**setting up your own Goërli node**](/docs/setup-goerlinode.md#setup-goerlinode).
 
 #### Computing Requirements
 
@@ -152,7 +153,7 @@ Keep in mind that the mainnet files you will be downloading are 70GB big.
 
 If the Prover is the only container you will be running externally in a cloud, then it is preferable to have a minimum 300GB of storage in the primary machine.
 
-Depending on the user's sources, the zkEVM network can be implemented with either the actual _Full Prover_ or the _Mock Prover_.
+Depending on the user's resources, the zkEVM network can be implemented with either the actual _Full Prover_ or the _Mock Prover_.
 
 The Full Prover is resource-intensive as it utilises the exact same proving stack employed in the real and live zkEVM network.
 

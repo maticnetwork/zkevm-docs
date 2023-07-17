@@ -12,23 +12,6 @@ keywords:
 
 Welcome to your step-by-step guide to implementing a full Polygon zkEVM network on the Goerli testnet as the L1 network.
 
-<<<<<<< HEAD
-Users with good internet connection can schedule a $\pm$2-hour window for completing the entire process in one go.
-
-However, in order to allow for in-between breaks, the process is aesthetically split into 6 steps.
-
-- [**First Step**](deploy-zkevm#overview-and-setting-up): Preliminary Setup, checking system requirements and prerequisites variables.
-
-- [**Second Step**](deploy-zkevm#step2-fullzkevm): Installing Dependencies and downloading Mainnet Files.
-
-- [**Third Step**](deploy-zkevm#step3-fullzkevm): Creating wallets and Deploying Contracts.
-
-- [**Fourth Step**](deploy-zkevm#step4-fullzkevm): Deployment of the zkNode.
-
-- [**Fifth Step**](deploy-zkevm#step5-fullzkevm): Configuring the Prover and Services.
-
-- [**Sixth Step**](deploy-zkevm#step6-fullzkevm): Activating forced txs and Bridging/Claiming Assets.
-=======
 Users with good internet connection can schedule a 2-hour window for completing the entire process in one go.
 
 However, in order to allow for in-between breaks, the process is aesthetically split into 6 steps.
@@ -44,7 +27,6 @@ However, in order to allow for in-between breaks, the process is aesthetically s
 - [**Fifth Step**](/docs/step5-fullzkevm.md#step5-fullzkevm): Configuring the Prover and Services.
 
 - [**Sixth Step**](/docs/step6-fullzkevm.md#step6-fullzkevm): Activating forced txs and Bridging/Claiming Assets.
->>>>>>> main
 
 :::caution
 
@@ -154,19 +136,16 @@ Next, ensure that you have checked your system specs, and have at hand all the v
 
 You'll need the following variables.
 
-| Variable                         | Details                                                                                |
-| -------------------------------- | -------------------------------------------------------------------------------------- |
-| INFURA_PROJECT_ID                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own ID.  |
-<<<<<<< HEAD
-| ETHERSCAN_API_KEY                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own KEY. |
-=======
+| Variable                         | Details                                                                                  |
+| -------------------------------- | ---------------------------------------------------------------------------------------- |
+| INFURA_PROJECT_ID                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own ID.    |
+| ETHERSCAN_API_KEY                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own KEY.   |
 | ETHERSCAN_API_KEY                | Open an account with [ETHERSCAN](https://etherscan.io/) in order to obtain your own KEY. |
->>>>>>> main
-| Public IP address                | Find this address in your machine.                                                     |
-| L1 Goërli node RPC               | This is the API Key of your designated L1 node. The L1 here is Goërli.                 |
-| Goerli address with **15 GöETH** | This refers to your MetaMask address, or any wallet of your choice.                    |
+| Public IP address                | Find this address in your machine.                                                       |
+| L1 Goërli node RPC               | This is the API Key of your designated L1 node. The L1 here is Goërli.                   |
+| Goerli address with **15 GöETH** | This refers to your MetaMask address, or any wallet of your choice.                      |
 
-See this guide here for [**setting up your own Goërli node**](deploy-zkevm#setup-goerli-node).
+See this guide here for [**setting up your own Goërli node**](/docs/setup-goerlinode.md#setup-goerlinode).
 
 #### Computing Requirements
 
@@ -174,7 +153,7 @@ Keep in mind that the mainnet files you will be downloading are 70GB big.
 
 If the Prover is the only container you will be running externally in a cloud, then it is preferable to have a minimum 300GB of storage in the primary machine.
 
-Depending on the user's sources, the zkEVM network can be implemented with either the actual _Full Prover_ or the _Mock Prover_.
+Depending on the user's resources, the zkEVM network can be implemented with either the actual _Full Prover_ or the _Mock Prover_.
 
 The Full Prover is resource-intensive as it utilises the exact same proving stack employed in the real and live zkEVM network.
 

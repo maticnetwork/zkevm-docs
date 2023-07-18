@@ -142,7 +142,7 @@ Create the `~/zkevm/config.json` file and replace the `aggregatorClientHost` par
 
 Edit the `~/zkevm/zkevm-node/mainnet/docker-compose.yml` file with the following content:
 
-```yml
+<!-- ```yml
 version: "3.5"
 
 networks:
@@ -161,7 +161,313 @@ services:
     volumes:
       - ./db/scripts/init_prover_db.sql:/docker-entrypoint-initdb.d/init.sql
       - ${ZKEVM_NODE_STATEDB_DATA
+``` -->
+
+<details>
+<summary>Click to expand the <code>~/zkevm/zkevm-node/mainnet/docker-compose.yml</code> file</summary>
+
+```yml
+version: "3.5"
+
+networks:
+  default:
+    name: zkevm
+
+services:
+
+  zkevm-state-db:
+    container_name: zkevm-state-db
+    restart: unless-stopped
+    image: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db/scripts/init_prover_db.sql:/docker-entrypoint-initdb.d/init.sql
+      - ${ZKEVM_NODE_STATEDB_DATA_DIR}:/var/lib/postgresql/data
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/postgresql.conf:/etc/postgresql.conf
+    environment:
+      - POSTGRES_USER=state_user
+      - POSTGRES_PASSWORD=state_password
+      - POSTGRES_DB=state_db
+    command:
+      - "postgres"
+      - "-N"
+      - "500"
+      - "-c"
+      - "config_file=/etc/postgresql.conf"
+
+  zkevm-pool-db:
+    container_name: zkevm-pool-db
+    restart: unless-stopped
+    image: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
+    ports:
+      - 5433:5432
+    volumes:
+      - ${ZKEVM_NODE_POOLDB_DATA_DIR}:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=pool_user
+      - POSTGRES_PASSWORD=pool_password
+      - POSTGRES_DB=pool_db
+   command:
+      - "postgres"
+      - "-N"
+      - "500"
+
+  zkevm-executor:
+    container_name: zkevm-executor
+    restart: unless-stopped
+    image: hermeznetwork/zkevm-prover:v1.1.4-RC2-fork.4
+    depends_on:
+      zkevm-state-db:
+        condition: service_healthy
+    ports:
+      - 50061:50061 # MT
+      - 50071:50071 # Executor
+    volumes:
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.prover.config.json:/usr/src/app/config.json
+    command: >
+      zkProver -c /usr/src/app/config.json
+
+  zkevm-sync:
+    container_name: zkevm-sync
+    restart: unless-stopped
+    depends_on:
+      zkevm-state-db:
+        condition: service_healthy
+      zkevm-executor:
+        condition: service_started
+    image: hermeznetwork/zkevm-node:v0.1.2-RC1
+    environment:
+      - ZKEVM_NODE_ETHERMAN_URL=${ZKEVM_NODE_ETHERMAN_URL}
+    volumes:
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.genesis.config.json:/app/genesis.json
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-node run --network custom --custom-network-file /app/genesis.json --cfg /app/config.toml --components synchronizer"
+
+  zkevm-l2gaspricer:
+    container_name: zkevm-l2gaspricer
+    image: hermeznetwork/zkevm-node:v0.1.2-RC1
+    depends_on:
+      zkevm-pool-db:
+          condition: service_healthy
+    environment:
+      - ZKEVM_NODE_POOL_DB_HOST=zkevm-pool-db
+    volumes:
+      - ${ZKEVM_CONFIG_DIR}/sequencer.keystore:/pk/keystore
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.genesis.config.json:/app/genesis.json
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-node run --network custom --custom-network-file /app/genesis.json --cfg /app/config.toml --components l2gaspricer"
+
+  zkevm-eth-tx-manager:
+    container_name: zkevm-eth-tx-manager
+    image: hermeznetwork/zkevm-node:v0.1.2-RC1
+    depends_on:
+      zkevm-state-db:
+          condition: service_healthy
+    ports:
+      - 9094:9091 # needed if metrics enabled
+    environment:
+      - ZKEVM_NODE_STATEDB_HOST=zkevm-state-db
+    volumes:
+      - ${ZKEVM_CONFIG_DIR}/sequencer.keystore:/pk/sequencer.keystore
+      - ${ZKEVM_CONFIG_DIR}/aggregator.keystore:/pk/aggregator.keystore
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.genesis.config.json:/app/genesis.json
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-node run --network custom --custom-network-file /app/genesis.json --cfg /app/config.toml --components eth-tx-manager"
+
+  zkevm-rpc:
+    container_name: zkevm-rpc
+    restart: unless-stopped
+    depends_on:
+      zkevm-pool-db:
+        condition: service_healthy
+      zkevm-state-db:
+        condition: service_healthy
+      zkevm-sync:
+        condition: service_started
+    image: hermeznetwork/zkevm-node:v0.1.2-RC1
+    ports:
+      - 8545:8545
+      - 9091:9091 # needed if metrics enabled
+    environment:
+      - ZKEVM_NODE_ETHERMAN_URL=${ZKEVM_NODE_ETHERMAN_URL}
+    volumes:
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.genesis.config.json:/app/genesis.json
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-node run --network custom --custom-network-file /app/genesis.json --cfg /app/config.toml --components rpc --http.api eth,net,debug,zkevm,txpool,web3"
+
+  zkevm-sequencer:
+    container_name: zkevm-sequencer
+    image: hermeznetwork/zkevm-node:v0.1.2-RC1
+    depends_on:
+      zkevm-pool-db:
+        condition: service_healthy
+      zkevm-state-db:
+        condition: service_healthy
+      zkevm-executor:
+        condition: service_started
+    ports:
+      - 9092:9091 # needed if metrics enabled
+      - 6060:6060
+    environment:
+      - ZKEVM_NODE_STATEDB_HOST=zkevm-state-db
+      - ZKEVM_NODE_POOL_DB_HOST=zkevm-pool-db
+      - ZKEVM_NODE_SEQUENCER_SENDER_ADDRESS=0x593A083125Dc0f6E50c0DAe8689ece7E22987450
+    volumes:
+      - ${ZKEVM_CONFIG_DIR}/sequencer.keystore:/pk/sequencer.keystore
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.genesis.config.json:/app/genesis.json
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-node run --network custom --custom-network-file /app/genesis.json --cfg /app/config.toml --components sequencer,sequence-sender"
+
+  zkevm-aggregator:
+    container_name: zkevm-aggregator
+    image: hermeznetwork/zkevm-node:v0.1.2-RC1
+    depends_on:
+      zkevm-pool-db:
+        condition: service_healthy
+      zkevm-state-db:
+        condition: service_healthy
+    ports:
+      - 50081:50081
+      - 9093:9091 # needed if metrics enabled
+    environment:
+      - ZKEVM_NODE_STATEDB_HOST=zkevm-state-db
+      - ZKEVM_NODE_AGGREGATOR_SENDER_ADDRESS=0x37dB10dab4C2aEE6D161ad873D0696C4494613D0
+    volumes:
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.genesis.config.json:/app/genesis.json
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-node run --network custom --custom-network-file /app/genesis.json --cfg /app/config.toml --components aggregator"
+
+  zkevm-explorer-l2:
+    container_name: zkevm-explorer-l2
+    image: hermeznetwork/zkevm-explorer:latest
+    ports:
+      - 4004:4004
+    environment:
+      - PORT=4004
+      - NETWORK=POE
+      - SUBNETWORK=Polygon zkEVM
+      - CHAIN_ID=42069
+      - COIN=ETH
+      - ETHEREUM_JSONRPC_VARIANT=geth
+      - ETHEREUM_JSONRPC_HTTP_URL=http://zkevm-rpc:8545
+      - DATABASE_URL=postgres://l2_explorer_user:l2_explorer_password@zkevm-explorer-l2-db:5432/explorer
+      - ECTO_USE_SSL=false
+      - MIX_ENV=prod
+      - LOGO=/images/blockscout_logo.svg
+      - LOGO_FOOTER=/images/blockscout_logo.svg
+      - SUPPORTED_CHAINS=[]
+      - SHOW_OUTDATED_NETWORK_MODAL=false
+    command: ["/bin/sh", "-c", "mix do ecto.create, ecto.migrate; mix phx.server"]
+  zkevm-explorer-l2-db:
+    container_name: zkevm-explorer-l2-db
+    image: postgres
+    ports:
+      - 5436:5432
+    environment:
+      - POSTGRES_USER=l2_explorer_user
+      - POSTGRES_PASSWORD=l2_explorer_password
+      - POSTGRES_DB=l2_explorer_db
+    command: [ "postgres", "-N", "500" ]
+
+  zkevm-bridge-db:
+    container_name: zkevm-bridge-db
+    image: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+    expose:
+      - 5435
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=test_password
+      - POSTGRES_DB=test_db
+    command: ["postgres", "-N", "500"]
+
+  zkevm-bridge-service:
+    container_name: zkevm-bridge-service
+    image: hermeznetwork/zkevm-bridge-service:v0.1.0
+    depends_on:
+      zkevm-bridge-db:
+        condition: service_healthy
+    ports:
+      - 9090:9090
+      - 8081:8080
+    environment:
+      - ZKEVM_BRIDGE_DATABASE_USER=test_user
+      - ZKEVM_BRIDGE_DATABASE_PASSWORD=test_password
+      - ZKEVM_BRIDGE_DATABASE_NAME=test_db
+      - ZKEVM_BRIDGE_DATABASE_HOST=zkevm-bridge-db
+      - ZKEVM_BRIDGE_DATABASE_PORT=5432
+    volumes:
+      - ${ZKEVM_CONFIG_DIR}/sequencer.keystore:/pk/sequencer.keystore
+      - ${ZKEVM_ADVANCED_CONFIG_DIR:-./config/environments/public}/public.node.config.toml:/app/config.toml
+    command:
+      - "/bin/sh"
+      - "-c"
+      - "/app/zkevm-bridge run --cfg /app/config.toml"
+  zkevm-bridge-ui:
+    container_name: zkevm-bridge-ui
+    image: hermeznetwork/zkevm-bridge-ui:latest
+    ports:
+      - 8080:80
+    environment:
+      - ETHEREUM_RPC_URL=$ZKEVM_NODE_ETHERMAN_URL
+      - ETHEREUM_EXPLORER_URL=https://goerli.etherscan.io
+      - ETHEREUM_BRIDGE_CONTRACT_ADDRESS=0x5567fAbF3B17F320BA3906d2f6CD43021d27A8AB
+      - ETHEREUM_FORCE_UPDATE_GLOBAL_EXIT_ROOT=true
+      - ETHEREUM_PROOF_OF_EFFICIENCY_CONTRACT_ADDRESS=0x12c3e0CC1d4619deaC19014a72C98c129448Cfd7
+      - POLYGON_ZK_EVM_RPC_URL=http://147.83.40.37:8545
+      - POLYGON_ZK_EVM_EXPLORER_URL=http://147.83.40.37:4004
+      - POLYGON_ZK_EVM_BRIDGE_CONTRACT_ADDRESS=0x5567fAbF3B17F320BA3906d2f6CD43021d27A8AB
+      - POLYGON_ZK_EVM_NETWORK_ID=1
+      - BRIDGE_API_URL=http://147.83.40.37:8081
+      - ENABLE_FIAT_EXCHANGE_RATES=false
+      - ENABLE_OUTDATED_NETWORK_MODAL=false
+      - ENABLE_DEPOSIT_WARNING=true
+      - ENABLE_REPORT_FORM=false
+
+  zkevm-prover-server:
+    container_name: zkevm-prover-server
+    image: hermeznetwork/zkevm-prover:v1.1.4-RC2-fork.4
+    ports:
+      - 50051:50051
+    volumes:
+     - ~/zkevm/v1.1.0-rc.1-fork.4/config:/mnt/prover/config:ro
+     - ~/zkevm/config.json:/app/config.json
+    command: "zkProver -c /app/config.json"
 ```
+
+</details>
 
 ## Start Services
 

@@ -2,7 +2,7 @@
 id: step5-fullzkevm
 title: Configuring The Prover And Services
 sidebar_label: Configure Prover
-description: The fifth step on launching your own zkEVM network on the Goerli testnet.
+description: The fifth step in launching your zkEVM network on the Goerli testnet.
 keywords:
   - polygon
   - zkEVM
@@ -10,7 +10,7 @@ keywords:
   - deploy full zkevm
 ---
 
-Continue with the **Fifth Step** of this Deployment-Guide where you configure the Prover and Services.
+Continue with this deployment guide's **Fifth Step** where you configure the Prover and Services.
 
 ## Edit DBs
 
@@ -33,7 +33,7 @@ GRANT ALL PRIVILEGES ON TABLE state.nodes TO prover_user;
 GRANT ALL PRIVILEGES ON TABLE state.program TO prover_user;
 ```
 
-Save and exit the file once the changes have been made. The above SQL script will setup your databases for the zkEVM Node.
+Save and exit the file once the changes have been made. The above SQL script will set up your databases for the zkEVM Node.
 
 ## Configure the Prover
 
@@ -142,7 +142,7 @@ Create the `~/zkevm/config.json` file and replace the `aggregatorClientHost` par
 
 Edit the `~/zkevm/zkevm-node/mainnet/docker-compose.yml` file with the following content:
 
-<!-- ```yml
+```yml
 version: "3.5"
 
 networks:
@@ -161,7 +161,7 @@ services:
     volumes:
       - ./db/scripts/init_prover_db.sql:/docker-entrypoint-initdb.d/init.sql
       - ${ZKEVM_NODE_STATEDB_DATA
-``` -->
+```
 
 <details>
 <summary>Click to expand the <code>~/zkevm/zkevm-node/mainnet/docker-compose.yml</code> file</summary>

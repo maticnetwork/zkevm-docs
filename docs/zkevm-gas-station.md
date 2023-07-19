@@ -13,9 +13,9 @@ keywords:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The goal of **Polygon zkEVM Gas Station** is to provide dApp developers with gas pricing suggestions so they can use it before sending transactions to the **Polygon zkEVM** network. The prediction method is modelled after the [Polygon Gas Station](https://wiki.polygon.technology/docs/tools/faucets/polygon-gas-station) but is unique in its own ways.
+The goal of **Polygon zkEVM Gas Station** is to provide dApp developers with gas pricing suggestions so they can use them before sending transactions to the **Polygon zkEVM** network. The prediction method is modeled after the [Polygon Gas Station](https://wiki.polygon.technology/docs/tools/faucets/polygon-gas-station) but is unique in its own way.
 
-Polygon zkEVM Gas Station is currently **deployed on the zkEVM Mainnet Beta and Blueberry Testnet**, where it analyzes recent 1500 transactions and recommends gas price.
+Polygon zkEVM Gas Station is currently **deployed on the zkEVM Mainnet Beta and Blueberry Testnet**, where it analyzes recent 1500 transactions and recommends gas prices.
 
 ## Usage
 
@@ -97,6 +97,6 @@ An example JSON response will look like this.
 }
 ```
 
-- {`safelow`, `standard`, `fast`, `fastest`} are gas prices in Gwei, you can use these prices before sending transaction off to Polygon zkEVM, depending upon your needs
-- `blockTime`, in seconds, gives average block time of the network
-- `blockNumber` provides the information of latest block mined when recommendation was made
+- {`safelow`, `standard`, `fast`, `fastest`} are gas prices in Gwei, you can use these prices before sending the transaction off to Polygon zkEVM, depending upon your needs
+- `blockTime`, in seconds, gives the average block time of the network
+- `blockNumber` provides the information of the latest block mined when the recommendation was made

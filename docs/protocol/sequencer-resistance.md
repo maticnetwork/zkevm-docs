@@ -1,8 +1,8 @@
 ---
 id: sequencer-resistance
 title: Resistance To Trusted Sequencer's Censorship Or Malfunction
-sidebar_label: Trusted Sequencer
-description: A guide to help developers understand the unique censorship and malfunction resistance methods of Polygon zkEVM.
+sidebar_label: Force Batches
+description: A guide to help developers understand how Polygon zkEVM resists transaction censorship and malfunction of the Sequencer.
 keywords:
   - polygon
   - protocol
@@ -60,9 +60,9 @@ In order to successfully publish forced batch to the `forcedBatches` mapping, th
 The forced batch is entered in `forcedBatches` mapping keyed by its force batch index.
 
 ```
-struct ForcedBatchData { 
-    bytes transactions; 
-    bytes32 globalExitRoot; 
+struct ForcedBatchData {
+    bytes transactions;
+    bytes32 globalExitRoot;
     uint64 minForcedTimestamp;
 }
 ```
@@ -72,10 +72,10 @@ The `lastForceBatch` storage variable, which is incremented for each forced batc
 ```
 keccak256(
 	abi.encodePacked(
-		keccak256(bytes transactions), 
+		keccak256(bytes transactions),
 		bytes32 globalExitRoot,
 		unint64 minTimestamp
-	) 
+	)
 );
 ```
 

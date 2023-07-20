@@ -1,8 +1,8 @@
 ---
 id: aggregator-resistance
 title: Resistance To Trusted Aggregator's Inactivity Or Malfunction
-sidebar_label: Trusted Aggregator
-description: A guide to help developers understand the unique censorship and malfunction resistance methods of Polygon zkEVM.
+sidebar_label: Force Verification
+description: A guide to help developers understand how Polygon zkEVM resists inactivity or malfunction of the Aggregator.
 keywords:
   - polygon
   - protocol

@@ -7,7 +7,7 @@ keywords:
   - polygon
   - zkEVM
   - zkNode
-  - deply full zkevm
+  - deploy full zkevm
 ---
 
 Welcome to the documentation for setting up a full Zero-Knowledge Ethereum Virtual Machine (zkEVM) network on the Goerli testnet. This guide will walk you through the necessary steps to configure and start your own fully functional zkEVM L2 Testnet on the Goerli network.

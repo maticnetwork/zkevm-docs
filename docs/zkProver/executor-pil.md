@@ -74,7 +74,7 @@ The preparation for these polynomial constraints actually starts in the Storage 
 
 </center>  
 
-Everytime each of these Boolean polynomials are utilised or performed, a record of a "1" is kept in its register. This is called an **Execution Trace**. 
+Every time each of these Boolean polynomials are utilised or performed, a record of a "1" is kept in its register. This is called an **Execution Trace**. 
 
 Therefore, instead of performing some expensive computations in order to verify correctness of execution (at times repeating the same computations being verified), the trace of execution is tested.
 

@@ -18,6 +18,8 @@ Before we begin, this document is fairly technical and requires prior exposure t
 
 Sequencer and Prover functionalities are not covered in this document as they are still undergoing development and rigorous testing.
 
+Syncing zkNode currently takes anywhere between 1-2 days depending on various factors. The team is working on snapshots to improve the syncing time.
+
 :::
 
 ## Prerequisites

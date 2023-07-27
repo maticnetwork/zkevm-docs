@@ -226,7 +226,7 @@ You can check out the complete changelog [here](https://github.com/0xPolygonHerm
 
 These are the new elements added in latest Prover release:
 
-- `dbMultiWriteSinglePosition` &rarr; it should be set to `true`
+- `dbMultiWriteSinglePosition` &rarr; it should be set to `false`
 - `ECRecoverPrecalc` &rarr; it should be set to `true`
 - `ECRecoverPrecalcNThreads` &rarr; it should be set to 16
 

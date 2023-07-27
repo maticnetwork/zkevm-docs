@@ -302,6 +302,15 @@ module.exports = {
         "maticjs/common-methods",
       ],
     },
+    {
+      type: "category",
+      label: "Release Notes",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: ["releases/july-release",],
+    },
     "open-source-repos",
     "glossary",
   ],

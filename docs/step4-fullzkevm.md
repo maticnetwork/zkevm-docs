@@ -8,12 +8,9 @@ keywords:
   - zkEVM
   - zkNode
   - deploy full zkevm
-
 ---
 
 Continue with the **Fourth Step** of this Deployment-Guide where you deploy the zkNode.
-
-
 
 ## zkNode Deployment
 
@@ -49,8 +46,6 @@ ZKEVM_NODE_STATEDB_DATA_DIR = "~/zkevm/data/statedb"
 ZKEVM_NODE_POOLDB_DATA_DIR = "~/zkevm/data/pooldb"
 ```
 
-
-
 ### Approve MATIC Token for Sequencer
 
 Run the below command to launch a Hardhat console connected to the Goerli network.
@@ -62,17 +57,18 @@ npx hardhat console --network goerli
 Here, you can utilize the JavaScript environment to interact with the Goerli network. In the console, run the following (you can copy all the code in one go):
 
 ```js
-const provider = ethers.getDefaultProvider("")  // set goerli RPC node
-const privateKey = ''   // From wallet.txt Trusted sequencer
+const provider = ethers.getDefaultProvider(""); // set goerli RPC node
+const privateKey = ""; // From wallet.txt Trusted sequencer
 const wallet = new ethers.Wallet(privateKey, provider);
 
-const maticTokenFactory = await ethers.getContractFactory('ERC20PermitMock', provider);
-maticTokenContract = maticTokenFactory.attach("")   // From ~/zkevm/zkevm-contract/deployments/goerly_***/deploy_output.json maticTokenAddress
-maticTokenContractWallet = maticTokenContract.connect(wallet)
-await maticTokenContractWallet.approve("", ethers.utils.parseEther("100.0"))    // From ~/zkevm/zkevm-contract/deployments/goerly_***/deploy_output.json polygonZkEVMAddress
+const maticTokenFactory = await ethers.getContractFactory(
+  "ERC20PermitMock",
+  provider
+);
+maticTokenContract = maticTokenFactory.attach(""); // From ~/zkevm/zkevm-contract/deployments/goerly_***/deploy_output.json maticTokenAddress
+maticTokenContractWallet = maticTokenContract.connect(wallet);
+await maticTokenContractWallet.approve("", ethers.utils.parseEther("100.0")); // From ~/zkevm/zkevm-contract/deployments/goerly_***/deploy_output.json polygonZkEVMAddress
 ```
-
-
 
 ### Configure Genesis
 
@@ -87,19 +83,17 @@ Edit the file changing the following parameters from `~/zkevm/zkevm-contracts/de
 
 ```json
 {
-  "l1Config" : {
+  "l1Config": {
     "chainId": 5,
     "polygonZkEVMAddress": "",
     "maticTokenAddress": "",
-    "polygonZkEVMGlobalExitRootAddress": ""  // deploymentBlockNumber from ~/zkevm/zkevm-contracts/deployments/goerli_***/deploy_output.json
+    "polygonZkEVMGlobalExitRootAddress": "" // deploymentBlockNumber from ~/zkevm/zkevm-contracts/deployments/goerli_***/deploy_output.json
   },
- "genesisBlockNumber": 9050589,
- "root": "",
- "genesis": {}
+  "genesisBlockNumber": 9050589,
+  "root": "",
+  "genesis": {}
 }
 ```
-
-
 
 ### Update Node Config file
 
@@ -288,9 +282,8 @@ FrequencyToMonitorTxs = "1s"
 PrivateKey = {Path = "/pk/sequencer.keystore", Password = "password"}
 Enabled = true
 ```
+
 </details>
-
-
 
 ### Add Wallets
 
@@ -298,6 +291,3 @@ Enabled = true
 nano zkevm-config/sequencer.keystore (from wallets.txt)
 nano zkevm-config/aggregator.keystore (from wallets.txt)
 ```
-
-
-

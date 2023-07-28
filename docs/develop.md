@@ -33,18 +33,21 @@ Developers will be able to deploy their existing contracts to the zkEVM, and Use
 
 In order to add the **Polygon zkEVM** network to your wallet, you will need to enter the following details :
 
-| Network | RPC URL | ChainID | Block Explorer URL |
-| ------- | ------------------------------- | ---------------------- | --------------------- |
-| Polygon zkEVM | `https://zkevm-rpc.com` | `1101` | `https://zkevm.polygonscan.com/` |
-| zkEVM Testnet | `https://rpc.public.zkevm-test.net` | `1442` | `https://testnet-zkevm.polygonscan.com` |
-
-#### Additional Details
-
-- **Currency Symbol**: ETH
-
-:::tip Quick Connect
+| Network | RPC URL | ChainID | Block Explorer URL | Currency |
+| ------- | ------------------------------- | ---------------- | ---------------- | ----- |
+| Polygon zkEVM | `https://zkevm-rpc.com` | `1101` | `https://zkevm.polygonscan.com/` | **ETH** |
+| zkEVM Testnet | `https://rpc.public.zkevm-test.net` | `1442` | `https://testnet-zkevm.polygonscan.com` | **ETH** |
 
 You can **add zkEVM Network to your MetaMask wallet** instantly by clicking the **Add to Wallet** button in the Wallet Suite interface.
+
+<video autoplay width="100%" height="100%" controls="true" >
+  <source type="video/mp4" src="/img/add-zkevm-network.mp4"></source>
+  <p>Your browser does not support the video element.</p>
+</video>
+
+:::info Additional RPC Endpoints
+
+If you want to launch your own RPC Endpoint for the Polygon zkEVM network, check out third party services like [QuickNode](https://www.quicknode.com/chains/zkevm).
 
 :::
 

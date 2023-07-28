@@ -142,27 +142,6 @@ Create the `~/zkevm/config.json` file and replace the `aggregatorClientHost` par
 
 Edit the `~/zkevm/zkevm-node/mainnet/docker-compose.yml` file with the following content:
 
-```yml
-version: "3.5"
-
-networks:
-  default:
-    name: zkevm
-
-services:
-  zkevm-state-db:
-    container_name: zkevm-state-db
-    restart: unless-stopped
-    image: postgres
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
-    ports:
-      - 5432:5432
-    volumes:
-      - ./db/scripts/init_prover_db.sql:/docker-entrypoint-initdb.d/init.sql
-      - ${ZKEVM_NODE_STATEDB_DATA
-```
-
 <details>
 <summary>Click to expand the <code>~/zkevm/zkevm-node/mainnet/docker-compose.yml</code> file</summary>
 

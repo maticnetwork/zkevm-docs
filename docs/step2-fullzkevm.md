@@ -10,52 +10,47 @@ keywords:
   - deploy full zkevm
 ---
 
-Continue with the **Second Step** of this Deployment-Guide where you install dependencies and download mainnet files. 
-
-
-
+Continue with the **Second Step** of this Deployment-Guide where you install dependencies and download Mainnet files.
 
 ## Install Dependencies
 
 1. First, install the following dependencies:
 
-    ```bash
-    # APT dependencies
-    sudo apt update -y
-    sudo apt install -y tmux git curl unzip jq docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   ```bash
+   # APT dependencies
+   sudo apt update -y
+   sudo apt install -y tmux git curl unzip jq docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-    # Docker
-    sudo usermod -aG docker $USER
-    newgrp docker && newgrp $USER
+   # Docker
+   sudo usermod -aG docker $USER
+   newgrp docker && newgrp $USER
 
-    # Node.js (NVM)
-    curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh> | bash
-    source ~/.bashrc
-    nvm install 16
-    node -v
+   # Node.js (NVM)
+   curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh> | bash
+   source ~/.bashrc
+   nvm install 16
+   node -v
 
-    # Go
-    wget <https://go.dev/dl/go1.20.4.linux-amd64.tar.gz>
-    sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
-    rm -rf go1.20.4.linux-amd64.tar.gz
-    ```
+   # Go
+   wget <https://go.dev/dl/go1.20.4.linux-amd64.tar.gz>
+   sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.4.linux-amd64.tar.gz
+   rm -rf go1.20.4.linux-amd64.tar.gz
+   ```
 
 2. Next, add these to your `.profile`:
 
-    ```bash
-    echo '
-    export ZKEVM_NET=mainnet
-    export ZKEVM_DIR=~/zkevm/zkevm-node
-    export ZKEVM_CONFIG_DIR=~/zkevm/zkevm-config
+   ```bash
+   echo '
+   export ZKEVM_NET=mainnet
+   export ZKEVM_DIR=~/zkevm/zkevm-node
+   export ZKEVM_CONFIG_DIR=~/zkevm/zkevm-config
 
-    [ -d "/usr/local/go/bin" ] && PATH="/usr/local/go/bin:$PATH"
-    ' >> ~/.profile
-    source .profile
-    ```
+   [ -d "/usr/local/go/bin" ] && PATH="/usr/local/go/bin:$PATH"
+   ' >> ~/.profile
+   source .profile
+   ```
 
-3. Lastly, confirm the installation of Golang by running this command: ```$ go version```
-
-
+3. Lastly, confirm the installation of Golang by running this command: `$ go version`
 
 ## Download Mainnet Files
 
@@ -72,6 +67,3 @@ Once the download is finished, you should extract the files using the following 
 ```bash
 tar xzvf v1.1.0-rc.1-fork.4.tgz
 ```
-
-
-

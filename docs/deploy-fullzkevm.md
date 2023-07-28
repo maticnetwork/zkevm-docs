@@ -139,7 +139,6 @@ You'll need the following variables.
 | Variable                         | Details                                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------------------- |
 | INFURA_PROJECT_ID                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own ID.    |
-| ETHERSCAN_API_KEY                | Open an account with [INFURA](https://www.infura.io/) in order to obtain your own KEY.   |
 | ETHERSCAN_API_KEY                | Open an account with [ETHERSCAN](https://etherscan.io/) in order to obtain your own KEY. |
 | Public IP address                | Find this address in your machine.                                                       |
 | L1 Goërli node RPC               | This is the API Key of your designated L1 node. The L1 here is Goërli.                   |

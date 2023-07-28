@@ -57,18 +57,18 @@ Additionally, you will need **an L1 Goerli address** to proceed with the setup t
        image: ethereum/client-go:stable
        container_name: goerli-execution
        command: |
-       --goerli
-       --http
-       --http.vhosts=*
-       --http.rpcprefix=/
-       --http.corsdomain=*
-       --http.addr 0.0.0.0
-       --http.api eth,net,engine,admin
+       --goerli:
+        --http
+        --http.vhosts=*
+        --http.rpcprefix=/
+        --http.corsdomain=*
+        --http.addr 0.0.0.0
+        --http.api eth,net,engine,admin
        volumes:
-       - ./docker-volumes/geth:/root/.ethereum
+        - ./docker-volumes/geth:/root/.ethereum
        ports:
-       - "0.0.0.0:${L1_RPC_PORT}:8545"
-       - "0.0.0.0:30303:30303/udp"
+        - "0.0.0.0:${L1_RPC_PORT}:8545/$."
+        - "0.0.0.0:30303:30303/udp"
 
    prysm:
        image: gcr.io/prysmaticlabs/prysm/beacon-chain:stable
@@ -82,8 +82,8 @@ Additionally, you will need **an L1 Goerli address** to proceed with the setup t
        --monitoring-host=0.0.0.0
        --execution-endpoint=/geth/goerli/geth.ipc
        --accept-terms-of-use
-       --suggested-fee-recipient=${L1_SUGGESTED_FEE_RECIPIENT_ADDR}
-       --checkpoint-sync-url=${L1_CHECKPOINT_URL**}
+       --suggested-fee-recipient=${L1_SUGGESTED_FEE_RECIPIENT_ADDR}/$.
+       --checkpoint-sync-url=${L1_CHECKPOINT_URL**}/$.
        volumes:
        - ./docker-volumes/prysm:/data
        - ./docker-volumes/geth:/geth

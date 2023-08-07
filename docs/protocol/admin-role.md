@@ -12,7 +12,24 @@ keywords:
   - timelock controller
 ---
 
-The Admin is an Ethereum account that controls the Consensus contract, but **it is planned to be removed in the future**. It is the only account in the contract that can call the following functions;
+Polygon zkEVM's _Admin_ is consists of three (3) developers of the Polygon team, who oversee any upgrades of the zk-rollup software.
+
+Whenever there are bug-fixes or updates to be made, the Admin uses a special _Admin Multisig Contract_ to approve the changes.
+
+Approval by any two of the three Admin members (_2-out-of-3_) is required.
+
+However, there's minimum 10-day waiting period before the changes get executed.
+
+The 10-day delay allows users to carefully assess the proposed changes and decide whether to exit or not.
+
+Another smart contract called _Timelock Contract_ is responsible for enabling the 10-day delay.
+
+An outline of the _upgrade process_ is outlined [here](/docs/protocol/zkevm-upgrades-process.md#process-overview).
+
+## Admin Contract In Detail
+
+The Admin owns the Ethereum account that controls the Consensus contract, and it is
+the only account that can call the following functions;
 
 - `setTrustedSequencer`
 - `setForceBatchAllowed`
@@ -27,7 +44,7 @@ The Admin is an Ethereum account that controls the Consensus contract, but **it 
 
 All **ProxyAdmin.sol** instances that can upgrade the contract implementations of the zkEVM Protocol belong to the Admin account.
 
-Moreover, all proxies are owned by the Admin account, making it the only account authorized to make modifications to the contracts used to implement the zkEVM Protocol.
+Moreover, all proxies are owned by the Admin account, making it the only account (other than the Security Council Multisig) authorized to make modifications to the contracts used to implement the zkEVM Protocol.
 
 ## Timelock Controller
 
@@ -37,17 +54,19 @@ Timelock Controller is a smart contract that enables setting up a delay to provi
 
 :::
 
-A **timelock controller** has been added to the zkEVM Protocol in order to improve user security and confidence.
+The **Timelock Controller** has been added to the zkEVM Protocol in order to improve user security and confidence.
 
-An admin can schedule and commit maintenance operations transactions in L1 using a timelock controller, and the timelock can be activated to carry out the transactions when a specified `minDelay` time has passed.
+The Admin can schedule and commit maintenance operations transactions in L1 using a Timelock Controller, and the timelock can be activated to carry out the transactions when a specified `minDelay` time has passed.
 
 **The Polygon zkEVM team has decided to use the [OpenZeppelin's TimelockController.sol contract](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/governance/TimelockController.sol) to inherit security as well to avoid the lengthy and complicated audit process**. We have changed the `getMinDelay` method in the contract and this modified implementation is named **PolygonZkEVMTimelock.sol** contract.
 
-In the event that the zkEVM contract system is in [Emergency Mode](emergency-state.md), the new `getMinDelay` will set the time `minDelay` to 0. The zKEVM Protocol’s Admin role is set to an instance of **PolygonZkEVMTimelock.sol** contract address during the deployment.
+In the event that the zkEVM contract system is in [Emergency Mode](emergency-state.md), the new `getMinDelay` will set the time `minDelay` to 0. This is when the Security Council Multisig takes control.
+
+The zKEVM Protocol’s Admin role is set to an instance of **PolygonZkEVMTimelock.sol** contract address since the deployment of the zk-rollup.
 
 ## Governance of zKEVM Contracts
 
-The Admin role requires significant responsibility and cannot be assigned solely to one account. For this reason, the Admin Ethereum account of a PolygonZkEVMTimelock.sol contract instance is assigned to a multisig contract that acts as a governance tool for the zkEVM Protocol, therefore decentralizing the management power among multiple trusted entities.
+The Admin carries significant and crititcal responsibility and that's the reason why it is coomposed of three (3) members as opposed to just one person. For this reason, the Admin Ethereum account of a PolygonZkEVMTimelock.sol contract instance is assigned to a multisig contract that acts as a governance tool for the zkEVM Protocol, therefore achieving some degree of decentralization overall.
 
 Below figure shows the governance tree of Polygon zkEVM L1 contracts.
 
@@ -57,12 +76,12 @@ Protocol maintenance operations can only be performed by following these steps:
 
 :::info
 
-Due to the governance chain among protocol contracts, any transaction on behalf of the Admin role can only be done through the below steps.
+Due to the governance chain among protocol contracts, all transactions generally follow the below steps.
 
 :::
 
 1. Maintenance operations transactions are proposed and stored into governance multisig contract. Polygon team reaches a consensus on whether or not to apply these operations. Voting inherits security from L1.
 
-2. **Once a decision has reached**, if the results are favorable to perform maintenance operations, **the governance multisig can be triggered to schedule the transactions to be executed** once a time delay has passed using **PolygonZkEVMTimelock.sol** contract instance.
+2. **Once a decision has been reached**, and the results are favorable to perform maintenance operations, **the governance multisig can be triggered to schedule the transactions to be executed** but only when the 10-day time delay has passed.
 
-3. Once a time delay has passed, **PolygonZkEVMTimelock.sol** contract instance can be triggered to execute scheduled transactions and fulfil maintenance operations.
+3. Once a time delay has passed, the Timelock Contract dubbed **PolygonZkEVMTimelock.sol** executes the scheduled transactions.

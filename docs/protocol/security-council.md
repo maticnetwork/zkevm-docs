@@ -31,9 +31,7 @@ The _security council_ of a rollup has a two-fold responsibility,
 
 The _security council_ therefore utilises a special _multisig_ contract that overrides the usual _Admin Multisig Contract_ and the _Timelock Contract_.
 
-<!--
 ![Figure 1: Overview of the Security Council in relation to the Admin Contract](figures/security-council-overview.png)
--->
 
 ### Security Council Composition
 

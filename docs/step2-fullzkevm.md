@@ -10,7 +10,7 @@ keywords:
   - deploy full zkevm
 ---
 
-Continue with the **Second Step** of this Deployment-Guide where you install dependencies and download mainnet files.
+Continue with the **Second Step** of this Deployment-Guide where you install dependencies and download Mainnet files.
 
 ## Install Dependencies
 

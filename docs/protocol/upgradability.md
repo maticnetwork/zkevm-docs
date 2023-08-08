@@ -22,7 +22,7 @@ In tandem, Polygon intends to move its governance of upgrades from the currently
 
 These gradual _changes in governance_ will follow Polygon Improvement Proposals (PIPs), as already outlined in Polygon's [Three Pillars of Governance](https://forum.polygon.technology/t/the-three-pillars-of-polygon-governance-call-for-proposals/11847).
 
-Presently, centralization is seen in the form of the _Admin Multisig Contract_ and the [_Security Council Multisig_](/docs/protocol/security-council.md#security-council.md).
+Presently, centralization is seen in the form of the _Admin Multisig Contract_ and the [_Security Council Multisig_](/docs/protocol/security-council.md).
 
 ## Deploying Battle-tested Contracts
 

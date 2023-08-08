@@ -12,19 +12,19 @@ keywords:
   - timelock controller
 ---
 
-Polygon zkEVM's _Admin_ is consists of three (3) developers of the Polygon team, who oversee any upgrades of the zk-rollup software.
+Polygon zkEVM's _Admin_ consists of three (3) developers of the Polygon team, who oversee any upgrades of the zk-rollup software.
 
-Whenever there are bug-fixes or updates to be made, the Admin uses a special _Admin Multisig Contract_ to approve the changes.
+Whenever there are bug fixes or updates to be made, the Admin uses a special _Admin Multisig Contract_ to approve the changes.
 
 Approval by any two of the three Admin members (_2-out-of-3_) is required.
 
-However, there's minimum 10-day waiting period before the changes get executed.
+However, there's a minimum 10-day waiting period before the changes get executed.
 
 The 10-day delay allows users to carefully assess the proposed changes and decide whether to exit or not.
 
 Another smart contract called _Timelock Contract_ is responsible for enabling the 10-day delay.
 
-An outline of the _upgrade process_ is outlined [here](/docs/protocol/zkevm-upgrades-process.md).
+An outline of the _upgrade process_ is outlined [here](/protocol/zkevm-upgrades-process.md).
 
 ## Admin Contract In Detail
 

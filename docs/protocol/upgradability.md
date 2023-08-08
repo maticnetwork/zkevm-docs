@@ -12,11 +12,25 @@ keywords:
   - openzeppelin-upgrades
 ---
 
+It is inevitable that the current version of the Polygon zkEVM will go through updates and some upgrades, as it gets tested by both the community of Polygon developers and the internal team.
+
+For this reason, and as an effort towards incentivising developers to battle-test the Polygon zkEVM, [bug-bounties](https://immunefi.com/bounty/polygonzkevm/) have been made available.
+
+Since zk-Rollup ecosystems are nascent, it is expected that the frequency of upgrades should decline with time.
+
+In tandem, Polygon intends to move its governance of upgrades from the currently centralized approach to a much more decentralized modus operandi.
+
+These gradual _changes in governance_ will follow Polygon Improvement Proposals (PIPs), as already outlined in Polygon's [Three Pillars of Governance](https://forum.polygon.technology/t/the-three-pillars-of-polygon-governance-call-for-proposals/11847).
+
+Presently, centralization is seen in the form of the _Admin Multisig Contract_ and the [_Security Council Multisig_](/docs/protocol/security-council.md#security-council.md).
+
+## Deploying Battle-tested Contracts
+
 To allow for future updates to the zkEVM Protocol implementation (either in the case of adding new features, fixing bugs, or optimizations upgrades), the following contracts are deployed using a **Transparent Upgradeable Proxy (TUP)** pattern:
 
-* **PolygonZkEVM.sol** (Consensus Contract)
-* **PolygonZkEVMGlobalExitRoot.sol**
-* **PolygonZkEVMBridge.sol**
+- **PolygonZkEVM.sol** (Consensus Contract)
+- **PolygonZkEVMGlobalExitRoot.sol**
+- **PolygonZkEVMBridge.sol**
 
 To inherit security and avoid prolonging and making the audit process more complex, the Polygon zkEVM team has chosen to use the OpenZeppelin’s [openzeppelin-upgrades](https://github.com/OpenZeppelin/openzeppelin-upgrades) library in order to implement this functionality.
 
@@ -34,4 +48,6 @@ As shown in the diagram below, Open Zeppelin's TUP pattern separates the protoco
 
 Following OpenZeppelin's recommendations, an instance of the contract **ProxyAdmin.sol**, which is also included in the openzeppelin-upgrades library, is deployed and its address is set as the proxy contract's admin. The Hardhat and Truffle plugins make these operations safe and simple.
 
-Each **ProxyAdmin.sol** instance serves as the actual administrative interface for each proxy, and the administrative account is the owner of each **ProxyAdmin.sol** instance. During the zkEVM Protocol's deployment, ownership of **ProxyAdmin.sol** will be transferred to the Admin role.
+Each **ProxyAdmin.sol** instance serves as the actual administrative interface for each proxy, and the administrative account is the owner of each **ProxyAdmin.sol** instance.
+
+The ownership of **ProxyAdmin.sol** was transferred to the Admin role when the zkEVM Protocol was launched.

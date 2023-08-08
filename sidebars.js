@@ -41,6 +41,7 @@ module.exports = {
         "protocol/upgradability",
         "protocol/admin-role",
         "protocol/zkevm-upgrades-process",
+        "protocol/security-council",
         {
           type: "category",
           label: "Malfunction Resistance",
@@ -309,7 +310,7 @@ module.exports = {
         type: "generated-index",
       },
       collapsed: false,
-      items: ["releases/july-release",],
+      items: ["releases/july-release"],
     },
     "open-source-repos",
     "glossary",

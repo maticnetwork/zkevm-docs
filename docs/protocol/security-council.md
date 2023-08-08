@@ -12,7 +12,11 @@ keywords:
   - contract
 ---
 
+<<<<<<< HEAD
 In addition to the above-mentioned governance issues and security measures, one more component was essential, especially to a young L2 system such as the Polygon zkEVM. That component is, the _Security Council Multisig_.
+=======
+In addition to the previously mentioned governance issues and security measures, one more component was essential, especially to a young L2 system such as the Polygon zkEVM. That component is, the _Security Council Multisig_.
+>>>>>>> main
 
 Since critical bugs or other security issues may occur, and hence warrant instant upgrades, it is good security practice to allow for emergency upgrades.
 
@@ -66,8 +70,14 @@ There is a further stipulation that a minimum of 2 out of the 6 attached signatu
 
 ## Conclusion
 
+<<<<<<< HEAD
 Although the ultimate goal is to move towards a totally decentralised Polygon zkEVM, employing a security council multisig is inevitable for the early stages of the zkrollup.
 
 It is a trade-off between security and decentralisation. So then, for the sake of the long-term security, it is a deliberate decision to have more centralised early stages of development, in order to attain more decentralised later stages.
+=======
+Although the ultimate goal is to move towards a totally decentralized Polygon zkEVM, employing a security council multisig is inevitable for the early stages of the zkRollup.
+
+It is a trade-off between security and decentralization. So then, for the sake of long-term security, it is a deliberate decision to have more centralized early stages of development, in order to attain more decentralized later stages.
+>>>>>>> main
 
 Although there is always a possibility for the members of Security Council to go rogue and collude, the 75% threshold together with the minimum 33% of external members’ signatures significantly reduces the risk.

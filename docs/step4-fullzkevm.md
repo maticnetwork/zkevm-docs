@@ -79,7 +79,7 @@ cp ~/zkevm/zkevm-contracts/deployments/goerli_***/genesis.json ~/zkevm/zkevm-nod
 nano ~/zkevm/zkevm-node/mainnet/config/environments/public/public.genesis.config.json
 ```
 
-Edit the file changing the following parameters from `~/zkevm/zkevm-contracts/deployments/goerli_***/deploy_output.json`. **Keep in mind that `polygonZkEVMGlobalExitRootAddress` is called `deploymentBlockNumber` in `deploy_output.json`**.
+Edit the file changing the following parameters from `~/zkevm/zkevm-contracts/deployments/goerli_***/deploy_output.json`. **Keep in mind that `genesisBlockNumber` is called `deploymentBlockNumber` in `deploy_output.json`**.
 
 ```json
 {
@@ -87,9 +87,9 @@ Edit the file changing the following parameters from `~/zkevm/zkevm-contracts/de
     "chainId": 5,
     "polygonZkEVMAddress": "",
     "maticTokenAddress": "",
-    "polygonZkEVMGlobalExitRootAddress": "" // deploymentBlockNumber from ~/zkevm/zkevm-contracts/deployments/goerli_***/deploy_output.json
+    "polygonZkEVMGlobalExitRootAddress": ""
   },
-  "genesisBlockNumber": 9050589,
+  "genesisBlockNumber": 9050589, // deploymentBlockNumber from ~/zkevm/zkevm-contracts/deployments/goerli_***/deploy_output.json
   "root": "",
   "genesis": {}
 }

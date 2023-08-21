@@ -28,7 +28,7 @@ mkdir -p ~/zkevm/data/{statedb,pooldb} ~/zkevm/zkevm-config ~/zkevm/zkevm-node
 Next, populate the directories by fetching data from latest node releases:
 
 ```bash
-curl -L <https://github.com/0xPolygonHermez/zkevm-node/releases/latest/download/$ZKEVM_NET.zip> > $ZKEVM_NET.zip && unzip -o $ZKEVM_NET.zip -d $ZKEVM_DIR && rm $ZKEVM_NET.zip
+curl -L <https://github.com/0xPolygonHermez/zkevm-node/releases/download/v0.1.2/$ZKEVM_NET.zip> > $ZKEVM_NET.zip && unzip -o $ZKEVM_NET.zip -d $ZKEVM_DIR && rm $ZKEVM_NET.zip
 ```
 
 Copy the `example.env` file into `.env` file and open in nano editor:

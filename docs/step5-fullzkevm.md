@@ -197,7 +197,7 @@ services:
       - POSTGRES_USER=pool_user
       - POSTGRES_PASSWORD=pool_password
       - POSTGRES_DB=pool_db
-   command:
+    command:
       - "postgres"
       - "-N"
       - "500"
